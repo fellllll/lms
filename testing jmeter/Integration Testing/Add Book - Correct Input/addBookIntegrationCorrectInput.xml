@@ -1,0 +1,2246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="709" it="0" lt="709" ct="4" ts="1734788315737" s="true" lb="-1" rc="200" rm="OK" tn="" dt="text" de="UTF-8" by="5516" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Host: localhost:8000
+Connection: close
+X-Powered-By: PHP/8.3.10
+Content-Type: text/html; charset=UTF-8
+Cache-Control: no-cache, private
+Date: Sat, 21 Dec 2024 13:38:36 GMT
+Set-Cookie: XSRF-TOKEN=eyJpdiI6IlpTeFNycHdwN3JGVno3eUk2NUFjN2c9PSIsInZhbHVlIjoieSt2aUwwUE1Td0hoSmhoZWg1OXIvWTYyWWpDVyt3a29YU3pvWHlHZ1VuZ0drNUJESk1HdG5iVnJoNXNwY0FsRlV2Sk5MVVN3ZEFHMWdUTFRob01WSjJ3UVMxTlNRQjBpK1I2NVkzNEZuTGtXSE1YWWR3UUtvOHk5dXNiS1hWdjUiLCJtYWMiOiJmM2M1NTkzMDZmMWU2OTliNDE4ZDVhYzc3OWQzM2NiNTZiZDk2Y2YzZjQ0YzQ3NWM5ZGJlYzAyNzJkYzQ0NWYzIiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 15:38:36 GMT; Max-Age=7200; path=/; samesite=lax
+Set-Cookie: laravel_session=eyJpdiI6IjJ5T2xPbWtSc0ZZUndEYXNIZ2ZSR1E9PSIsInZhbHVlIjoiRzc3NmZYNGRWSXpUZnB0QkZvZHFzSVZOd1hBdjl1Z1QvZk5IYXJiSVJCTDdhU3VBL2gya3BoeXZpZStoelBnYmFSNVB5UTlsZUJYTHM3cmE4MTFaOUJGdkdLVFVxTEV0VWNBb2kyeGI5d2VQRlptM1hmTE5SU3R2WncwbXZYRngiLCJtYWMiOiI1MWI0MzRhM2ZjMjAwNWI0YWNjOGE4NTk2YTQyNzVkNGY2MzA3MmI3Mjc5NjQ5NmFiYWRkMzcyMGExNzIzMTIzIiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 15:38:36 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Accept-Language: en-US,en;q=0.5
+Host: localhost:8000
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+        &lt;meta name=&quot;csrf-token&quot; content=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot;&gt;
+
+        &lt;title&gt;Laravel&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.bunny.net&quot;&gt;
+        &lt;link href=&quot;https://fonts.bunny.net/css?family=figtree:400,500,600&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+
+        &lt;!-- Scripts --&gt;
+        &lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/@vite/client&quot;&gt;&lt;/script&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;http://[::1]:5173/resources/css/app.css&quot; /&gt;&lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/resources/js/app.js&quot;&gt;&lt;/script&gt;    &lt;/head&gt;
+    &lt;body class=&quot;font-sans text-gray-900 antialiased bg-gray-100 dark:bg-gray-900&quot;&gt;
+        &lt;div class=&quot;min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0&quot;&gt;
+            &lt;div&gt;
+                &lt;a href=&quot;/&quot;&gt;
+                    &lt;img src=&quot;http://localhost:8000/images/logo.png&quot;  width=&quot;125&quot; alt=&quot;Logo&quot;&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;w-full sm:max-w-md mt-5 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg&quot;&gt;
+                &lt;!-- Session Status --&gt;
+    
+    &lt;!-- Display Middleware Error Messages --&gt;
+    
+    &lt;form method=&quot;POST&quot; action=&quot;http://localhost:8000/login&quot;&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;
+        &lt;!-- Email Address --&gt;
+        &lt;div&gt;
+            &lt;label class=&quot;block font-medium text-sm text-gray-700 dark:text-gray-300&quot; for=&quot;email&quot;&gt;
+    Email
+&lt;/label&gt;
+            &lt;input  class=&quot;border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm block mt-1 w-full&quot; id=&quot;email&quot; type=&quot;email&quot; name=&quot;email&quot; required=&quot;required&quot; autofocus=&quot;autofocus&quot; autocomplete=&quot;username&quot;&gt;
+                    &lt;/div&gt;
+
+        &lt;!-- Password --&gt;
+        &lt;div class=&quot;mt-4&quot;&gt;
+            &lt;label class=&quot;block font-medium text-sm text-gray-700 dark:text-gray-300&quot; for=&quot;password&quot;&gt;
+    Password
+&lt;/label&gt;
+            &lt;input  class=&quot;border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm block mt-1 w-full&quot; id=&quot;password&quot; type=&quot;password&quot; name=&quot;password&quot; required=&quot;required&quot; autocomplete=&quot;current-password&quot;&gt;
+                    &lt;/div&gt;
+
+        &lt;!-- Forgot Password and Remember Me --&gt;
+        &lt;div class=&quot;flex items-center justify-between mt-4&quot;&gt;
+                            &lt;a class=&quot;underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500&quot; href=&quot;http://localhost:8000/forgot-password&quot;&gt;
+                    Forgot your password?
+                &lt;/a&gt;
+            
+            &lt;label for=&quot;remember_me&quot; class=&quot;inline-flex items-center&quot;&gt;
+                &lt;input id=&quot;remember_me&quot; type=&quot;checkbox&quot; class=&quot;rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500&quot; name=&quot;remember&quot;&gt;
+                &lt;span class=&quot;ml-2 text-sm text-gray-600&quot;&gt;Remember me&lt;/span&gt;
+            &lt;/label&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Login Button and Register Link --&gt;
+        &lt;div class=&quot;flex items-center justify-between mt-6&quot;&gt;
+            &lt;button type=&quot;submit&quot; class=&quot;inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150 w-full justify-center&quot;&gt;
+    Log in
+&lt;/button&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Register Link --&gt;
+        &lt;div class=&quot;mt-4 text-center&quot;&gt;
+                            &lt;a class=&quot;underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500&quot; href=&quot;http://localhost:8000/register&quot;&gt;
+                    Don&amp;#039;t have an account? Register here
+                &lt;/a&gt;
+                    &lt;/div&gt;
+    &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">XSRF-TOKEN=eyJpdiI6Im9IemVuSnhTemU1dmp2ZXhrb1AxS0E9PSIsInZhbHVlIjoiNmp2TXRTczBZUHdPMTZkeVRPTmcrZWs4dDcrdGJkVHJDd0xtRG5YK3d1azlzQWhEYUlCSFF0TFdsM1FBL3JKZUJDZ29mUkRpSjRjRlZ2Y3JMWmxWOUhyQ3dTcUx1dDJvNU1MdjdZZk9Uc3VldWF3NTRjOHRBZkpES2xIckNpNG8iLCJtYWMiOiIxYzljOWE5NmJhNTQyYTA1YmM5NGQ5OGZlNGNmNjI3MmJkZmJlZDYzYjhmNGEwOGYxODNjOTUyZTJlMTE2MjI3IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6InF5aXZaRTIydDV1VWhDMnVJbG55aGc9PSIsInZhbHVlIjoiMGNXbjFHTjdpYTlMOStCNW8ydWVxaVBYMzlNalAvL1JkQTlLb1VDWDdGTlVBNkgxalJrYnhTRXI4aGJlN3Q5K1dPaDlNaWQ0OG9qdXFEMWczU3BBOGtNNmJsZDB2QVVpTVRDcUJZVHJGZldQb2FHUnNobzBVSGZmQXpIbTV4T0giLCJtYWMiOiI0NGY3NDgwYTU4M2QxNGUwYTA1YjNmMzBjODlhYzc0N2Y2NmQ1NmE1MDQ3NDc0YWMxYTNkYjdjYTE2NjRlN2IyIiwidGFnIjoiIn0%3D</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://localhost:8000/</java.net.URL>
+</httpSample>
+<httpSample t="361" it="0" lt="0" ct="2" ts="1734788316574" s="true" lb="-2" rc="304" rm="Not Modified" tn="" dt="" de="" by="117" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 304 Not Modified
+Access-Control-Allow-Origin: *
+Date: Sat, 21 Dec 2024 13:38:36 GMT
+Connection: close
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Sec-Fetch-Mode: cors
+Referer: http://localhost:8000/
+If-None-Match: W/&quot;5c7d-r2XVoOdzitsnSypOAVmmnEyl5tg&quot;
+Sec-Fetch-Site: cross-site
+Accept-Language: en-US,en;q=0.5
+Origin: http://localhost:8000
+Host: [::1]:5173
+Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: */*
+Sec-Fetch-Dest: script
+</requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://[::1]:5173/@vite/client</java.net.URL>
+</httpSample>
+<httpSample t="223" it="0" lt="0" ct="2" ts="1734788316973" s="true" lb="-7" rc="304" rm="Not Modified" tn="" dt="" de="" by="117" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 304 Not Modified
+Access-Control-Allow-Origin: *
+Date: Sat, 21 Dec 2024 13:38:37 GMT
+Connection: close
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Sec-Fetch-Mode: cors
+Referer: http://[::1]:5173/@vite/client
+If-None-Match: W/&quot;27a-50Oe5S7HDq59Hm15o909pGTGmf8&quot;
+Sec-Fetch-Site: cross-site
+Accept-Language: en-US,en;q=0.5
+Origin: http://localhost:8000
+Host: [::1]:5173
+Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: */*
+Sec-Fetch-Dest: script
+</requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://[::1]:5173/node_modules/vite/dist/client/env.mjs</java.net.URL>
+</httpSample>
+<httpSample t="599" it="0" lt="598" ct="31" ts="1734788317702" s="false" lb="-8" rc="400" rm="Bad Request" tn="" dt="text" de="" by="200" sc="1" ec="1" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 400 Bad Request
+Server: nginx
+Content-Type: application/ocsp-response
+Content-Length: 5
+Cache-Control: max-age=0, no-cache
+Date: Sat, 21 Dec 2024 13:38:37 GMT
+Connection: close
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Accept-Language: en-US,en;q=0.5
+Host: r10.o.lencr.org
+Content-Type: application/ocsp-request
+Priority: u=2
+Cache-Control: no-cache
+Accept-Encoding: gzip, deflate
+Pragma: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: */*
+Content-Length: 115
+</requestHeader>
+  <responseData class="java.lang.String">0&#x3;
+&#x1;&#x1;</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">0S0Q0O0M0K0	&#x6;&#x5;+&#xe;&#x3;&#x2;&#x1a;&#x5;&#x0;&#x4;&#x14;i&#xf;�&#x15;g�o&#x7f;�4Dd&#x6;&#x6;o	g&#x7;qr&#x4;&#x14;t�v)&#x17;&#x18;T�17�g�&#x6;X���&#x5;r&#x2;&#x12;&#x3;-@F&#x13;�aP��g#u�&#xb;�,.</queryString>
+  <java.net.URL>http://r10.o.lencr.org/</java.net.URL>
+</httpSample>
+<httpSample t="733" it="0" lt="719" ct="2" ts="1734788331883" s="true" lb="-9" rc="302" rm="Found" tn="" dt="text" de="utf-8" by="1512" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 302 Found
+Host: localhost:8000
+Connection: close
+X-Powered-By: PHP/8.3.10
+Cache-Control: no-cache, private
+Date: Sat, 21 Dec 2024 13:38:52 GMT
+Location: http://localhost:8000/dashboard
+Content-Type: text/html; charset=utf-8
+Set-Cookie: XSRF-TOKEN=eyJpdiI6ImtqaUhYWHJMSWt6eWhYY05DRmlueXc9PSIsInZhbHVlIjoiTzdxQjFLOHU1c05ISzJVaU1hanE1SStyYzdzVEJ2M2gxRXBoL00zL2VGWnRob3hVV1Y1V1Q4NCtNTzVXQlNGcGk4bmRqM0phMmtwQzlnd09HVndBTnUvQWNMWmR2Q2xIcWxMWkNrM3Y2Q1k0YUV3c3FjUzBVSkU5QXlBTURnakEiLCJtYWMiOiI3MTk5NjFlZjZjZjk1NTMxMTMxNDU0NTIzOTkyNTMwMzE0YzUwZTBiOTNlZjg0ZWUyZmUyYjM1YWU3MmE4NjY5IiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 15:38:52 GMT; Max-Age=7200; path=/; samesite=lax
+Set-Cookie: laravel_session=eyJpdiI6IkVmOUVjbGVUbDNPbkQxUGN3QW5YOFE9PSIsInZhbHVlIjoiQm5BV3FUZlFzMWlWUC8xaFh5dGdxcklIQ2NXcXBpT2NLMVBxM2xNOEp6eUpaRENJSmJEclpaNUlydE5vMmxXaEhSRE9tU1Q3alROQVdnTUQ0SWl3cDVvdWo0RGJ2L05ZRFE5VVZFR0Z1cmtBcVFLMGV2RE8xdGxWckNMSkRnMngiLCJtYWMiOiI2OGMwOGYwYzU4OGQ3ZjVkN2ZmZDcyNTA0NDEzNDA3MWEwMDEyMWJlNjhkZDFiOGYwYzZmYTVmOTVkYjE0MjY0IiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 15:38:52 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Referer: http://localhost:8000/
+Accept-Language: en-US,en;q=0.5
+Origin: http://localhost:8000
+Priority: u=0, i
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Host: localhost:8000
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Content-Length: 94
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot; /&gt;
+        &lt;meta http-equiv=&quot;refresh&quot; content=&quot;0;url=&apos;http://localhost:8000/dashboard&apos;&quot; /&gt;
+
+        &lt;title&gt;Redirecting to http://localhost:8000/dashboard&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Redirecting to &lt;a href=&quot;http://localhost:8000/dashboard&quot;&gt;http://localhost:8000/dashboard&lt;/a&gt;.
+    &lt;/body&gt;
+&lt;/html&gt;</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">XSRF-TOKEN=eyJpdiI6IlpTeFNycHdwN3JGVno3eUk2NUFjN2c9PSIsInZhbHVlIjoieSt2aUwwUE1Td0hoSmhoZWg1OXIvWTYyWWpDVyt3a29YU3pvWHlHZ1VuZ0drNUJESk1HdG5iVnJoNXNwY0FsRlV2Sk5MVVN3ZEFHMWdUTFRob01WSjJ3UVMxTlNRQjBpK1I2NVkzNEZuTGtXSE1YWWR3UUtvOHk5dXNiS1hWdjUiLCJtYWMiOiJmM2M1NTkzMDZmMWU2OTliNDE4ZDVhYzc3OWQzM2NiNTZiZDk2Y2YzZjQ0YzQ3NWM5ZGJlYzAyNzJkYzQ0NWYzIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IjJ5T2xPbWtSc0ZZUndEYXNIZ2ZSR1E9PSIsInZhbHVlIjoiRzc3NmZYNGRWSXpUZnB0QkZvZHFzSVZOd1hBdjl1Z1QvZk5IYXJiSVJCTDdhU3VBL2gya3BoeXZpZStoelBnYmFSNVB5UTlsZUJYTHM3cmE4MTFaOUJGdkdLVFVxTEV0VWNBb2kyeGI5d2VQRlptM1hmTE5SU3R2WncwbXZYRngiLCJtYWMiOiI1MWI0MzRhM2ZjMjAwNWI0YWNjOGE4NTk2YTQyNzVkNGY2MzA3MmI3Mjc5NjQ5NmFiYWRkMzcyMGExNzIzMTIzIiwidGFnIjoiIn0%3D</cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">_token=zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&amp;email=john.doe%40example.com&amp;password=12345678</queryString>
+  <redirectLocation class="java.lang.String">http://localhost:8000/dashboard</redirectLocation>
+  <java.net.URL>http://localhost:8000/login</java.net.URL>
+</httpSample>
+<httpSample t="1165" it="0" lt="1158" ct="1" ts="1734788332638" s="true" lb="-10" rc="200" rm="OK" tn="" dt="text" de="UTF-8" by="15498" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Host: localhost:8000
+Connection: close
+X-Powered-By: PHP/8.3.10
+Content-Type: text/html; charset=UTF-8
+Cache-Control: no-cache, private
+Date: Sat, 21 Dec 2024 13:38:53 GMT
+Set-Cookie: XSRF-TOKEN=eyJpdiI6IjFjUFhQRldKdlplakpIaGxNTFZPRHc9PSIsInZhbHVlIjoiTGNHbHFDblZOdWFOZXQ2VHNCdCtiN3hNSE9SSU93a2J0Zk94ck1LelV6TDZVU2JNbkJBemhZTVpEMjM5ZlYxY3ErMENBNHpUeFhjTTdwNk1PaGgzc2x1OFV0Sjg0bU5nbUYwcUVHaHhNSTBiSzVqcjZVZENydXZHRnFBZTIzZmgiLCJtYWMiOiJmNGZkYTgxMzQzNTk2Nzg0YjIyNTdiM2ZjNzY5YTk4ZWZjODAyODMyNzM0MDlkMWJjYjg1OTVkMzI4ODE3ZWQwIiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 15:38:53 GMT; Max-Age=7200; path=/; samesite=lax
+Set-Cookie: laravel_session=eyJpdiI6IndJWlYzMUROWVk5MjVVb2hNOExIOXc9PSIsInZhbHVlIjoiWkI2dEtQWGFwUmxpWmtWMUtIU3ZLL2xwV3Q1RU9lblpMMmwyek5DeDhMenhzZWtwTjNZME41Nm1tcDY2NkdxV3kwRFN0SkNoaytEOUNiNm95cDgvVFZoSXA0a2EwV045bmRROVA3MGJXZEZCMkgwLzA0ZWUyeWwwSE5CZC9pdDIiLCJtYWMiOiJmODNlZTFmOTM5ODU1MmYxN2UzNWVkMWFmYjI2OGJiZmRmNzk5NTcwZjUyM2FiN2Q4YzZiYTEzNGYyMzQyNjljIiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 15:38:53 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Referer: http://localhost:8000/
+Accept-Language: en-US,en;q=0.5
+Host: localhost:8000
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+        &lt;meta name=&quot;csrf-token&quot; content=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot;&gt;
+
+        &lt;title&gt;Laravel&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.bunny.net&quot;&gt;
+        &lt;link href=&quot;https://fonts.bunny.net/css?family=figtree:400,500,600&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+
+        &lt;!-- Scripts --&gt;
+        &lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/@vite/client&quot;&gt;&lt;/script&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;http://[::1]:5173/resources/css/app.css&quot; /&gt;&lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/resources/js/app.js&quot;&gt;&lt;/script&gt;        
+        &lt;!-- jquery --&gt;
+        &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- DataTables CSS --&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css&quot;&gt;
+
+        &lt;!-- DataTables JS --&gt;
+        &lt;script src=&quot;https://cdn.datatables.net/2.1.8/js/dataTables.min.js&quot;&gt;&lt;/script&gt;
+        
+        &lt;!-- SweetAlert2 --&gt;
+        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/sweetalert2@11&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- Font Awesome --&gt;
+        &lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;/head&gt;
+
+    
+    &lt;style&gt;
+    select.dt-input {
+                margin-right: 5px !important;
+                width: 60px;
+            }
+
+            .dt-type-numeric {
+                text-align: left !important;
+            }
+
+            input.dt-input {
+                margin-left: 5px !important;
+            }
+    &lt;/style&gt;
+    
+    &lt;body class=&quot;font-sans antialiased&quot;&gt;
+        &lt;div class=&quot;min-h-screen bg-gray-100 dark:bg-gray-900&quot;&gt;
+            &lt;nav x-data=&quot;{ open: false }&quot; class=&quot;bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700&quot;&gt;
+    &lt;!-- Primary Navigation Menu --&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+        &lt;div class=&quot;flex justify-between h-16&quot;&gt;
+            &lt;div class=&quot;flex&quot;&gt;
+                &lt;!-- Logo --&gt;
+                &lt;div class=&quot;shrink-0 flex items-center&quot;&gt;
+                    &lt;a href=&quot;http://localhost:8000/dashboard&quot;&gt;
+                        &lt;img src=&quot;http://localhost:8000/images/logo.png&quot; class=&quot;h-10 w-auto&quot; alt=&quot;Logo&quot;&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Navigation Links --&gt;
+                &lt;div class=&quot;hidden space-x-8 sm:-my-px sm:ms-10 sm:flex&quot;&gt;
+                    &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-indigo-400 dark:border-indigo-600 text-sm font-medium leading-5 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/dashboard&quot;&gt;
+    Dashboard
+&lt;/a&gt;
+                                            &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/books&quot;&gt;
+    Book List
+&lt;/a&gt;
+                                                            &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/reservation&quot;&gt;
+    Reservations
+&lt;/a&gt;
+
+                   
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Settings Dropdown --&gt;
+            &lt;div class=&quot;hidden sm:flex sm:items-center sm:ms-6&quot;&gt;
+                &lt;div class=&quot;relative&quot; x-data=&quot;{ open: false }&quot; @click.outside=&quot;open = false&quot; @close.stop=&quot;open = false&quot;&gt;
+    &lt;div @click=&quot;open = ! open&quot;&gt;
+        &lt;button class=&quot;inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150&quot;&gt;
+                            &lt;div&gt;John Doe&lt;/div&gt;
+
+                            &lt;div class=&quot;ms-1&quot;&gt;
+                                &lt;svg class=&quot;fill-current h-4 w-4&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 20 20&quot;&gt;
+                                    &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z&quot; clip-rule=&quot;evenodd&quot; /&gt;
+                                &lt;/svg&gt;
+                            &lt;/div&gt;
+                        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div x-show=&quot;open&quot;
+            x-transition:enter=&quot;transition ease-out duration-200&quot;
+            x-transition:enter-start=&quot;opacity-0 scale-95&quot;
+            x-transition:enter-end=&quot;opacity-100 scale-100&quot;
+            x-transition:leave=&quot;transition ease-in duration-75&quot;
+            x-transition:leave-start=&quot;opacity-100 scale-100&quot;
+            x-transition:leave-end=&quot;opacity-0 scale-95&quot;
+            class=&quot;absolute z-50 mt-2 w-48 rounded-md shadow-lg ltr:origin-top-right rtl:origin-top-left end-0&quot;
+            style=&quot;display: none;&quot;
+            @click=&quot;open = false&quot;&gt;
+        &lt;div class=&quot;rounded-md ring-1 ring-black ring-opacity-5 py-1 bg-white dark:bg-gray-700&quot;&gt;
+            &lt;a class=&quot;block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/profile&quot;&gt;Profile&lt;/a&gt;
+
+                        &lt;!-- Authentication --&gt;
+                        &lt;form method=&quot;POST&quot; action=&quot;http://localhost:8000/logout&quot;&gt;
+                            &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;
+                            &lt;a class=&quot;block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/logout&quot; onclick=&quot;event.preventDefault();
+                                                this.closest(&apos;form&apos;).submit();&quot;&gt;Log Out&lt;/a&gt;
+                        &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Hamburger --&gt;
+            &lt;div class=&quot;-me-2 flex items-center sm:hidden&quot;&gt;
+                &lt;button @click=&quot;open = ! open&quot; class=&quot;inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out&quot;&gt;
+                    &lt;svg class=&quot;h-6 w-6&quot; stroke=&quot;currentColor&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+                        &lt;path :class=&quot;{&apos;hidden&apos;: open, &apos;inline-flex&apos;: ! open }&quot; class=&quot;inline-flex&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 6h16M4 12h16M4 18h16&quot; /&gt;
+                        &lt;path :class=&quot;{&apos;hidden&apos;: ! open, &apos;inline-flex&apos;: open }&quot; class=&quot;hidden&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M6 18L18 6M6 6l12 12&quot; /&gt;
+                    &lt;/svg&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Responsive Navigation Menu --&gt;
+    &lt;div :class=&quot;{&apos;block&apos;: open, &apos;hidden&apos;: ! open}&quot; class=&quot;hidden sm:hidden&quot;&gt;
+        &lt;div class=&quot;pt-2 pb-3 space-y-1&quot;&gt;
+            &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-indigo-400 dark:border-indigo-600 text-start text-base font-medium text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-900/50 focus:outline-none focus:text-indigo-800 dark:focus:text-indigo-200 focus:bg-indigo-100 dark:focus:bg-indigo-900 focus:border-indigo-700 dark:focus:border-indigo-300 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/dashboard&quot;&gt;
+    Dashboard
+&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Responsive Settings Options --&gt;
+        &lt;div class=&quot;pt-4 pb-1 border-t border-gray-200 dark:border-gray-600&quot;&gt;
+            &lt;div class=&quot;px-4&quot;&gt;
+                &lt;div class=&quot;font-medium text-base text-gray-800 dark:text-gray-200&quot;&gt;John Doe&lt;/div&gt;
+                &lt;div class=&quot;font-medium text-sm text-gray-500&quot;&gt;john.doe@example.com&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;mt-3 space-y-1&quot;&gt;
+                &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/profile&quot;&gt;
+    Profile
+&lt;/a&gt;
+
+                &lt;!-- Authentication --&gt;
+                &lt;form method=&quot;POST&quot; action=&quot;http://localhost:8000/logout&quot;&gt;
+                    &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;
+                    &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/logout&quot; onclick=&quot;event.preventDefault();
+                                        this.closest(&apos;form&apos;).submit();&quot;&gt;
+    Log Out
+&lt;/a&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+
+            &lt;!-- Page Heading --&gt;
+            
+            &lt;!-- Page Content --&gt;
+            &lt;main&gt;
+                &lt;div class=&quot;section1 relative h-screen overflow-hidden&quot;&gt;
+        &lt;img src=&quot;http://localhost:8000/images/library.png&quot; alt=&quot;Foto Gereja&quot; class=&quot;absolute inset-0 w-full h-full object-cover z-10&quot;&gt;
+        &lt;div class=&quot;absolute inset-0 bg-black opacity-70 z-20&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;relative py-12 z-30&quot;&gt;
+            &lt;div class=&quot;max-w-sm md:max-w-7xl mx-auto sm:px-6 lg:px-8&quot;&gt;
+                &lt;div class=&quot;bg-white dark:bg-gray-800 overflow-hidden rounded-lg&quot;&gt;
+                    &lt;div class=&quot;p-6 text-gray-900 dark:text-gray-100&quot;&gt;
+                        You&amp;#039;re logged in!
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30  text-white&quot;&gt;
+            &lt;p class=&quot;text-4xl text-center font-bold&quot;&gt;Welcome to the library,&lt;/p&gt;
+            &lt;p class=&quot;text-4xl text-center font-bold pt-2&quot;&gt;Your Gateway to Endless Discovery!&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;section2 py-20 bg-gray-100&quot;&gt;
+        &lt;div class=&quot;text-center text-gray-900&quot;&gt;
+            &lt;p class=&quot;text-4xl font-bold&quot;&gt;Opening Hours&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- Hours --&gt;
+        &lt;div class=&quot;mt-8 space-y-8 max-w-lg mx-auto&quot;&gt;
+            &lt;!-- Weekdays --&gt;
+            &lt;div class=&quot;md:flex justify-between items-center border-b border-gray-300 pb-4&quot;&gt;
+                &lt;p class=&quot;text-center md:text-left text-2xl font-semibold&quot;&gt;Weekdays&lt;/p&gt;
+                &lt;div class=&quot;text-center md:text-right&quot;&gt;
+                    &lt;p class=&quot;text-2xl font-semibold&quot;&gt;07.30 - 21.00&lt;/p&gt;
+                    &lt;p class=&quot;text-sm text-gray-600&quot;&gt;Western Indonesia Time (UTC+7)&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Weekend --&gt;
+            &lt;div class=&quot;md:flex justify-between items-center border-b border-gray-300 pb-4&quot;&gt;
+                &lt;p class=&quot;text-center md:text-left text-2xl font-semibold&quot;&gt;Weekend&lt;/p&gt;
+                &lt;div class=&quot;text-center md:text-right&quot;&gt;
+                    &lt;p class=&quot;text-2xl font-semibold&quot;&gt;08.00 - 17.00&lt;/p&gt;
+                    &lt;p class=&quot;text-sm text-gray-600&quot;&gt;Western Indonesia Time (UTC+7)&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- National Holiday --&gt;
+            &lt;div class=&quot;md:flex justify-between items-center&quot;&gt;
+                &lt;p class=&quot;text-center md:text-left text-2xl font-semibold&quot;&gt;National Holiday&lt;/p&gt;
+                &lt;div class=&quot;text-center md:text-right&quot;&gt;
+                    &lt;p class=&quot;text-2xl font-semibold&quot;&gt;CLOSED&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;section3 py-20 bg-black&quot;&gt;
+        &lt;div class=&quot;text-center text-white mb-8&quot;&gt;
+            &lt;p class=&quot;text-4xl font-bold&quot;&gt;Contact Us&lt;/p&gt;
+        &lt;/div&gt;
+        
+        &lt;!-- Contact Details --&gt;
+        &lt;div class=&quot;flex flex-col md:flex-row justify-center items-center mt-8 max-w-4xl mx-auto md:space-x-28 space-y-8 md:space-y-0 text-white&quot;&gt;
+            
+            &lt;!-- Email --&gt;
+            &lt;div class=&quot;flex flex-col md:flex-row justify-center items-center space-y-4 w-full md:w-auto&quot;&gt;
+                &lt;!-- Email Icon from Font Awesome --&gt;
+                &lt;i class=&quot;fas fa-envelope fa-2x m-4 md:fa-3x w-8 h-8 text-white&quot;&gt;&lt;/i&gt;
+                &lt;div class=&quot;text-center md:text-left&quot;&gt;
+                    &lt;p class=&quot;text-2xl font-semibold&quot;&gt;Email Us&lt;/p&gt;
+                    &lt;p class=&quot;text-xl&quot;&gt;contact@library.com&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Phone --&gt;
+            &lt;div class=&quot;flex flex-col md:flex-row justify-center items-center space-y-4 w-full md:w-auto&quot;&gt;
+                &lt;!-- Phone Icon from Font Awesome --&gt;
+                &lt;i class=&quot;fas fa-phone-alt fa-2x m-4 md:fa-3x w-8 h-8 text-white&quot;&gt;&lt;/i&gt;
+                &lt;div class=&quot;text-center md:text-left&quot;&gt;
+                    &lt;p class=&quot;text-2xl font-semibold&quot;&gt;Call Us&lt;/p&gt;
+                    &lt;p class=&quot;text-xl&quot;&gt;+123-456-7890&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+            &lt;/main&gt;
+        &lt;/div&gt;
+        
+    &lt;/body&gt;
+&lt;/html&gt;
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">XSRF-TOKEN=eyJpdiI6ImtqaUhYWHJMSWt6eWhYY05DRmlueXc9PSIsInZhbHVlIjoiTzdxQjFLOHU1c05ISzJVaU1hanE1SStyYzdzVEJ2M2gxRXBoL00zL2VGWnRob3hVV1Y1V1Q4NCtNTzVXQlNGcGk4bmRqM0phMmtwQzlnd09HVndBTnUvQWNMWmR2Q2xIcWxMWkNrM3Y2Q1k0YUV3c3FjUzBVSkU5QXlBTURnakEiLCJtYWMiOiI3MTk5NjFlZjZjZjk1NTMxMTMxNDU0NTIzOTkyNTMwMzE0YzUwZTBiOTNlZjg0ZWUyZmUyYjM1YWU3MmE4NjY5IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IkVmOUVjbGVUbDNPbkQxUGN3QW5YOFE9PSIsInZhbHVlIjoiQm5BV3FUZlFzMWlWUC8xaFh5dGdxcklIQ2NXcXBpT2NLMVBxM2xNOEp6eUpaRENJSmJEclpaNUlydE5vMmxXaEhSRE9tU1Q3alROQVdnTUQ0SWl3cDVvdWo0RGJ2L05ZRFE5VVZFR0Z1cmtBcVFLMGV2RE8xdGxWckNMSkRnMngiLCJtYWMiOiI2OGMwOGYwYzU4OGQ3ZjVkN2ZmZDcyNTA0NDEzNDA3MWEwMDEyMWJlNjhkZDFiOGYwYzZmYTVmOTVkYjE0MjY0IiwidGFnIjoiIn0%3D</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://localhost:8000/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="0" ct="2" ts="1734788333931" s="true" lb="-11" rc="304" rm="Not Modified" tn="" dt="" de="" by="117" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 304 Not Modified
+Access-Control-Allow-Origin: *
+Date: Sat, 21 Dec 2024 13:38:53 GMT
+Connection: close
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Sec-Fetch-Mode: cors
+Referer: http://localhost:8000/
+If-None-Match: W/&quot;5c7d-r2XVoOdzitsnSypOAVmmnEyl5tg&quot;
+Sec-Fetch-Site: cross-site
+Accept-Language: en-US,en;q=0.5
+Origin: http://localhost:8000
+Host: [::1]:5173
+Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: */*
+Sec-Fetch-Dest: script
+</requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://[::1]:5173/@vite/client</java.net.URL>
+</httpSample>
+<httpSample t="2" it="0" lt="0" ct="1" ts="1734788333964" s="true" lb="-16" rc="304" rm="Not Modified" tn="" dt="" de="" by="117" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 304 Not Modified
+Access-Control-Allow-Origin: *
+Date: Sat, 21 Dec 2024 13:38:53 GMT
+Connection: close
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Sec-Fetch-Mode: cors
+Referer: http://[::1]:5173/@vite/client
+If-None-Match: W/&quot;27a-50Oe5S7HDq59Hm15o909pGTGmf8&quot;
+Sec-Fetch-Site: cross-site
+Accept-Language: en-US,en;q=0.5
+Origin: http://localhost:8000
+Host: [::1]:5173
+Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: */*
+Sec-Fetch-Dest: script
+</requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://[::1]:5173/node_modules/vite/dist/client/env.mjs</java.net.URL>
+</httpSample>
+<httpSample t="131" it="0" lt="131" ct="66" ts="1734788334107" s="true" lb="-18" rc="200" rm="OK" tn="" dt="text" de="" by="250" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Content-Type: application/ocsp-response
+Cache-Control: public, max-age=300
+Date: Sat, 21 Dec 2024 13:38:53 GMT
+Server: ocsp_responder
+Content-Length: 5
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+Connection: close
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Accept-Language: en-US,en;q=0.5
+Host: o.pki.goog
+Content-Type: application/ocsp-request
+Priority: u=2
+Cache-Control: no-cache
+Accept-Encoding: gzip, deflate
+Pragma: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: */*
+Content-Length: 122
+</requestHeader>
+  <responseData class="java.lang.String">0&#x3;
+&#x1;&#x1;</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">0Q0O0M0K0I0	&#x6;&#x5;+&#xe;&#x3;&#x2;&#x1a;&#x5;&#x0;&#x4;&#x14;SBԄ��&#x17;��&#x14;Mw|�#1&#xf;{5�&#x4;&#x14;�&#x1b;&#x1e;�y&#x15;�&gt;7$�!��49mB�0&#x2;&#x10;&#x1a;��&amp;a��&#x10;��İ1o�</queryString>
+  <java.net.URL>http://o.pki.goog/wr2</java.net.URL>
+</httpSample>
+<httpSample t="291" it="0" lt="291" ct="73" ts="1734788334111" s="false" lb="-19" rc="414" rm="Request URI Too Long" tn="" dt="text" de="" by="323" sc="1" ec="1" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 414 Request URI Too Long
+Date: Sat, 21 Dec 2024 13:38:53 GMT
+Content-Type: application/ocsp-response
+Content-Length: 5
+Connection: close
+Cache-Control: s-maxage=3600, public, no-transform, must-revalidate
+CF-Cache-Status: MISS
+Vary: Accept-Encoding
+Server: cloudflare
+CF-RAY: 8f58466979454ab4-CGK
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Accept-Language: en-US,en;q=0.5
+Host: ocsp.globalsign.com
+Content-Type: application/ocsp-request
+Priority: u=2
+Cache-Control: no-cache
+Accept-Encoding: gzip, deflate
+Pragma: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: */*
+Content-Length: 139
+</requestHeader>
+  <responseData class="java.lang.String">0&#x3;
+&#x1;&#x1;</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">0Q0O0M0K0I0	&#x6;&#x5;+&#xe;&#x3;&#x2;&#x1a;&#x5;&#x0;&#x4;&#x14;����j�3&#x5;�&#x11;d��r�/���&#x4;&#x14;e�*S&#x1d;�G�&#xd;1�&lt;Vx��Q��3&#x2;&#x10;&#x1;8n ��J���]����</queryString>
+  <java.net.URL>http://ocsp.globalsign.com/ca/gsatlasr3dvtlsca2024q3</java.net.URL>
+</httpSample>
+<httpSample t="822" it="0" lt="817" ct="3" ts="1734788340091" s="true" lb="-20" rc="200" rm="OK" tn="" dt="text" de="UTF-8" by="35631" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Host: localhost:8000
+Connection: close
+X-Powered-By: PHP/8.3.10
+Content-Type: text/html; charset=UTF-8
+Cache-Control: no-cache, private
+Date: Sat, 21 Dec 2024 13:39:00 GMT
+Set-Cookie: XSRF-TOKEN=eyJpdiI6Ijk3eDlHbUl6WXB6NUhKVGtoNEJHeXc9PSIsInZhbHVlIjoiYWRkN1VmSktlVC9EdFdhTVpwN0t1czh0SFVCdStFNlQ5bTVDR3RERk5wenpRdUxZM3pzcW9sSUdoMzJiSG02dFA3Y1ZwSm5OWU5kdkJGOGQxckpnSkhDc1JScGVYTDhQSFoxeFgySi92VE5NbzZEb0VPZkZ2RCtIMlZ3UTZpaTciLCJtYWMiOiI5ZmIxYjZlMDljZDRhNTBhMWM1ZDJiYTY5ZDJiNDU0YTNiMDM3YTU1MTE2ZGU5MGVmNjlkNjZmNzY0NTIzYmIxIiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 15:39:00 GMT; Max-Age=7200; path=/; samesite=lax
+Set-Cookie: laravel_session=eyJpdiI6IjJ1NFB4YTc2OTQvcTR6YzlrOXJEQ1E9PSIsInZhbHVlIjoidktIaFpRNzFFNHpqRHpSTG5IRmxQZFdydFZubkUwdytjdDdOSHNrVDVWUzk3NXJ2RjI0SUt3MzR0emkvU25FRWtvWk5YdHZpRG5FTkYwbWEwbXFyelVzcEZtY0lKK3BPUUpPRkJXY05sZDAxSnNJMi9KS1VRclR0Qk1hMEQ4NFciLCJtYWMiOiIwZTJlMGU3Mzc1NDIyNzIwOTM0MzU3MWJjNWM1ZjA3N2IwZTlkZjI0NWRlYmMyMGFiNTVhNjgwZjFiNjc4ZGJlIiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 15:39:00 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Referer: http://localhost:8000/dashboard
+Accept-Language: en-US,en;q=0.5
+Host: localhost:8000
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+        &lt;meta name=&quot;csrf-token&quot; content=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot;&gt;
+
+        &lt;title&gt;Laravel&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.bunny.net&quot;&gt;
+        &lt;link href=&quot;https://fonts.bunny.net/css?family=figtree:400,500,600&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+
+        &lt;!-- Scripts --&gt;
+        &lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/@vite/client&quot;&gt;&lt;/script&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;http://[::1]:5173/resources/css/app.css&quot; /&gt;&lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/resources/js/app.js&quot;&gt;&lt;/script&gt;        
+        &lt;!-- jquery --&gt;
+        &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- DataTables CSS --&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css&quot;&gt;
+
+        &lt;!-- DataTables JS --&gt;
+        &lt;script src=&quot;https://cdn.datatables.net/2.1.8/js/dataTables.min.js&quot;&gt;&lt;/script&gt;
+        
+        &lt;!-- SweetAlert2 --&gt;
+        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/sweetalert2@11&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- Font Awesome --&gt;
+        &lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;/head&gt;
+
+    
+    &lt;style&gt;
+    select.dt-input {
+                margin-right: 5px !important;
+                width: 60px;
+            }
+
+            .dt-type-numeric {
+                text-align: left !important;
+            }
+
+            input.dt-input {
+                margin-left: 5px !important;
+            }
+    &lt;/style&gt;
+    
+    &lt;body class=&quot;font-sans antialiased&quot;&gt;
+        &lt;div class=&quot;min-h-screen bg-gray-100 dark:bg-gray-900&quot;&gt;
+            &lt;nav x-data=&quot;{ open: false }&quot; class=&quot;bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700&quot;&gt;
+    &lt;!-- Primary Navigation Menu --&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+        &lt;div class=&quot;flex justify-between h-16&quot;&gt;
+            &lt;div class=&quot;flex&quot;&gt;
+                &lt;!-- Logo --&gt;
+                &lt;div class=&quot;shrink-0 flex items-center&quot;&gt;
+                    &lt;a href=&quot;http://localhost:8000/dashboard&quot;&gt;
+                        &lt;img src=&quot;http://localhost:8000/images/logo.png&quot; class=&quot;h-10 w-auto&quot; alt=&quot;Logo&quot;&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Navigation Links --&gt;
+                &lt;div class=&quot;hidden space-x-8 sm:-my-px sm:ms-10 sm:flex&quot;&gt;
+                    &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/dashboard&quot;&gt;
+    Dashboard
+&lt;/a&gt;
+                                            &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-indigo-400 dark:border-indigo-600 text-sm font-medium leading-5 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/books&quot;&gt;
+    Book List
+&lt;/a&gt;
+                                                            &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/reservation&quot;&gt;
+    Reservations
+&lt;/a&gt;
+
+                   
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Settings Dropdown --&gt;
+            &lt;div class=&quot;hidden sm:flex sm:items-center sm:ms-6&quot;&gt;
+                &lt;div class=&quot;relative&quot; x-data=&quot;{ open: false }&quot; @click.outside=&quot;open = false&quot; @close.stop=&quot;open = false&quot;&gt;
+    &lt;div @click=&quot;open = ! open&quot;&gt;
+        &lt;button class=&quot;inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150&quot;&gt;
+                            &lt;div&gt;John Doe&lt;/div&gt;
+
+                            &lt;div class=&quot;ms-1&quot;&gt;
+                                &lt;svg class=&quot;fill-current h-4 w-4&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 20 20&quot;&gt;
+                                    &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z&quot; clip-rule=&quot;evenodd&quot; /&gt;
+                                &lt;/svg&gt;
+                            &lt;/div&gt;
+                        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div x-show=&quot;open&quot;
+            x-transition:enter=&quot;transition ease-out duration-200&quot;
+            x-transition:enter-start=&quot;opacity-0 scale-95&quot;
+            x-transition:enter-end=&quot;opacity-100 scale-100&quot;
+            x-transition:leave=&quot;transition ease-in duration-75&quot;
+            x-transition:leave-start=&quot;opacity-100 scale-100&quot;
+            x-transition:leave-end=&quot;opacity-0 scale-95&quot;
+            class=&quot;absolute z-50 mt-2 w-48 rounded-md shadow-lg ltr:origin-top-right rtl:origin-top-left end-0&quot;
+            style=&quot;display: none;&quot;
+            @click=&quot;open = false&quot;&gt;
+        &lt;div class=&quot;rounded-md ring-1 ring-black ring-opacity-5 py-1 bg-white dark:bg-gray-700&quot;&gt;
+            &lt;a class=&quot;block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/profile&quot;&gt;Profile&lt;/a&gt;
+
+                        &lt;!-- Authentication --&gt;
+                        &lt;form method=&quot;POST&quot; action=&quot;http://localhost:8000/logout&quot;&gt;
+                            &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;
+                            &lt;a class=&quot;block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/logout&quot; onclick=&quot;event.preventDefault();
+                                                this.closest(&apos;form&apos;).submit();&quot;&gt;Log Out&lt;/a&gt;
+                        &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Hamburger --&gt;
+            &lt;div class=&quot;-me-2 flex items-center sm:hidden&quot;&gt;
+                &lt;button @click=&quot;open = ! open&quot; class=&quot;inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out&quot;&gt;
+                    &lt;svg class=&quot;h-6 w-6&quot; stroke=&quot;currentColor&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+                        &lt;path :class=&quot;{&apos;hidden&apos;: open, &apos;inline-flex&apos;: ! open }&quot; class=&quot;inline-flex&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 6h16M4 12h16M4 18h16&quot; /&gt;
+                        &lt;path :class=&quot;{&apos;hidden&apos;: ! open, &apos;inline-flex&apos;: open }&quot; class=&quot;hidden&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M6 18L18 6M6 6l12 12&quot; /&gt;
+                    &lt;/svg&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Responsive Navigation Menu --&gt;
+    &lt;div :class=&quot;{&apos;block&apos;: open, &apos;hidden&apos;: ! open}&quot; class=&quot;hidden sm:hidden&quot;&gt;
+        &lt;div class=&quot;pt-2 pb-3 space-y-1&quot;&gt;
+            &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/dashboard&quot;&gt;
+    Dashboard
+&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Responsive Settings Options --&gt;
+        &lt;div class=&quot;pt-4 pb-1 border-t border-gray-200 dark:border-gray-600&quot;&gt;
+            &lt;div class=&quot;px-4&quot;&gt;
+                &lt;div class=&quot;font-medium text-base text-gray-800 dark:text-gray-200&quot;&gt;John Doe&lt;/div&gt;
+                &lt;div class=&quot;font-medium text-sm text-gray-500&quot;&gt;john.doe@example.com&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;mt-3 space-y-1&quot;&gt;
+                &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/profile&quot;&gt;
+    Profile
+&lt;/a&gt;
+
+                &lt;!-- Authentication --&gt;
+                &lt;form method=&quot;POST&quot; action=&quot;http://localhost:8000/logout&quot;&gt;
+                    &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;
+                    &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/logout&quot; onclick=&quot;event.preventDefault();
+                                        this.closest(&apos;form&apos;).submit();&quot;&gt;
+    Log Out
+&lt;/a&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+
+            &lt;!-- Page Heading --&gt;
+                            &lt;header class=&quot;bg-white dark:bg-gray-800 shadow&quot;&gt;
+                    &lt;div class=&quot;max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8&quot;&gt;
+                        &lt;h1 class=&quot;text-2xl font-bold text-center&quot;&gt;Library Book List&lt;/h1&gt;
+                    &lt;/div&gt;
+                &lt;/header&gt;
+            
+            &lt;!-- Page Content --&gt;
+            &lt;main&gt;
+                &lt;div class=&quot;pb-3&quot;&gt;
+        &lt;div class=&quot;max-w-7xl mx-auto sm:px-6 lg:px-8&quot;&gt;
+        &lt;div class=&quot;container mx-auto p-6&quot;&gt;
+            &lt;div class=&quot;mb-4 w-5/5 max-w-full mx-auto flex justify-start&quot;&gt;
+                &lt;button type=&quot;submit&quot; class=&quot;bg-blue-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700&quot;&gt;
+                    &lt;a href=&quot;/books/add&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-plus&quot;&gt;&lt;/i&gt;
+                    ADD BOOK&lt;/a&gt;
+                &lt;/button&gt; 
+            &lt;/div&gt;
+
+            &lt;table  id=&quot;reservation_table&quot; class=&quot;table table-striped table-hover&quot;&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th scope=&quot;col&quot;&gt;ID&lt;/th&gt;
+                        &lt;th scope=&quot;col&quot;&gt;Book Title&lt;/th&gt;
+                        &lt;th scope=&quot;col&quot;&gt;Author&lt;/th&gt;
+                        &lt;th scope=&quot;col&quot;&gt;Action&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody class=&quot;bg-white divide-y divide-gray-200&quot;&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;1&lt;/td&gt;
+                            &lt;td&gt;Laut Bercerita&lt;/td&gt;
+                            &lt;td&gt;Leila S. Chudori&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/1&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-1&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6ImtzdUxEMjFFRjN0dU9KWDUzc2RDWVE9PSIsInZhbHVlIjoiRFJxd090Zk93UzhvVUVLTVNkU3FJQT09IiwibWFjIjoiODBlMzIwODI0OWIyZTRiZTFhODNhMjI0MjQ5MGQ0YzBkZTUxNDM4NzVkZWE4ZDczNDg2YWY3NjUwYTY4Y2NmMSIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;1&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;2&lt;/td&gt;
+                            &lt;td&gt;The Psychology of Money&lt;/td&gt;
+                            &lt;td&gt;Morgan Housel&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/2&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-2&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6Ino1MlE2UVJGZ0pmcUFyZjdOM0hNdHc9PSIsInZhbHVlIjoic1M1TjlLaFFqUjJva29pNEsvQ2R4UT09IiwibWFjIjoiN2Y0YjRkNmYwNTczYjY3NTFiNTBmMGU5ZjMxODJhNDIyMTRlYWQ1NzkzODgxNmE5MWViNWIyZDA4YjRmZWQ2NSIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;2&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;3&lt;/td&gt;
+                            &lt;td&gt;The Maxwell Daily Reader&lt;/td&gt;
+                            &lt;td&gt;John C. Maxwell&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/3&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-3&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6IjFlZ1Y0dTdhck9FdXRYZEsyL2NWRVE9PSIsInZhbHVlIjoiMmFGTER3RE1KdEFVK2lkSmUycWtOZz09IiwibWFjIjoiZGFhMzU4OGVmNzIyMDgzZmVkYzU1N2Y1YWUzYWRjNWFiOGRkMGNiNTQ1MjJiYjFiYmRlYjkzYjIyYWI0YWU4NSIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;3&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;4&lt;/td&gt;
+                            &lt;td&gt;Home Sweet Loan&lt;/td&gt;
+                            &lt;td&gt;Almira Bastari&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/4&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-4&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6IkZNU1hXNWhCN0xPalBrZVJYQ2Jwenc9PSIsInZhbHVlIjoiSFRMS2lqOUMxUk54WkZUSndOdEtJUT09IiwibWFjIjoiZmRmNWM1NmQyZTFmMDFjMGU0MTIyOGI4YzZkYTJjYzc0ZjEwYmMxZTY5ZTA4Y2Q4ZTRjNTczYTQ5YmI1NmZmZCIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;4&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;5&lt;/td&gt;
+                            &lt;td&gt;The Alchemist&amp;#039;s Secret&lt;/td&gt;
+                            &lt;td&gt;Scott Mariani&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/5&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-5&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6IldhNk55K3o1VEhHZlNFSFdha0M3YVE9PSIsInZhbHVlIjoiQXFYcUNJVGpibUVNa1pFcFFNcUhJdz09IiwibWFjIjoiMWU5YzJiNjRhZWJjOWEwOTA4NzdlNjU2MTA5YTRhNDE3ZjU1ZGEzNDMyYTYxYzZkYzRiNjFkZjEyYzhlMWMzOSIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;5&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;6&lt;/td&gt;
+                            &lt;td&gt;The Fault in Our Stars&lt;/td&gt;
+                            &lt;td&gt;John Green&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/6&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-6&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6IkV5ME03VmJOSWlVQXZsanRWZVcwUUE9PSIsInZhbHVlIjoiQittUmZlY2l2QVZFQU5aRmdGdnUvUT09IiwibWFjIjoiYmU1Njk4YjEwMmQzMTNhZjZjZWU1M2E3YWZkMTRiMjA2ODQ1NzQ4M2QxMzZiZmRiNzAyYTQxMTlhNDlhNGM1NiIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;6&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;7&lt;/td&gt;
+                            &lt;td&gt;Koala Kumal&lt;/td&gt;
+                            &lt;td&gt;Raditya Dika&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/7&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-7&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6InRFNElxY1RIRkNvTEtUa0pYeTNRT0E9PSIsInZhbHVlIjoiTW9wWVdtckxvRjZIWjl1dmVBY08vUT09IiwibWFjIjoiMWUwNDU0OGRhZTJlZTMzYzJlM2YwMDdjYTRmNDc4OTU0NmRhZjkxOTM1Nzc1ZmI3NjkxZDUyOGFlOGRkZWJlYyIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;7&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;8&lt;/td&gt;
+                            &lt;td&gt;Crazy Rich Asians&lt;/td&gt;
+                            &lt;td&gt;Kevin Kwan&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/8&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-8&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6IjFiZGk5YzFwTWNVQzc4eXN3S1lNd3c9PSIsInZhbHVlIjoiVG9qVHFMN3FzT0hMNmFhOTF0MVhJQT09IiwibWFjIjoiZWMxNWQxZmM3ODJiMGY4ZGNjMzgwN2Q3NTk4MTBmN2NhNDU4MDQxNDlkNDNhNWI0NWIxZmQxMjU2YWI4ZDRhMyIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;8&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;9&lt;/td&gt;
+                            &lt;td&gt;Effortless&lt;/td&gt;
+                            &lt;td&gt;Greg McKeown&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/9&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-9&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6IjRJdVFML3FUTkNNTFl2c05TTkwzL0E9PSIsInZhbHVlIjoiRndwT044SGxxeWRISXB3K0JCaFd0Zz09IiwibWFjIjoiYjlkZmZiMzMwMGU2ZjU1ZTI4MGZmYjBlMmRiM2YzMTU4ZjZlY2M0NjExNjI5ZTdhODIwOGI4YjkwOTBiMTllZiIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;9&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;10&lt;/td&gt;
+                            &lt;td&gt;Supernova: Inteligensi Embun Pagi&lt;/td&gt;
+                            &lt;td&gt;Dewi Lestari&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/10&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-10&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6Ik4wYnd3UzlIMjJUNStJWGduQ05ZMXc9PSIsInZhbHVlIjoiT0Q3dFhEVzNtd2xxaDNWcXZEMFNGQT09IiwibWFjIjoiM2JiMjJkZDA3NDc1NmExNjU4NDllOTBiNGQyMzIyMTMxYWQ0YWRjNjRlYzQ3MDE0YmNhNWMyMzU2MjkwNjg2NiIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;10&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;11&lt;/td&gt;
+                            &lt;td&gt;Gojo and Geto&lt;/td&gt;
+                            &lt;td&gt;Kimberly&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/11&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-11&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6IkowbTVyNGQzcEdsaTVHbVFsQVdGVFE9PSIsInZhbHVlIjoibVlJRHN0SzRwTDg5elJmTWhMaEQzdz09IiwibWFjIjoiZDI5ODQ0MGQ4Zjc3NjM3NzZjZDlkMjNmY2FkOTZkNmJhMGUzOGRiZTVmODAyNGYyN2UzMjJkZDlkZTVjZWQ5ZCIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;11&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                    &lt;/tbody&gt;
+            &lt;/table&gt;
+    &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+    $(document).ready(function() {
+        $(&apos;#reservation_table&apos;).DataTable({
+            // Optional: You can customize DataTables options here
+            paging: true,
+            searching: true,
+            ordering: true,
+            info: true,
+            lengthChange: true,
+            scrollX: true,
+            autoWidth: false
+        });
+    });
+    &lt;/script&gt;
+
+       
+&lt;script&gt;
+    function confirmDialog($id) {
+        event.preventDefault();
+        
+        Swal.fire({
+            title: `Apakah Kamu Yakin akan Menghapus Buku Ini ?`,
+            icon: &quot;warning&quot;,
+            showCancelButton: true,
+            confirmButtonText: `Ya, Hapus`,
+            confirmButtonColor: &quot;#2463eb&quot;,
+            cancelButtonText: &quot;Batal&quot;,
+            reverseButtons: true
+        }).then((result) =&gt; {
+            if (result.isConfirmed) {
+                document.getElementById(&apos;delete-form-&apos; + $id).submit();
+            }
+        });
+    }
+&lt;/script&gt;
+            &lt;/main&gt;
+        &lt;/div&gt;
+        
+    &lt;/body&gt;
+&lt;/html&gt;
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">XSRF-TOKEN=eyJpdiI6IjFjUFhQRldKdlplakpIaGxNTFZPRHc9PSIsInZhbHVlIjoiTGNHbHFDblZOdWFOZXQ2VHNCdCtiN3hNSE9SSU93a2J0Zk94ck1LelV6TDZVU2JNbkJBemhZTVpEMjM5ZlYxY3ErMENBNHpUeFhjTTdwNk1PaGgzc2x1OFV0Sjg0bU5nbUYwcUVHaHhNSTBiSzVqcjZVZENydXZHRnFBZTIzZmgiLCJtYWMiOiJmNGZkYTgxMzQzNTk2Nzg0YjIyNTdiM2ZjNzY5YTk4ZWZjODAyODMyNzM0MDlkMWJjYjg1OTVkMzI4ODE3ZWQwIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IndJWlYzMUROWVk5MjVVb2hNOExIOXc9PSIsInZhbHVlIjoiWkI2dEtQWGFwUmxpWmtWMUtIU3ZLL2xwV3Q1RU9lblpMMmwyek5DeDhMenhzZWtwTjNZME41Nm1tcDY2NkdxV3kwRFN0SkNoaytEOUNiNm95cDgvVFZoSXA0a2EwV045bmRROVA3MGJXZEZCMkgwLzA0ZWUyeWwwSE5CZC9pdDIiLCJtYWMiOiJmODNlZTFmOTM5ODU1MmYxN2UzNWVkMWFmYjI2OGJiZmRmNzk5NTcwZjUyM2FiN2Q4YzZiYTEzNGYyMzQyNjljIiwidGFnIjoiIn0%3D</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://localhost:8000/books</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="0" ct="3" ts="1734788340956" s="true" lb="-21" rc="304" rm="Not Modified" tn="" dt="" de="" by="117" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 304 Not Modified
+Access-Control-Allow-Origin: *
+Date: Sat, 21 Dec 2024 13:39:00 GMT
+Connection: close
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Sec-Fetch-Mode: cors
+Referer: http://localhost:8000/
+If-None-Match: W/&quot;5c7d-r2XVoOdzitsnSypOAVmmnEyl5tg&quot;
+Sec-Fetch-Site: cross-site
+Accept-Language: en-US,en;q=0.5
+Origin: http://localhost:8000
+Host: [::1]:5173
+Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: */*
+Sec-Fetch-Dest: script
+</requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://[::1]:5173/@vite/client</java.net.URL>
+</httpSample>
+<httpSample t="2" it="0" lt="0" ct="0" ts="1734788340974" s="true" lb="-25" rc="304" rm="Not Modified" tn="" dt="" de="" by="117" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 304 Not Modified
+Access-Control-Allow-Origin: *
+Date: Sat, 21 Dec 2024 13:39:00 GMT
+Connection: close
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Sec-Fetch-Mode: cors
+Referer: http://[::1]:5173/@vite/client
+If-None-Match: W/&quot;27a-50Oe5S7HDq59Hm15o909pGTGmf8&quot;
+Sec-Fetch-Site: cross-site
+Accept-Language: en-US,en;q=0.5
+Origin: http://localhost:8000
+Host: [::1]:5173
+Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: */*
+Sec-Fetch-Dest: script
+</requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://[::1]:5173/node_modules/vite/dist/client/env.mjs</java.net.URL>
+</httpSample>
+<httpSample t="685" it="0" lt="679" ct="1" ts="1734788343922" s="true" lb="-27" rc="200" rm="OK" tn="" dt="text" de="UTF-8" by="17046" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Host: localhost:8000
+Connection: close
+X-Powered-By: PHP/8.3.10
+Content-Type: text/html; charset=UTF-8
+Cache-Control: no-cache, private
+Date: Sat, 21 Dec 2024 13:39:04 GMT
+Set-Cookie: XSRF-TOKEN=eyJpdiI6ImE5UFVkbkZLZWJhamN5MFNzOW5uS1E9PSIsInZhbHVlIjoiWU9MNHNwZThyTDRUMm9XeTlqMEgzaUNtNTFqNFAwdGlUWlBRNHhkTkdNajFZZC9uaUhhaE8rVzViUUNYSWYxcVNqZUVRc1crRGIwUW9CQUR0SE9FbTQ0Q0FpTWd2MCs5ZWxZVnc3bXU3b2d5L2V1azM0R2pzc0hrMm44ZVRBdFIiLCJtYWMiOiIwZjliYzBkODFkZDI1N2UwMTQ0YzQ5MDg1MTZmODVlN2U1MTkzZDI1ZTdiMzdkYmZmOWNjNDk4ODY3YjFhMDE4IiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 15:39:04 GMT; Max-Age=7200; path=/; samesite=lax
+Set-Cookie: laravel_session=eyJpdiI6Ild2TnVGN1JRM2prSEpRK0VhWWxJMGc9PSIsInZhbHVlIjoidElBSVZiU0xMOXdYUHF2VUR5SFhLdEpGdjZBbzl4NHNXQWVGdG1BUU9zeVhJcFBqNEhvTlBOcUVGWGdqaHlid0VCb1VxVXB3a25SSkROVU9ZYmhldmR3NUtXQ1BFS1NESFBHN052ZVh2WGxhTys4aGNqQzd1QzQyYXBXdEhUaXciLCJtYWMiOiJmNjRjNGRmMTMyOTBiZmRlMDZjOWViZGExZmM2NmFkYWE1NTMxODgyYTM0ZWI3ZGNlYjJmNjgzZmEwN2I0OGZjIiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 15:39:04 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Referer: http://localhost:8000/books
+Accept-Language: en-US,en;q=0.5
+Host: localhost:8000
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+        &lt;meta name=&quot;csrf-token&quot; content=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot;&gt;
+
+        &lt;title&gt;Laravel&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.bunny.net&quot;&gt;
+        &lt;link href=&quot;https://fonts.bunny.net/css?family=figtree:400,500,600&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+
+        &lt;!-- Scripts --&gt;
+        &lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/@vite/client&quot;&gt;&lt;/script&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;http://[::1]:5173/resources/css/app.css&quot; /&gt;&lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/resources/js/app.js&quot;&gt;&lt;/script&gt;        
+        &lt;!-- jquery --&gt;
+        &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- DataTables CSS --&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css&quot;&gt;
+
+        &lt;!-- DataTables JS --&gt;
+        &lt;script src=&quot;https://cdn.datatables.net/2.1.8/js/dataTables.min.js&quot;&gt;&lt;/script&gt;
+        
+        &lt;!-- SweetAlert2 --&gt;
+        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/sweetalert2@11&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- Font Awesome --&gt;
+        &lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;/head&gt;
+
+    
+    &lt;style&gt;
+    select.dt-input {
+                margin-right: 5px !important;
+                width: 60px;
+            }
+
+            .dt-type-numeric {
+                text-align: left !important;
+            }
+
+            input.dt-input {
+                margin-left: 5px !important;
+            }
+    &lt;/style&gt;
+    
+    &lt;body class=&quot;font-sans antialiased&quot;&gt;
+        &lt;div class=&quot;min-h-screen bg-gray-100 dark:bg-gray-900&quot;&gt;
+            &lt;nav x-data=&quot;{ open: false }&quot; class=&quot;bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700&quot;&gt;
+    &lt;!-- Primary Navigation Menu --&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+        &lt;div class=&quot;flex justify-between h-16&quot;&gt;
+            &lt;div class=&quot;flex&quot;&gt;
+                &lt;!-- Logo --&gt;
+                &lt;div class=&quot;shrink-0 flex items-center&quot;&gt;
+                    &lt;a href=&quot;http://localhost:8000/dashboard&quot;&gt;
+                        &lt;img src=&quot;http://localhost:8000/images/logo.png&quot; class=&quot;h-10 w-auto&quot; alt=&quot;Logo&quot;&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Navigation Links --&gt;
+                &lt;div class=&quot;hidden space-x-8 sm:-my-px sm:ms-10 sm:flex&quot;&gt;
+                    &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/dashboard&quot;&gt;
+    Dashboard
+&lt;/a&gt;
+                                            &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/books&quot;&gt;
+    Book List
+&lt;/a&gt;
+                                                            &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/reservation&quot;&gt;
+    Reservations
+&lt;/a&gt;
+
+                   
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Settings Dropdown --&gt;
+            &lt;div class=&quot;hidden sm:flex sm:items-center sm:ms-6&quot;&gt;
+                &lt;div class=&quot;relative&quot; x-data=&quot;{ open: false }&quot; @click.outside=&quot;open = false&quot; @close.stop=&quot;open = false&quot;&gt;
+    &lt;div @click=&quot;open = ! open&quot;&gt;
+        &lt;button class=&quot;inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150&quot;&gt;
+                            &lt;div&gt;John Doe&lt;/div&gt;
+
+                            &lt;div class=&quot;ms-1&quot;&gt;
+                                &lt;svg class=&quot;fill-current h-4 w-4&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 20 20&quot;&gt;
+                                    &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z&quot; clip-rule=&quot;evenodd&quot; /&gt;
+                                &lt;/svg&gt;
+                            &lt;/div&gt;
+                        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div x-show=&quot;open&quot;
+            x-transition:enter=&quot;transition ease-out duration-200&quot;
+            x-transition:enter-start=&quot;opacity-0 scale-95&quot;
+            x-transition:enter-end=&quot;opacity-100 scale-100&quot;
+            x-transition:leave=&quot;transition ease-in duration-75&quot;
+            x-transition:leave-start=&quot;opacity-100 scale-100&quot;
+            x-transition:leave-end=&quot;opacity-0 scale-95&quot;
+            class=&quot;absolute z-50 mt-2 w-48 rounded-md shadow-lg ltr:origin-top-right rtl:origin-top-left end-0&quot;
+            style=&quot;display: none;&quot;
+            @click=&quot;open = false&quot;&gt;
+        &lt;div class=&quot;rounded-md ring-1 ring-black ring-opacity-5 py-1 bg-white dark:bg-gray-700&quot;&gt;
+            &lt;a class=&quot;block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/profile&quot;&gt;Profile&lt;/a&gt;
+
+                        &lt;!-- Authentication --&gt;
+                        &lt;form method=&quot;POST&quot; action=&quot;http://localhost:8000/logout&quot;&gt;
+                            &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;
+                            &lt;a class=&quot;block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/logout&quot; onclick=&quot;event.preventDefault();
+                                                this.closest(&apos;form&apos;).submit();&quot;&gt;Log Out&lt;/a&gt;
+                        &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Hamburger --&gt;
+            &lt;div class=&quot;-me-2 flex items-center sm:hidden&quot;&gt;
+                &lt;button @click=&quot;open = ! open&quot; class=&quot;inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out&quot;&gt;
+                    &lt;svg class=&quot;h-6 w-6&quot; stroke=&quot;currentColor&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+                        &lt;path :class=&quot;{&apos;hidden&apos;: open, &apos;inline-flex&apos;: ! open }&quot; class=&quot;inline-flex&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 6h16M4 12h16M4 18h16&quot; /&gt;
+                        &lt;path :class=&quot;{&apos;hidden&apos;: ! open, &apos;inline-flex&apos;: open }&quot; class=&quot;hidden&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M6 18L18 6M6 6l12 12&quot; /&gt;
+                    &lt;/svg&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Responsive Navigation Menu --&gt;
+    &lt;div :class=&quot;{&apos;block&apos;: open, &apos;hidden&apos;: ! open}&quot; class=&quot;hidden sm:hidden&quot;&gt;
+        &lt;div class=&quot;pt-2 pb-3 space-y-1&quot;&gt;
+            &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/dashboard&quot;&gt;
+    Dashboard
+&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Responsive Settings Options --&gt;
+        &lt;div class=&quot;pt-4 pb-1 border-t border-gray-200 dark:border-gray-600&quot;&gt;
+            &lt;div class=&quot;px-4&quot;&gt;
+                &lt;div class=&quot;font-medium text-base text-gray-800 dark:text-gray-200&quot;&gt;John Doe&lt;/div&gt;
+                &lt;div class=&quot;font-medium text-sm text-gray-500&quot;&gt;john.doe@example.com&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;mt-3 space-y-1&quot;&gt;
+                &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/profile&quot;&gt;
+    Profile
+&lt;/a&gt;
+
+                &lt;!-- Authentication --&gt;
+                &lt;form method=&quot;POST&quot; action=&quot;http://localhost:8000/logout&quot;&gt;
+                    &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;
+                    &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/logout&quot; onclick=&quot;event.preventDefault();
+                                        this.closest(&apos;form&apos;).submit();&quot;&gt;
+    Log Out
+&lt;/a&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+
+            &lt;!-- Page Heading --&gt;
+            
+            &lt;!-- Page Content --&gt;
+            &lt;main&gt;
+                &lt;div class=&quot;py-12&quot;&gt;
+        &lt;div class=&quot;max-w-7xl mx-auto sm:px-6 lg:px-8&quot;&gt;
+
+            &lt;section&gt;
+                &lt;form action=&quot;http://localhost:8000/books/submit&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot; class=&quot;bg-white p-4 rounded-md shadow-md&quot;&gt;
+                    &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;                    &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;post&quot;&gt;
+                    &lt;!-- Title Input --&gt;
+                    &lt;label for=&quot;title&quot; class=&quot;block mb-1&quot;&gt;Title:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;title&quot; id=&quot;title&quot; required 
+                        class=&quot;w-full p-2 border border-gray-300 rounded mb-4&quot;&gt;
+                    
+                    &lt;!-- Image Upload --&gt;
+                    &lt;label for=&quot;image&quot; class=&quot;block mb-1&quot;&gt;Upload Image:&lt;/label&gt;
+                    &lt;input type=&quot;file&quot; name=&quot;image&quot; id=&quot;image&quot; class=&quot;w-full p-2 border border-gray-300 rounded mb-4&quot; accept=&quot;image/*&quot;&gt;
+
+                    
+                    &lt;!-- Genre Selection --&gt;
+                    &lt;label for=&quot;genre_id&quot; class=&quot;block mb-1&quot;&gt;Genre:&lt;/label&gt;
+                    &lt;select name=&quot;genre_id&quot; id=&quot;genre_id&quot; class=&quot;w-full p-2 border border-gray-300 rounded mb-4&quot;&gt;
+                        &lt;option value=&quot;&quot; disabled selected&gt;Select a genre&lt;/option&gt;
+                                                    &lt;option value=&quot;1&quot;&gt;
+                                Fantasy
+                            &lt;/option&gt;
+                                                    &lt;option value=&quot;2&quot;&gt;
+                                Self-improvement
+                            &lt;/option&gt;
+                                                    &lt;option value=&quot;3&quot;&gt;
+                                Romance
+                            &lt;/option&gt;
+                                                    &lt;option value=&quot;4&quot;&gt;
+                                Comedy
+                            &lt;/option&gt;
+                                                    &lt;option value=&quot;5&quot;&gt;
+                                Science Fiction
+                            &lt;/option&gt;
+                                            &lt;/select&gt;
+                    
+
+                    &lt;!-- Year Input --&gt;
+                    &lt;label for=&quot;year&quot; class=&quot;block mb-1&quot;&gt;Year:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;year&quot; id=&quot;year&quot; required 
+                        pattern=&quot;\d{4}&quot; title=&quot;Please enter a valid year (e.g., 2024)&quot; 
+                        class=&quot;w-full p-2 border border-gray-300 rounded mb-4&quot; placeholder=&quot;YYYY&quot;&gt;
+                    
+                    &lt;!-- Author Input --&gt;
+                    &lt;label for=&quot;author&quot; class=&quot;block mb-1&quot;&gt;Author:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;author&quot; id=&quot;author&quot;required 
+                        class=&quot;w-full p-2 border border-gray-300 rounded mb-4&quot; placeholder=&quot;Author&apos;s name&quot;&gt;
+                    
+                    &lt;!-- Publisher Input --&gt;
+                    &lt;label for=&quot;publisher&quot; class=&quot;block mb-1&quot;&gt;Publisher:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;publisher&quot; id=&quot;publisher&quot; required 
+                        class=&quot;w-full p-2 border border-gray-300 rounded mb-4&quot; placeholder=&quot;Publisher&apos;s name&quot;&gt;
+                    
+                    &lt;!-- Pages Input --&gt;
+                    &lt;label for=&quot;pages&quot; class=&quot;block mb-1&quot;&gt;Pages:&lt;/label&gt;
+                    &lt;input type=&quot;number&quot; name=&quot;pages&quot; id=&quot;pages&quot; required 
+                        class=&quot;w-full p-2 border border-gray-300 rounded mb-4&quot; placeholder=&quot;Number of pages&quot;&gt;
+                    
+                    &lt;!-- Quota Input --&gt;
+                    &lt;label for=&quot;quota&quot; class=&quot;block mb-1&quot;&gt;Quota:&lt;/label&gt;
+                    &lt;input type=&quot;number&quot; name=&quot;quota&quot; id=&quot;quota&quot; required 
+                        class=&quot;w-full p-2 border border-gray-300 rounded mb-4&quot; placeholder=&quot;Number of available quota&quot;&gt;
+                    
+                    &lt;!-- Description Input --&gt;
+                    &lt;label for=&quot;description&quot; class=&quot;block mb-1&quot;&gt;Description:&lt;/label&gt;
+                    &lt;textarea name=&quot;description&quot; id=&quot;description&quot; rows=&quot;4&quot; required 
+                        class=&quot;w-full p-2 border border-gray-300 rounded mb-4 h-32&quot; placeholder=&quot;Enter a description...&quot;&gt;&lt;/textarea&gt;
+                    
+                    &lt;!-- Summary Input --&gt;
+                    &lt;label for=&quot;summary&quot; class=&quot;block mb-1&quot;&gt;Summary:&lt;/label&gt;
+                    &lt;textarea name=&quot;summary&quot; id=&quot;summary&quot; rows=&quot;4&quot; required 
+                        class=&quot;w-full p-2 border border-gray-300 rounded mb-4 h-32&quot; placeholder=&quot;Enter a summary...&quot;&gt;&lt;/textarea&gt;
+                    
+                    &lt;!-- Submit Buttons --&gt;
+                    &lt;div class=&quot;flex justify-center space-x-4 mt-4&quot;&gt;
+                        &lt;!-- Tombol Save --&gt;
+                        &lt;button type=&quot;submit&quot; class=&quot;bg-blue-600 text-white px-4 py-3 rounded hover:bg-blue-700 text-base&quot;&gt;
+                            Save
+                        &lt;/button&gt;
+
+                        &lt;!-- Tombol Cancel --&gt;
+                        &lt;a href=&quot;http://localhost:8000/books&quot; class=&quot;bg-red-600 text-white px-4 py-3 rounded hover:bg-red-700 text-base&quot;&gt;
+                            Cancel
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+            &lt;/section&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+            &lt;/main&gt;
+        &lt;/div&gt;
+        
+    &lt;/body&gt;
+&lt;/html&gt;
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">XSRF-TOKEN=eyJpdiI6Ijk3eDlHbUl6WXB6NUhKVGtoNEJHeXc9PSIsInZhbHVlIjoiYWRkN1VmSktlVC9EdFdhTVpwN0t1czh0SFVCdStFNlQ5bTVDR3RERk5wenpRdUxZM3pzcW9sSUdoMzJiSG02dFA3Y1ZwSm5OWU5kdkJGOGQxckpnSkhDc1JScGVYTDhQSFoxeFgySi92VE5NbzZEb0VPZkZ2RCtIMlZ3UTZpaTciLCJtYWMiOiI5ZmIxYjZlMDljZDRhNTBhMWM1ZDJiYTY5ZDJiNDU0YTNiMDM3YTU1MTE2ZGU5MGVmNjlkNjZmNzY0NTIzYmIxIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IjJ1NFB4YTc2OTQvcTR6YzlrOXJEQ1E9PSIsInZhbHVlIjoidktIaFpRNzFFNHpqRHpSTG5IRmxQZFdydFZubkUwdytjdDdOSHNrVDVWUzk3NXJ2RjI0SUt3MzR0emkvU25FRWtvWk5YdHZpRG5FTkYwbWEwbXFyelVzcEZtY0lKK3BPUUpPRkJXY05sZDAxSnNJMi9KS1VRclR0Qk1hMEQ4NFciLCJtYWMiOiIwZTJlMGU3Mzc1NDIyNzIwOTM0MzU3MWJjNWM1ZjA3N2IwZTlkZjI0NWRlYmMyMGFiNTVhNjgwZjFiNjc4ZGJlIiwidGFnIjoiIn0%3D</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://localhost:8000/books/add</java.net.URL>
+</httpSample>
+<httpSample t="12" it="0" lt="0" ct="4" ts="1734788344675" s="true" lb="-28" rc="304" rm="Not Modified" tn="" dt="" de="" by="117" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 304 Not Modified
+Access-Control-Allow-Origin: *
+Date: Sat, 21 Dec 2024 13:39:04 GMT
+Connection: close
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Sec-Fetch-Mode: cors
+Referer: http://localhost:8000/
+If-None-Match: W/&quot;5c7d-r2XVoOdzitsnSypOAVmmnEyl5tg&quot;
+Sec-Fetch-Site: cross-site
+Accept-Language: en-US,en;q=0.5
+Origin: http://localhost:8000
+Host: [::1]:5173
+Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: */*
+Sec-Fetch-Dest: script
+</requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://[::1]:5173/@vite/client</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="0" ct="2" ts="1734788344713" s="true" lb="-32" rc="304" rm="Not Modified" tn="" dt="" de="" by="117" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 304 Not Modified
+Access-Control-Allow-Origin: *
+Date: Sat, 21 Dec 2024 13:39:04 GMT
+Connection: close
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Sec-Fetch-Mode: cors
+Referer: http://[::1]:5173/@vite/client
+If-None-Match: W/&quot;27a-50Oe5S7HDq59Hm15o909pGTGmf8&quot;
+Sec-Fetch-Site: cross-site
+Accept-Language: en-US,en;q=0.5
+Origin: http://localhost:8000
+Host: [::1]:5173
+Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: */*
+Sec-Fetch-Dest: script
+</requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://[::1]:5173/node_modules/vite/dist/client/env.mjs</java.net.URL>
+</httpSample>
+<httpSample t="1146" it="0" lt="1144" ct="25" ts="1734788381976" s="true" lb="-34" rc="302" rm="Found" tn="" dt="text" de="utf-8" by="1487" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 302 Found
+Host: localhost:8000
+Connection: close
+X-Powered-By: PHP/8.3.10
+Cache-Control: no-cache, private
+Date: Sat, 21 Dec 2024 13:39:43 GMT
+Location: http://localhost:8000/book
+Content-Type: text/html; charset=utf-8
+Set-Cookie: XSRF-TOKEN=eyJpdiI6InZyRWlhSUVuKzVWeHQwK3BSTE1CYUE9PSIsInZhbHVlIjoiSkdJU0c5QmJDUlBRQVdKVTRIK0hPeXl2N2hXcEgyTG1pUW1xQUl4SEpHRXRBUWE2S3RodHRTY0tkaFZmQ3ZjdVhHa3hKbzhPT2tiSTFmKzZxclJ5NDRKT2x1RHZaeFFmL29MaDlocVkwM0k2dUdQQ0lucVBXdlRSR0FIbFExK1kiLCJtYWMiOiI2ZTRlNDM3YmE2MDI1NWMwNzQ5ODU3NTQ2MGNhNWZhZGQ0MjE5Nzg3ZjIzODhkOTYyYzY1OTM5YTIxYWEzYjBjIiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 15:39:43 GMT; Max-Age=7200; path=/; samesite=lax
+Set-Cookie: laravel_session=eyJpdiI6ImU4emRpUUcyRjAvRlpxRFpFa05la0E9PSIsInZhbHVlIjoicE1PQi84a0d2V3l6UzNEOGhwYmY3akIwUHRBSUV4d2lURzBVSWN5YlcrbEY2RWJNRHdnM1FBSjNTOXV0akl4aGxoS3NxbmdaaGVXdmlvQktKTjFQOWxacmxZVzRNa1d5czh1NGZYWEpwd3o3bUMwUXZ6d04yeWxmMWRleVRjQlIiLCJtYWMiOiI4YjdlNzE2NGMzOTJmMTMxYzc4ZDZlNmMwZjg1ZjFmMTc5MzdlN2JmODllMTAxYTU4NGQ2ZDhhNmY4MzAwZTM4IiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 15:39:43 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Referer: http://localhost:8000/books/add
+Accept-Language: en-US,en;q=0.5
+Origin: http://localhost:8000
+Priority: u=0, i
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Host: localhost:8000
+Upgrade-Insecure-Requests: 1
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Content-Length: 412243
+Content-Type: multipart/form-data; boundary=cwFo0vE04wBRraM8A0vQ98P7TPn971IfTRegHf; charset=UTF-8
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot; /&gt;
+        &lt;meta http-equiv=&quot;refresh&quot; content=&quot;0;url=&apos;http://localhost:8000/book&apos;&quot; /&gt;
+
+        &lt;title&gt;Redirecting to http://localhost:8000/book&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Redirecting to &lt;a href=&quot;http://localhost:8000/book&quot;&gt;http://localhost:8000/book&lt;/a&gt;.
+    &lt;/body&gt;
+&lt;/html&gt;</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">XSRF-TOKEN=eyJpdiI6ImE5UFVkbkZLZWJhamN5MFNzOW5uS1E9PSIsInZhbHVlIjoiWU9MNHNwZThyTDRUMm9XeTlqMEgzaUNtNTFqNFAwdGlUWlBRNHhkTkdNajFZZC9uaUhhaE8rVzViUUNYSWYxcVNqZUVRc1crRGIwUW9CQUR0SE9FbTQ0Q0FpTWd2MCs5ZWxZVnc3bXU3b2d5L2V1azM0R2pzc0hrMm44ZVRBdFIiLCJtYWMiOiIwZjliYzBkODFkZDI1N2UwMTQ0YzQ5MDg1MTZmODVlN2U1MTkzZDI1ZTdiMzdkYmZmOWNjNDk4ODY3YjFhMDE4IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6Ild2TnVGN1JRM2prSEpRK0VhWWxJMGc9PSIsInZhbHVlIjoidElBSVZiU0xMOXdYUHF2VUR5SFhLdEpGdjZBbzl4NHNXQWVGdG1BUU9zeVhJcFBqNEhvTlBOcUVGWGdqaHlid0VCb1VxVXB3a25SSkROVU9ZYmhldmR3NUtXQ1BFS1NESFBHN052ZVh2WGxhTys4aGNqQzd1QzQyYXBXdEhUaXciLCJtYWMiOiJmNjRjNGRmMTMyOTBiZmRlMDZjOWViZGExZmM2NmFkYWE1NTMxODgyYTM0ZWI3ZGNlYjJmNjgzZmEwN2I0OGZjIiwidGFnIjoiIn0%3D</cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">--cwFo0vE04wBRraM8A0vQ98P7TPn971IfTRegHf&#xd;
+Content-Disposition: form-data; name=&quot;_token&quot;&#xd;
+&#xd;
+zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&#xd;
+--cwFo0vE04wBRraM8A0vQ98P7TPn971IfTRegHf&#xd;
+Content-Disposition: form-data; name=&quot;_method&quot;&#xd;
+&#xd;
+post&#xd;
+--cwFo0vE04wBRraM8A0vQ98P7TPn971IfTRegHf&#xd;
+Content-Disposition: form-data; name=&quot;title&quot;&#xd;
+&#xd;
+Gojo and Geto&#xd;
+--cwFo0vE04wBRraM8A0vQ98P7TPn971IfTRegHf&#xd;
+Content-Disposition: form-data; name=&quot;genre_id&quot;&#xd;
+&#xd;
+1&#xd;
+--cwFo0vE04wBRraM8A0vQ98P7TPn971IfTRegHf&#xd;
+Content-Disposition: form-data; name=&quot;year&quot;&#xd;
+&#xd;
+2024&#xd;
+--cwFo0vE04wBRraM8A0vQ98P7TPn971IfTRegHf&#xd;
+Content-Disposition: form-data; name=&quot;author&quot;&#xd;
+&#xd;
+Kimberly&#xd;
+--cwFo0vE04wBRraM8A0vQ98P7TPn971IfTRegHf&#xd;
+Content-Disposition: form-data; name=&quot;publisher&quot;&#xd;
+&#xd;
+Gramedia&#xd;
+--cwFo0vE04wBRraM8A0vQ98P7TPn971IfTRegHf&#xd;
+Content-Disposition: form-data; name=&quot;pages&quot;&#xd;
+&#xd;
+100&#xd;
+--cwFo0vE04wBRraM8A0vQ98P7TPn971IfTRegHf&#xd;
+Content-Disposition: form-data; name=&quot;quota&quot;&#xd;
+&#xd;
+5&#xd;
+--cwFo0vE04wBRraM8A0vQ98P7TPn971IfTRegHf&#xd;
+Content-Disposition: form-data; name=&quot;description&quot;&#xd;
+&#xd;
+Description&#xd;
+--cwFo0vE04wBRraM8A0vQ98P7TPn971IfTRegHf&#xd;
+Content-Disposition: form-data; name=&quot;summary&quot;&#xd;
+&#xd;
+Summary&#xd;
+--cwFo0vE04wBRraM8A0vQ98P7TPn971IfTRegHf&#xd;
+Content-Disposition: form-data; name=&quot;image&quot;; filename=&quot;gojo x geto bg.jpg&quot;&#xd;
+Content-Type: image/jpeg&#xd;
+&#xd;
+&lt;actual file content, not shown here&gt;&#xd;
+--cwFo0vE04wBRraM8A0vQ98P7TPn971IfTRegHf--&#xd;
+</queryString>
+  <redirectLocation class="java.lang.String">http://localhost:8000/book</redirectLocation>
+  <java.net.URL>http://localhost:8000/books/submit</java.net.URL>
+</httpSample>
+<httpSample t="536" it="0" lt="533" ct="1" ts="1734788383126" s="true" lb="-35" rc="200" rm="OK" tn="" dt="text" de="UTF-8" by="40347" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Host: localhost:8000
+Connection: close
+X-Powered-By: PHP/8.3.10
+Content-Type: text/html; charset=UTF-8
+Cache-Control: no-cache, private
+Date: Sat, 21 Dec 2024 13:39:43 GMT
+Set-Cookie: XSRF-TOKEN=eyJpdiI6IjFSczhyeWY1TGR5TU1mY3RQa2lYbmc9PSIsInZhbHVlIjoiK29iQnlndUU5NHJWK0RvRVJxY091WVdLb01FRlJ6UVRYRGN1cGx5Zm5uQ0dmU3BJVngydFVFR1BOK0Z2NTYxM1NLRHNHYW8rbUNidDJ1Q3R0ckRpVUxjcHFWeXM3M1RzTXZyQ0p2OU50dk0rdzdUNEFUT3R6UTNiZXlsNFFLYTAiLCJtYWMiOiJiMjkzMWZhMWYxNjY3ZjU3ODgwNWZmNWE2ZmU5YjM5M2E4NjJkNTQ4NTllNzI5NzkxZTg4MDNjOTQwMjk5YmIzIiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 15:39:43 GMT; Max-Age=7200; path=/; samesite=lax
+Set-Cookie: laravel_session=eyJpdiI6IllXbUhiMUgwNjlLYktCODhrTTZZVWc9PSIsInZhbHVlIjoiZkRVZWZIK0JYMGt1b3cyZkpBSlNPa3lZNUNTV0JsRDhwOEdxeENWUURuWDJvZU1kZ3JUUkxKNVNFMGpCemZEODJ6K1pFaGR1cmJNL1NVbmIzU0ZsNDJvYVd1aTNlQWk5MnZwOGl1eTVJNGZld2dsN2w4VDRrSmhVY3NwN1FNMGUiLCJtYWMiOiI2MTZlNTY2NGNlNzBmMzlkMjgzNTIzZDg2YzQ1NzFjMzkzMDk5NTM3ODY0MjNhYWU2Nzc5NTQ0NDQ2NTlhZDVlIiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 15:39:43 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Referer: http://localhost:8000/books/add
+Accept-Language: en-US,en;q=0.5
+Host: localhost:8000
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+        &lt;meta name=&quot;csrf-token&quot; content=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot;&gt;
+
+        &lt;title&gt;Laravel&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.bunny.net&quot;&gt;
+        &lt;link href=&quot;https://fonts.bunny.net/css?family=figtree:400,500,600&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+
+        &lt;!-- Scripts --&gt;
+        &lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/@vite/client&quot;&gt;&lt;/script&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;http://[::1]:5173/resources/css/app.css&quot; /&gt;&lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/resources/js/app.js&quot;&gt;&lt;/script&gt;        
+        &lt;!-- jquery --&gt;
+        &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- DataTables CSS --&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css&quot;&gt;
+
+        &lt;!-- DataTables JS --&gt;
+        &lt;script src=&quot;https://cdn.datatables.net/2.1.8/js/dataTables.min.js&quot;&gt;&lt;/script&gt;
+        
+        &lt;!-- SweetAlert2 --&gt;
+        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/sweetalert2@11&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- Font Awesome --&gt;
+        &lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;/head&gt;
+
+    
+    &lt;style&gt;
+    select.dt-input {
+                margin-right: 5px !important;
+                width: 60px;
+            }
+
+            .dt-type-numeric {
+                text-align: left !important;
+            }
+
+            input.dt-input {
+                margin-left: 5px !important;
+            }
+    &lt;/style&gt;
+    
+    &lt;body class=&quot;font-sans antialiased&quot;&gt;
+        &lt;div class=&quot;min-h-screen bg-gray-100 dark:bg-gray-900&quot;&gt;
+            &lt;nav x-data=&quot;{ open: false }&quot; class=&quot;bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700&quot;&gt;
+    &lt;!-- Primary Navigation Menu --&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+        &lt;div class=&quot;flex justify-between h-16&quot;&gt;
+            &lt;div class=&quot;flex&quot;&gt;
+                &lt;!-- Logo --&gt;
+                &lt;div class=&quot;shrink-0 flex items-center&quot;&gt;
+                    &lt;a href=&quot;http://localhost:8000/dashboard&quot;&gt;
+                        &lt;img src=&quot;http://localhost:8000/images/logo.png&quot; class=&quot;h-10 w-auto&quot; alt=&quot;Logo&quot;&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Navigation Links --&gt;
+                &lt;div class=&quot;hidden space-x-8 sm:-my-px sm:ms-10 sm:flex&quot;&gt;
+                    &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/dashboard&quot;&gt;
+    Dashboard
+&lt;/a&gt;
+                                            &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/books&quot;&gt;
+    Book List
+&lt;/a&gt;
+                                                            &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/reservation&quot;&gt;
+    Reservations
+&lt;/a&gt;
+
+                   
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Settings Dropdown --&gt;
+            &lt;div class=&quot;hidden sm:flex sm:items-center sm:ms-6&quot;&gt;
+                &lt;div class=&quot;relative&quot; x-data=&quot;{ open: false }&quot; @click.outside=&quot;open = false&quot; @close.stop=&quot;open = false&quot;&gt;
+    &lt;div @click=&quot;open = ! open&quot;&gt;
+        &lt;button class=&quot;inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150&quot;&gt;
+                            &lt;div&gt;John Doe&lt;/div&gt;
+
+                            &lt;div class=&quot;ms-1&quot;&gt;
+                                &lt;svg class=&quot;fill-current h-4 w-4&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 20 20&quot;&gt;
+                                    &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z&quot; clip-rule=&quot;evenodd&quot; /&gt;
+                                &lt;/svg&gt;
+                            &lt;/div&gt;
+                        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div x-show=&quot;open&quot;
+            x-transition:enter=&quot;transition ease-out duration-200&quot;
+            x-transition:enter-start=&quot;opacity-0 scale-95&quot;
+            x-transition:enter-end=&quot;opacity-100 scale-100&quot;
+            x-transition:leave=&quot;transition ease-in duration-75&quot;
+            x-transition:leave-start=&quot;opacity-100 scale-100&quot;
+            x-transition:leave-end=&quot;opacity-0 scale-95&quot;
+            class=&quot;absolute z-50 mt-2 w-48 rounded-md shadow-lg ltr:origin-top-right rtl:origin-top-left end-0&quot;
+            style=&quot;display: none;&quot;
+            @click=&quot;open = false&quot;&gt;
+        &lt;div class=&quot;rounded-md ring-1 ring-black ring-opacity-5 py-1 bg-white dark:bg-gray-700&quot;&gt;
+            &lt;a class=&quot;block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/profile&quot;&gt;Profile&lt;/a&gt;
+
+                        &lt;!-- Authentication --&gt;
+                        &lt;form method=&quot;POST&quot; action=&quot;http://localhost:8000/logout&quot;&gt;
+                            &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;
+                            &lt;a class=&quot;block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/logout&quot; onclick=&quot;event.preventDefault();
+                                                this.closest(&apos;form&apos;).submit();&quot;&gt;Log Out&lt;/a&gt;
+                        &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Hamburger --&gt;
+            &lt;div class=&quot;-me-2 flex items-center sm:hidden&quot;&gt;
+                &lt;button @click=&quot;open = ! open&quot; class=&quot;inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out&quot;&gt;
+                    &lt;svg class=&quot;h-6 w-6&quot; stroke=&quot;currentColor&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+                        &lt;path :class=&quot;{&apos;hidden&apos;: open, &apos;inline-flex&apos;: ! open }&quot; class=&quot;inline-flex&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 6h16M4 12h16M4 18h16&quot; /&gt;
+                        &lt;path :class=&quot;{&apos;hidden&apos;: ! open, &apos;inline-flex&apos;: open }&quot; class=&quot;hidden&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M6 18L18 6M6 6l12 12&quot; /&gt;
+                    &lt;/svg&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Responsive Navigation Menu --&gt;
+    &lt;div :class=&quot;{&apos;block&apos;: open, &apos;hidden&apos;: ! open}&quot; class=&quot;hidden sm:hidden&quot;&gt;
+        &lt;div class=&quot;pt-2 pb-3 space-y-1&quot;&gt;
+            &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/dashboard&quot;&gt;
+    Dashboard
+&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Responsive Settings Options --&gt;
+        &lt;div class=&quot;pt-4 pb-1 border-t border-gray-200 dark:border-gray-600&quot;&gt;
+            &lt;div class=&quot;px-4&quot;&gt;
+                &lt;div class=&quot;font-medium text-base text-gray-800 dark:text-gray-200&quot;&gt;John Doe&lt;/div&gt;
+                &lt;div class=&quot;font-medium text-sm text-gray-500&quot;&gt;john.doe@example.com&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;mt-3 space-y-1&quot;&gt;
+                &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/profile&quot;&gt;
+    Profile
+&lt;/a&gt;
+
+                &lt;!-- Authentication --&gt;
+                &lt;form method=&quot;POST&quot; action=&quot;http://localhost:8000/logout&quot;&gt;
+                    &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;zbXmR5GBH8M9lJBNNIUHdWKIVmDnz8HQOne1kOqG&quot; autocomplete=&quot;off&quot;&gt;
+                    &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/logout&quot; onclick=&quot;event.preventDefault();
+                                        this.closest(&apos;form&apos;).submit();&quot;&gt;
+    Log Out
+&lt;/a&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+
+            &lt;!-- Page Heading --&gt;
+                            &lt;header class=&quot;bg-white dark:bg-gray-800 shadow&quot;&gt;
+                    &lt;div class=&quot;max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8&quot;&gt;
+                        &lt;h1 class=&quot;text-2xl font-bold text-center&quot;&gt;Library Book Collections&lt;/h1&gt;
+                    &lt;/div&gt;
+                &lt;/header&gt;
+            
+            &lt;!-- Page Content --&gt;
+            &lt;main&gt;
+                &lt;script&gt;
+        document.addEventListener(&apos;DOMContentLoaded&apos;, function() {
+            Swal.fire({
+                title: &apos;Book Berhasil Diinput!&apos;,
+                text: &apos;&apos;,
+                icon: &apos;success&apos;,
+                confirmButtonText: &apos;OK&apos;,
+                confirmButtonColor: &quot;#2463eb&quot;,
+            });
+        });
+    &lt;/script&gt;
+     
+    
+    &lt;form class=&quot;max-w-md mx-auto mt-8&quot; action=&quot;&quot; method=&quot;GET&quot;&gt;   
+        &lt;label for=&quot;search&quot; class=&quot;mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white&quot;&gt;Search&lt;/label&gt;
+        &lt;div class=&quot;relative&quot;&gt;
+            &lt;div class=&quot;absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none&quot;&gt;
+                &lt;svg class=&quot;w-4 h-4 text-gray-500 dark:text-gray-400&quot; aria-hidden=&quot;true&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 20 20&quot;&gt;
+                    &lt;path stroke=&quot;currentColor&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z&quot;/&gt;
+                &lt;/svg&gt;
+            &lt;/div&gt;
+            &lt;input type=&quot;search&quot; id=&quot;search&quot; name=&quot;search&quot; class=&quot;block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500&quot; placeholder=&quot;Search&quot; required /&gt;
+            &lt;button type=&quot;submit&quot; class=&quot;text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800&quot;&gt;Search&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+
+    &lt;div class=&quot;py-12&quot;&gt;
+        &lt;div class=&quot;max-w-7xl mx-auto sm:px-6 lg:px-8&quot;&gt;
+            &lt;section class=&quot;grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-6&quot;&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6IjVpeXZTVGZ6czc2SEtSbnpOUk52S0E9PSIsInZhbHVlIjoiRjJ2Zks4dm5lc1c5TDJCOVlkd1p0UT09IiwibWFjIjoiODM1ODkyYzNlYTFiY2M3NTQ5MDM0YzIyZDc2MDI0MTdmMzE4MzgzMzk3MWY5N2JmYzdmMTUzZGQ4YmRkNTVlNSIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/Laut-Bercerita.jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;Laut Bercerita&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Leila S. Chudori&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;A tale of struggle, sacrifice, and loss during a dark chapter in Indonesian history.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 3
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6Iko5VWVVTFBnQTJMWWVYL28xWlZLT1E9PSIsInZhbHVlIjoiRkE4dVg2VmxSNE82d1hwZk1YTitCdz09IiwibWFjIjoiOGNhZTZlMjA3MWEyZDdjODJhNzNhODBmNDRhMDQ4ZWY0N2ViOWY4MTFmMTNjMTU5MzFkNTQxMGYwZDExYjFmYyIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6IlF4ZnV4UkZGb3ZkVGZ2aUFuQk8za3c9PSIsInZhbHVlIjoicUZDK0hiMWhqYndUbHVQcm9XTWZodz09IiwibWFjIjoiMjBmYjdkYmVmN2FlNDhjYzU0NDMwMDk2OGUwYTY4Y2FhZjVkZjVlNDc3Y2ExMTkwMTJiMDM4MDY3Mzc1ODJmYyIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/The-Psychology-of-Money.jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;The Psychology of Money&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Morgan Housel&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;Explores how a healthy mindset about money can help achieve financial freedom.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 2
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6InZiUmdRYUYzUGZ4Mm5VN0JrOCs1V0E9PSIsInZhbHVlIjoibTFYNGd4YVQ2SE1iS3FsTlgrSk5xQT09IiwibWFjIjoiODYyYWNiNjJlODc1MjU3ZTE4NzM0MjhjNjA0ZmQxMjc4M2E4Zjc5YWRiNjFiOGMzMjVkNzUwNzIzZWUxYWI3YiIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6IlR4MEs5ZUoyOXd3SklPd1RpeVNaNHc9PSIsInZhbHVlIjoiMm1RdkRydnBwQkZNY1hpbUh6TzlxZz09IiwibWFjIjoiMTA5ZTJjNTZhNzhjZWZhNzAzNWE5OWYxNjAxOWIwOWRmZjYzNzRmZGE3ZWI0Mzg3YWVhNThhYTNjZjIzODc2ZCIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/The-Maxwell-Daily-Reader.jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;The Maxwell Daily Reader&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: John C. Maxwell&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;A daily guide offering leadership lessons for personal and professional development.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 2
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6ImpqendRZVpEdmtpdWQzTmRJWllKZWc9PSIsInZhbHVlIjoiL0dYQ2tmZXdKWFRWVHVHNjBuNngzZz09IiwibWFjIjoiNjkwYWRhOTJlMWM3MzczYjRjNjJlNGNkNDVlZDg2YmE2ODBiNDRjMDI1NDM0OTA1NjY5NDdmMTJiYWRhODE2YiIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6IjdkQ1c4RHczOHA5bk5NN1BUdDVmU3c9PSIsInZhbHVlIjoia3A0TnlTcE5VblpBMmQyS3BUcjdMQT09IiwibWFjIjoiZGUxN2MyNTQ4ZjdhNWI0ZWI2Y2U5NDhjOTM3YzJjZDlmNTI1NWE1YjM5NjBhMDMxODM5NThmMTRlYmJiOTRkMyIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/Home-Sweet-Loan.jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;Home Sweet Loan&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Almira Bastari&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;A humorous story about the struggles of millennials trying to achieve their dream of owning a house amidst various obstacles.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 5
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6IjMxOEUwWWprM1dYaEduZURYeHVjRGc9PSIsInZhbHVlIjoiMUppK3BRWTJQREczdERQZzU4U2laQT09IiwibWFjIjoiZDU5M2UzMmRjOGE4MzQ0NDQzNjgyMmZmMDI3ZTU5MzkzOWMzMjg2MWI4ZWVjYjhjMTk1M2ViMTQ1YzFmMmU5YyIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6Inp0UGd6ZFNBaWZTWE5HWTRXblI5Y1E9PSIsInZhbHVlIjoiRlhOSjNHRmxiZCtGV3lGTHlMZThCdz09IiwibWFjIjoiODdmMzg5MmUwNmNlZTJlNDU2ZDBkZTgzODA4MTk4MjBjZDAyMDVmNWVmNTQ4NGQ0MzIyYjhhYzRmMjY0MzM5NSIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/The-Alchemists-Secret.jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;The Alchemist&amp;#039;s Secret&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Scott Mariani&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;A magical adventure in the world of alchemy filled with secrets and challenges.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 1
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6IlNtSTRGK2pSZEx1UW1qTVRxdlh3dVE9PSIsInZhbHVlIjoiRlpWaENQNVIyZ2RrY2RiOHF3bFN5dz09IiwibWFjIjoiOTU5MGUxMzZlODA3Y2JjOTcxMzk3ZTM0ZWM3ZTlhNTUxZDc3YmIxOGJjNjExZDQ0NzViMjU4ODFiYWE4YTZjOSIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6ImJ0T1U5eDhxcVhCTGlsUzU5VmxwV3c9PSIsInZhbHVlIjoibE9penI5K2Jtc2NnT3ZmOTVzdlZiQT09IiwibWFjIjoiNzkxMDIyOGQ3MGZmZmU5YWYwMDYzYjAzMmJjY2Q2ODVmMzZmYzQ2YmVkYzM2NTgwNGY3NDQ3MjZhOWUzYzQ2OSIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/The-Fault-in-Our-Stars.jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;The Fault in Our Stars&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: John Green&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;A love story that teaches courage and acceptance of life’s realities.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 1
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6IngzTmdEYURsM3BnVGZNU2ZRd3FsM2c9PSIsInZhbHVlIjoid0xYcXJ4THNZL3Vwakl6bTEwVUR0Zz09IiwibWFjIjoiM2Y2OGE5YmRmMGFlMWQyOTNiZjliYTA3MmEwMTU1MDZkZjA3YWZmNGZmYjgyZWIxODBmMDg1YzI5ZjAzMjgzNCIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6Ik5TUFVvVGxHN25pdE83ci9qZTJrZFE9PSIsInZhbHVlIjoiUFIxaWx5R0ZrOVE0ZEZwN3BGUHBNQT09IiwibWFjIjoiZTFhZjVkYzk0NmE2Y2JhNWQyZDIxYTI5ZWEwOTZjMDg0OGY0OGZmZWMxZmIxOGVkMmM3YmJkMzRjMzViY2M0NSIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/Koala-Kumal.jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;Koala Kumal&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Raditya Dika&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;Comedy that explores everyday life with Raditya Dika&amp;#039;s signature style.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 2
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6ImU1RXdrZFBoTW9naFhrQ25pczZIWFE9PSIsInZhbHVlIjoid1RQeXlId1BUMzhyejg2amVoR2JLZz09IiwibWFjIjoiNDE1M2NkMDUyYjE5MmUxM2IwZjYwYzIwMDY0ZTcwNmJkNTA2MDYyMWQxMzc0NWJlZDUwMzJiZDFiYjk4MTUzZSIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6IktyWGt5VnpkZlM0WlltTHFJNTBKelE9PSIsInZhbHVlIjoiTUUvK2VqRUhSbGNKTGFOelBvbnRzQT09IiwibWFjIjoiMzRiNGYzMGFlMDkzZTg5Zjc4NzYzMWJkMTJmNWU4YzdkZjlkOTYxNzMzZTBiNjgzN2Y2MjdmYmY4MjNlZTc2NSIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/Crazy-Rich-Asians.jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;Crazy Rich Asians&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Kevin Kwan&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;A romantic comedy about cultural differences and social pressures within a wealthy Asian family.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 3
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6IndzVVhQeGZHZmN5RGxhWW5tcmZxZnc9PSIsInZhbHVlIjoiSVI4ak5JQmpaMkxLN2d5RUJkS2hJUT09IiwibWFjIjoiYWZkZWQzYWVhMTkwOTI1NzFjNWQ3MWI3NGFhMWZkMjIxZjYzNzFiN2FiMWFkNGQyMDc0YzE3ODJmMTU4ZjliYSIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6InhoSXRBWmYzKzFGTDhBNzdraTVXT1E9PSIsInZhbHVlIjoiYmtCSlZKWUxiT3l5c1dES08walpwQT09IiwibWFjIjoiZWNkODM3YzAzYzYyODcxNTJiYmRmZGRjYTgyYmQyYzQ3ODZmNWM4OTk0ZjEwZjliZTI2NTQzYWMzYjI3MTAzYSIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/Effortless.jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;Effortless&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Greg McKeown&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;Buku pengembangan diri yang mengajarkan cara membuat hal-hal esensial dalam hidup menjadi lebih mudah dan tercapai.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 1
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6Ik5yUFd1ZndxbVlXT3lvcktLVmx5eHc9PSIsInZhbHVlIjoiOUw2U3pZNnhjQ2NiOGZtM25PN1g4QT09IiwibWFjIjoiMWQxNTc2Y2FjYzgxNjJkMzM1Y2U3MzFiM2FmYjE1MGI4YzEwMjllZjMxNWU0MzFjN2U0Zjg2NTdkNjlkNjFjZCIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6ImVFaFp6ajBhQzk1cm9oL0NIaENTemc9PSIsInZhbHVlIjoiSFVJUE83TyszV1VUVk5OMWhJUXEydz09IiwibWFjIjoiOGJkZmFjZTgwZjU5MGU5MmJjMTM2YTdlNjg1NGY4ZTk5NmQxY2JhMWM5ZGU3NWQ1ZDM3ZTQ4NzNlNDg2MjY2YSIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/Supernova-Inteligensi-Embun-Pagi.jpeg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;Supernova: Inteligensi Embun Pagi&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Dewi Lestari&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;The epic conclusion of the Supernova series, blending science, spirituality, and drama.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 2
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6Inc3RTFSY3BuL1V3NVZQOWV3T0txdlE9PSIsInZhbHVlIjoiU25RcWl2NHdwTHBkSldKcFV5SEw1QT09IiwibWFjIjoiN2ViZGY3NWViZDkzMmFjZjM5ODRiZGJkMGM4OGYzYzhhOTFlNTdlMDE4YTExNjNjZjk4ZjNkMjMwNmFjODU5MCIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6IlJrdnJNbzZVY1JteXdOQW44WTZZblE9PSIsInZhbHVlIjoiTGtUcWNnK0xvV0dmelcyclRtTmZ1Zz09IiwibWFjIjoiOGI3ZDZlMTlmZGZhNTE0ODE1N2U2YzE0MjM5NWU4NTYxNzcxOGUwYjAyYWU3YjBiZDUyZjUxZTkzZjY4NTQ1OCIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/gojo_x_geto_bg_jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;Gojo and Geto&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Kimberly&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;Lalala&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 5
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6Imo2OGViWklmbU5lNmZKT3dncjY1TEE9PSIsInZhbHVlIjoiRHBVUnQzb3N0OTV1dlU2V3NRbTY5Zz09IiwibWFjIjoiMTQ3Zjc5MTAxODA0YWIzZDZkYTY0MjhjYzE4YzAzMjljOGFmYWQ3MGM2NDUwYWIyMjhiMzlkYzdhMjllYWRlOCIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6IlYwemJWbVZsbnVYMzRUODg5OUMzOFE9PSIsInZhbHVlIjoieFdRQXNqSCt3cWNrQWVJc3hoaDlNZz09IiwibWFjIjoiNmU2MTUxMjgyYzgzMzNiNzhiOTI3YzkyZjMwNjYzMWY3YjgwN2JmZDMyYWE4OGViOWU4NzBmMTJhYjUxMzg0NCIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/gojo_x_geto_bg_jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;Gojo and Geto&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Kimberly&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;Summary&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 5
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6ImtaU2FPb2ZWaVZLbVFTSHIyVUtFZlE9PSIsInZhbHVlIjoiSTJKbkZ4dVdDdkxwZGk1T0ZSS2NYZz09IiwibWFjIjoiZjgzMWUwMDhkYzUzOWUzNjdlNDY3Mjc2NmE5Njk2NzhhMGQyMjdhODY3ZjM0N2I0YTdiMGMyOGYxYjIwMTMxYiIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                            &lt;/section&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+            &lt;/main&gt;
+        &lt;/div&gt;
+        
+    &lt;/body&gt;
+&lt;/html&gt;
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">XSRF-TOKEN=eyJpdiI6InZyRWlhSUVuKzVWeHQwK3BSTE1CYUE9PSIsInZhbHVlIjoiSkdJU0c5QmJDUlBRQVdKVTRIK0hPeXl2N2hXcEgyTG1pUW1xQUl4SEpHRXRBUWE2S3RodHRTY0tkaFZmQ3ZjdVhHa3hKbzhPT2tiSTFmKzZxclJ5NDRKT2x1RHZaeFFmL29MaDlocVkwM0k2dUdQQ0lucVBXdlRSR0FIbFExK1kiLCJtYWMiOiI2ZTRlNDM3YmE2MDI1NWMwNzQ5ODU3NTQ2MGNhNWZhZGQ0MjE5Nzg3ZjIzODhkOTYyYzY1OTM5YTIxYWEzYjBjIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6ImU4emRpUUcyRjAvRlpxRFpFa05la0E9PSIsInZhbHVlIjoicE1PQi84a0d2V3l6UzNEOGhwYmY3akIwUHRBSUV4d2lURzBVSWN5YlcrbEY2RWJNRHdnM1FBSjNTOXV0akl4aGxoS3NxbmdaaGVXdmlvQktKTjFQOWxacmxZVzRNa1d5czh1NGZYWEpwd3o3bUMwUXZ6d04yeWxmMWRleVRjQlIiLCJtYWMiOiI4YjdlNzE2NGMzOTJmMTMxYzc4ZDZlNmMwZjg1ZjFmMTc5MzdlN2JmODllMTAxYTU4NGQ2ZDhhNmY4MzAwZTM4IiwidGFnIjoiIn0%3D</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://localhost:8000/book</java.net.URL>
+</httpSample>
+<httpSample t="2" it="0" lt="0" ct="0" ts="1734788383685" s="true" lb="-36" rc="304" rm="Not Modified" tn="" dt="" de="" by="117" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 304 Not Modified
+Access-Control-Allow-Origin: *
+Date: Sat, 21 Dec 2024 13:39:43 GMT
+Connection: close
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Sec-Fetch-Mode: cors
+Referer: http://localhost:8000/
+If-None-Match: W/&quot;5c7d-r2XVoOdzitsnSypOAVmmnEyl5tg&quot;
+Sec-Fetch-Site: cross-site
+Accept-Language: en-US,en;q=0.5
+Origin: http://localhost:8000
+Host: [::1]:5173
+Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: */*
+Sec-Fetch-Dest: script
+</requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://[::1]:5173/@vite/client</java.net.URL>
+</httpSample>
+<httpSample t="2" it="0" lt="0" ct="1" ts="1734788383701" s="true" lb="-46" rc="304" rm="Not Modified" tn="" dt="" de="" by="117" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 304 Not Modified
+Access-Control-Allow-Origin: *
+Date: Sat, 21 Dec 2024 13:39:43 GMT
+Connection: close
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Sec-Fetch-Mode: cors
+Referer: http://[::1]:5173/@vite/client
+If-None-Match: W/&quot;27a-50Oe5S7HDq59Hm15o909pGTGmf8&quot;
+Sec-Fetch-Site: cross-site
+Accept-Language: en-US,en;q=0.5
+Origin: http://localhost:8000
+Host: [::1]:5173
+Accept-Encoding: gzip, deflate, br, zstd
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: */*
+Sec-Fetch-Dest: script
+</requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://[::1]:5173/node_modules/vite/dist/client/env.mjs</java.net.URL>
+</httpSample>
+<httpSample t="22" it="0" lt="17" ct="1" ts="1734788383694" s="true" lb="-39" rc="200" rm="OK" tn="" dt="" de="" by="411041" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Host: localhost:8000
+Date: Sat, 21 Dec 2024 13:39:43 GMT
+Connection: close
+Content-Length: 410920
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Referer: http://localhost:8000/book
+Accept-Language: en-US,en;q=0.5
+Host: localhost:8000
+Priority: u=5, i
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+</requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">XSRF-TOKEN=eyJpdiI6IjFSczhyeWY1TGR5TU1mY3RQa2lYbmc9PSIsInZhbHVlIjoiK29iQnlndUU5NHJWK0RvRVJxY091WVdLb01FRlJ6UVRYRGN1cGx5Zm5uQ0dmU3BJVngydFVFR1BOK0Z2NTYxM1NLRHNHYW8rbUNidDJ1Q3R0ckRpVUxjcHFWeXM3M1RzTXZyQ0p2OU50dk0rdzdUNEFUT3R6UTNiZXlsNFFLYTAiLCJtYWMiOiJiMjkzMWZhMWYxNjY3ZjU3ODgwNWZmNWE2ZmU5YjM5M2E4NjJkNTQ4NTllNzI5NzkxZTg4MDNjOTQwMjk5YmIzIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IllXbUhiMUgwNjlLYktCODhrTTZZVWc9PSIsInZhbHVlIjoiZkRVZWZIK0JYMGt1b3cyZkpBSlNPa3lZNUNTV0JsRDhwOEdxeENWUURuWDJvZU1kZ3JUUkxKNVNFMGpCemZEODJ6K1pFaGR1cmJNL1NVbmIzU0ZsNDJvYVd1aTNlQWk5MnZwOGl1eTVJNGZld2dsN2w4VDRrSmhVY3NwN1FNMGUiLCJtYWMiOiI2MTZlNTY2NGNlNzBmMzlkMjgzNTIzZDg2YzQ1NzFjMzkzMDk5NTM3ODY0MjNhYWU2Nzc5NTQ0NDQ2NTlhZDVlIiwidGFnIjoiIn0%3D</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://localhost:8000/images/books/gojo_x_geto_bg_jpg</java.net.URL>
+</httpSample>
+<httpSample t="250" it="0" lt="250" ct="37" ts="1734788383731" s="false" lb="-53" rc="414" rm="Request URI Too Long" tn="" dt="text" de="" by="323" sc="1" ec="1" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 414 Request URI Too Long
+Date: Sat, 21 Dec 2024 13:39:42 GMT
+Content-Type: application/ocsp-response
+Content-Length: 5
+Connection: close
+Cache-Control: s-maxage=3600, public, no-transform, must-revalidate
+CF-Cache-Status: MISS
+Vary: Accept-Encoding
+Server: cloudflare
+CF-RAY: 8f58479f5c95efe5-CGK
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Accept-Language: en-US,en;q=0.5
+Host: ocsp.globalsign.com
+Content-Type: application/ocsp-request
+Priority: u=2
+Cache-Control: no-cache
+Accept-Encoding: gzip, deflate
+Pragma: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: */*
+Content-Length: 139
+</requestHeader>
+  <responseData class="java.lang.String">0&#x3;
+&#x1;&#x1;</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">0Q0O0M0K0I0	&#x6;&#x5;+&#xe;&#x3;&#x2;&#x1a;&#x5;&#x0;&#x4;&#x14;����j�3&#x5;�&#x11;d��r�/���&#x4;&#x14;e�*S&#x1d;�G�&#xd;1�&lt;Vx��Q��3&#x2;&#x10;&#x1;8n ��J���]����</queryString>
+  <java.net.URL>http://ocsp.globalsign.com/ca/gsatlasr3dvtlsca2024q3</java.net.URL>
+</httpSample>
+
+</testResults>

@@ -1,0 +1,1952 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="739" it="0" lt="733" ct="23" ts="1734796591845" s="true" lb="-1" rc="302" rm="Found" tn="" dt="text" de="utf-8" by="1462" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 302 Found
+Host: localhost:8000
+Connection: close
+X-Powered-By: PHP/8.3.10
+Cache-Control: no-cache, private
+Date: Sat, 21 Dec 2024 15:56:32 GMT
+Location: http://localhost:8000
+Content-Type: text/html; charset=utf-8
+Set-Cookie: XSRF-TOKEN=eyJpdiI6ImNLMERYRFRpQmU1aVVUNUE0d0s4UWc9PSIsInZhbHVlIjoiTjZLZXp1bHVlb3dNQWxIZ09UcDZockdlL1lIODZkaTNTdkhHWXF0ZDdKY3FUNzZXWVczTWIxaGdFQUxYdUJiYjkxMVFpVjhtUE85WXVoYjJyeERJWHIwb0w2dTNrRUFHcEtmdmxzbVp0U09pWkhjVXkxS0MyRUFWYm5RM2duMnQiLCJtYWMiOiIzZTU4OTc1Y2YxZGM2NGI0NWM4ODU1ZmJjOTMxZTIzYWNhZGUwNjU0MjllYTQzNjU1YmUwNzlkZGQ0MDA2MTg2IiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 17:56:32 GMT; Max-Age=7200; path=/; samesite=lax
+Set-Cookie: laravel_session=eyJpdiI6Ilk1UTd6ZWJVMkhXQ0Iva2NlTXRvRWc9PSIsInZhbHVlIjoiTWpWU1JPS2xGcm1ocXZRcUFQd2ZmVk5qK3FSZ2hKdS9wT0EyVXlEZFFuc0xkRGtRNkQwRitCR3pxYkg5WUpXcytVc2c1OVBDTkRzMjhMNzQ3Sjd1WXc1eVZoUk9TaWNLQ2pKc21BVVJFc05wbEVUZGRIVk1pcko5Z1NqclRCb1kiLCJtYWMiOiJiOGE3ZGEwMjRhNWQ2ZDgxMzZkZTBkYWExYTE5YjE1ODk5YmM1NzliNTg2YmI0NGYwZmQ0ZDVhYjk0NDlmNGU2IiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 17:56:32 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Referer: http://localhost:8000/books/add
+Accept-Language: en-US,en;q=0.5
+Origin: http://localhost:8000
+Priority: u=0, i
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Host: localhost:8000
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Content-Length: 47
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot; /&gt;
+        &lt;meta http-equiv=&quot;refresh&quot; content=&quot;0;url=&apos;http://localhost:8000&apos;&quot; /&gt;
+
+        &lt;title&gt;Redirecting to http://localhost:8000&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Redirecting to &lt;a href=&quot;http://localhost:8000&quot;&gt;http://localhost:8000&lt;/a&gt;.
+    &lt;/body&gt;
+&lt;/html&gt;</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">XSRF-TOKEN=eyJpdiI6InVLSVBRS1J4WHpwbXF6YklKc2tOYmc9PSIsInZhbHVlIjoiRzh6eG5MN3dkd1Y1MFRhMjkxL1ZTZmVpVjJ4TEFqY1hTWnduc0dzUXlhbG1RLzY2azRsNUpqVXhBWHpOZGFzVEFOSEJ0QTVhaE5mYVBlZS82MlZUVDJuTWxOSURBMWl5SWhWSURrcTFjV3cvSzlkOTZvOFJORDlMNzdBM3hKSjEiLCJtYWMiOiJiZTc3Mzc0M2IxOTY3YTdmMmVlNDhhNDQyOTgxMWEwNWEzODA0MDIwZDIzM2M1YmZlOTJlZjI5MDJlN2Y4ZmZlIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IkJ3V1VtRG1ueHdoVlZiUzBpbllxcUE9PSIsInZhbHVlIjoiT1c0QXh2ZUpaWkd6OThpSGFMWEIvMWs5VTJZZ1k1UGFNbnFCQWFlbDRhR080ZDVuOURwUmlOWVV2aTF5bGFUWisvWlJ1amZrQnFKQ1BqbldFcGVzY08wdUtHN052RkVQSWlrUS95TDZpSUlCVzJTNmdZTVVlL1NFNDNpQlp0clkiLCJtYWMiOiJkMDFmNTQ2NmZmZmFkYWQ2OWIzYzIyOTQ5NGYwNzAxZjU5MjI4Y2QzZmE5ZWQxNmYxM2E5OGY0NmIxNzc0MjI3IiwidGFnIjoiIn0%3D</cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">_token=d0QLOZCCQD81kGuWR9aQTf50iroq05bJAJMln4Qy</queryString>
+  <redirectLocation class="java.lang.String">http://localhost:8000</redirectLocation>
+  <java.net.URL>http://localhost:8000/logout</java.net.URL>
+</httpSample>
+<httpSample t="425" it="0" lt="423" ct="1" ts="1734796592682" s="true" lb="-2" rc="200" rm="OK" tn="" dt="text" de="UTF-8" by="5516" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Host: localhost:8000
+Connection: close
+X-Powered-By: PHP/8.3.10
+Content-Type: text/html; charset=UTF-8
+Cache-Control: no-cache, private
+Date: Sat, 21 Dec 2024 15:56:33 GMT
+Set-Cookie: XSRF-TOKEN=eyJpdiI6InhMVlNadDBqZjVRYm5xU200QXFySnc9PSIsInZhbHVlIjoicUY4UFdYSlZWakxxMmNUT3Eza3RxZWZuS2NpY0R4dlJoK0R5OEZqR2YrMWVsWWdmZ0dpUjJwd2ZEd1JCa01lcDBjMURXSzN3d2RNL3VaSVJ1bjF5cHAxMlZLODgrWUQ4TUFwRWdIRVBaRmErclVvZVJzZ0NhclppaUVINjhqTlYiLCJtYWMiOiJjYjRiY2I3ZmU0NjYwZGVlMmJhMGY1YzI1YjU3MjU1MmI4OWMwZmRiNTI4NzJkZDlkMWM4OGVlYmQ2YTBmMGVlIiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 17:56:33 GMT; Max-Age=7200; path=/; samesite=lax
+Set-Cookie: laravel_session=eyJpdiI6Img1RkxoUjNzL0xiS1YwWXNydnpnUlE9PSIsInZhbHVlIjoiSklibDg2a3llTG1KZFZGeU42QWg0YjdPSDZPeXJvN0JkN3R2RGhJekF0WG9BdE0wajNiUExmSW83MmZmR0s5blFjdU1DV0tJWkdXaW85dmtmdW1jVlV4MzBkZURhYWhlYXp4Ly9Bd1ZNRkN3eHd4T1V1V1J0bHZHQUFnZU5hWGUiLCJtYWMiOiJmMDY2NzQyMjMxNDFiY2RiZGZhNmQyNmUxMjkzYzNkZGI2ZmM0ZDNiZmNmMGZhMGI0YjAxYTMwNTRhZDIxMjI5IiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 17:56:33 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Referer: http://localhost:8000/books/add
+Accept-Language: en-US,en;q=0.5
+Host: localhost:8000
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+        &lt;meta name=&quot;csrf-token&quot; content=&quot;4JRnpz9zFpcqhI0xOVYKyo7MBPHllkdUhti9TRsL&quot;&gt;
+
+        &lt;title&gt;Laravel&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.bunny.net&quot;&gt;
+        &lt;link href=&quot;https://fonts.bunny.net/css?family=figtree:400,500,600&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+
+        &lt;!-- Scripts --&gt;
+        &lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/@vite/client&quot;&gt;&lt;/script&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;http://[::1]:5173/resources/css/app.css&quot; /&gt;&lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/resources/js/app.js&quot;&gt;&lt;/script&gt;    &lt;/head&gt;
+    &lt;body class=&quot;font-sans text-gray-900 antialiased bg-gray-100 dark:bg-gray-900&quot;&gt;
+        &lt;div class=&quot;min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0&quot;&gt;
+            &lt;div&gt;
+                &lt;a href=&quot;/&quot;&gt;
+                    &lt;img src=&quot;http://localhost:8000/images/logo.png&quot;  width=&quot;125&quot; alt=&quot;Logo&quot;&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;w-full sm:max-w-md mt-5 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg&quot;&gt;
+                &lt;!-- Session Status --&gt;
+    
+    &lt;!-- Display Middleware Error Messages --&gt;
+    
+    &lt;form method=&quot;POST&quot; action=&quot;http://localhost:8000/login&quot;&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;4JRnpz9zFpcqhI0xOVYKyo7MBPHllkdUhti9TRsL&quot; autocomplete=&quot;off&quot;&gt;
+        &lt;!-- Email Address --&gt;
+        &lt;div&gt;
+            &lt;label class=&quot;block font-medium text-sm text-gray-700 dark:text-gray-300&quot; for=&quot;email&quot;&gt;
+    Email
+&lt;/label&gt;
+            &lt;input  class=&quot;border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm block mt-1 w-full&quot; id=&quot;email&quot; type=&quot;email&quot; name=&quot;email&quot; required=&quot;required&quot; autofocus=&quot;autofocus&quot; autocomplete=&quot;username&quot;&gt;
+                    &lt;/div&gt;
+
+        &lt;!-- Password --&gt;
+        &lt;div class=&quot;mt-4&quot;&gt;
+            &lt;label class=&quot;block font-medium text-sm text-gray-700 dark:text-gray-300&quot; for=&quot;password&quot;&gt;
+    Password
+&lt;/label&gt;
+            &lt;input  class=&quot;border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm block mt-1 w-full&quot; id=&quot;password&quot; type=&quot;password&quot; name=&quot;password&quot; required=&quot;required&quot; autocomplete=&quot;current-password&quot;&gt;
+                    &lt;/div&gt;
+
+        &lt;!-- Forgot Password and Remember Me --&gt;
+        &lt;div class=&quot;flex items-center justify-between mt-4&quot;&gt;
+                            &lt;a class=&quot;underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500&quot; href=&quot;http://localhost:8000/forgot-password&quot;&gt;
+                    Forgot your password?
+                &lt;/a&gt;
+            
+            &lt;label for=&quot;remember_me&quot; class=&quot;inline-flex items-center&quot;&gt;
+                &lt;input id=&quot;remember_me&quot; type=&quot;checkbox&quot; class=&quot;rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500&quot; name=&quot;remember&quot;&gt;
+                &lt;span class=&quot;ml-2 text-sm text-gray-600&quot;&gt;Remember me&lt;/span&gt;
+            &lt;/label&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Login Button and Register Link --&gt;
+        &lt;div class=&quot;flex items-center justify-between mt-6&quot;&gt;
+            &lt;button type=&quot;submit&quot; class=&quot;inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150 w-full justify-center&quot;&gt;
+    Log in
+&lt;/button&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Register Link --&gt;
+        &lt;div class=&quot;mt-4 text-center&quot;&gt;
+                            &lt;a class=&quot;underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500&quot; href=&quot;http://localhost:8000/register&quot;&gt;
+                    Don&amp;#039;t have an account? Register here
+                &lt;/a&gt;
+                    &lt;/div&gt;
+    &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">XSRF-TOKEN=eyJpdiI6ImNLMERYRFRpQmU1aVVUNUE0d0s4UWc9PSIsInZhbHVlIjoiTjZLZXp1bHVlb3dNQWxIZ09UcDZockdlL1lIODZkaTNTdkhHWXF0ZDdKY3FUNzZXWVczTWIxaGdFQUxYdUJiYjkxMVFpVjhtUE85WXVoYjJyeERJWHIwb0w2dTNrRUFHcEtmdmxzbVp0U09pWkhjVXkxS0MyRUFWYm5RM2duMnQiLCJtYWMiOiIzZTU4OTc1Y2YxZGM2NGI0NWM4ODU1ZmJjOTMxZTIzYWNhZGUwNjU0MjllYTQzNjU1YmUwNzlkZGQ0MDA2MTg2IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6Ilk1UTd6ZWJVMkhXQ0Iva2NlTXRvRWc9PSIsInZhbHVlIjoiTWpWU1JPS2xGcm1ocXZRcUFQd2ZmVk5qK3FSZ2hKdS9wT0EyVXlEZFFuc0xkRGtRNkQwRitCR3pxYkg5WUpXcytVc2c1OVBDTkRzMjhMNzQ3Sjd1WXc1eVZoUk9TaWNLQ2pKc21BVVJFc05wbEVUZGRIVk1pcko5Z1NqclRCb1kiLCJtYWMiOiJiOGE3ZGEwMjRhNWQ2ZDgxMzZkZTBkYWExYTE5YjE1ODk5YmM1NzliNTg2YmI0NGYwZmQ0ZDVhYjk0NDlmNGU2IiwidGFnIjoiIn0%3D</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://localhost:8000/</java.net.URL>
+</httpSample>
+<httpSample t="708" it="0" lt="705" ct="1" ts="1734796625062" s="true" lb="-10" rc="302" rm="Found" tn="" dt="text" de="utf-8" by="1512" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 302 Found
+Host: localhost:8000
+Connection: close
+X-Powered-By: PHP/8.3.10
+Cache-Control: no-cache, private
+Date: Sat, 21 Dec 2024 15:57:05 GMT
+Location: http://localhost:8000/dashboard
+Content-Type: text/html; charset=utf-8
+Set-Cookie: XSRF-TOKEN=eyJpdiI6InZBc0ZET3BqV0JuaFROVVZGQVI5OGc9PSIsInZhbHVlIjoicW9TN2QvM3dOODVBL3o0Z2k3MnlZY09mMFp6RXVoNTNmNkhoVnhFR21valRHbU1VcGxLT0Ywb2JXcFE4S1hFNXNDc1I0Y0RXUXdxVjN5NjFJSEFUV2M1M1hjcVpQYWlVWUdIQ0MvK0s5bG9vdmFSYi93S1MxbnU4OUZXNUE0ZWwiLCJtYWMiOiJjNmVmM2FjNGM5NWI3ZTYzMzFjODczMGEzZWQ1YmRlZjc1Zjg1MDk3NTcwNjFlNThlMWRkMThiMzVjODNiZDM2IiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 17:57:05 GMT; Max-Age=7200; path=/; samesite=lax
+Set-Cookie: laravel_session=eyJpdiI6ImVvSmJ0ZGhCK1JJMEdrV0NyeFFhTEE9PSIsInZhbHVlIjoiMUhFNi9tMFczenVvN0xGRGNNeE1KL1k1TisvMDA2NUIyTDN5RHZhMC80bmcra0dwTW9jU1lOSkMyQUNRSkZXSFVxalgxeWphcDFReGMyZWIrdFhZYkRkcm05VU0wQmlTMStSS2cxV2pPNGV2WUVKR0lqSmxUTUxPTzZJamJaRUYiLCJtYWMiOiIzYjVjYmI0ZGNkMTViZWEzMDQ1ZGMzNThhN2RkZWVjODljZjFkOWEzY2VjZmY1ODIyMTg1ZDhlNjg2NWI1NDU2IiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 17:57:05 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Referer: http://localhost:8000/
+Accept-Language: en-US,en;q=0.5
+Origin: http://localhost:8000
+Priority: u=0, i
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Host: localhost:8000
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Content-Length: 94
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot; /&gt;
+        &lt;meta http-equiv=&quot;refresh&quot; content=&quot;0;url=&apos;http://localhost:8000/dashboard&apos;&quot; /&gt;
+
+        &lt;title&gt;Redirecting to http://localhost:8000/dashboard&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Redirecting to &lt;a href=&quot;http://localhost:8000/dashboard&quot;&gt;http://localhost:8000/dashboard&lt;/a&gt;.
+    &lt;/body&gt;
+&lt;/html&gt;</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">XSRF-TOKEN=eyJpdiI6InhMVlNadDBqZjVRYm5xU200QXFySnc9PSIsInZhbHVlIjoicUY4UFdYSlZWakxxMmNUT3Eza3RxZWZuS2NpY0R4dlJoK0R5OEZqR2YrMWVsWWdmZ0dpUjJwd2ZEd1JCa01lcDBjMURXSzN3d2RNL3VaSVJ1bjF5cHAxMlZLODgrWUQ4TUFwRWdIRVBaRmErclVvZVJzZ0NhclppaUVINjhqTlYiLCJtYWMiOiJjYjRiY2I3ZmU0NjYwZGVlMmJhMGY1YzI1YjU3MjU1MmI4OWMwZmRiNTI4NzJkZDlkMWM4OGVlYmQ2YTBmMGVlIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6Img1RkxoUjNzL0xiS1YwWXNydnpnUlE9PSIsInZhbHVlIjoiSklibDg2a3llTG1KZFZGeU42QWg0YjdPSDZPeXJvN0JkN3R2RGhJekF0WG9BdE0wajNiUExmSW83MmZmR0s5blFjdU1DV0tJWkdXaW85dmtmdW1jVlV4MzBkZURhYWhlYXp4Ly9Bd1ZNRkN3eHd4T1V1V1J0bHZHQUFnZU5hWGUiLCJtYWMiOiJmMDY2NzQyMjMxNDFiY2RiZGZhNmQyNmUxMjkzYzNkZGI2ZmM0ZDNiZmNmMGZhMGI0YjAxYTMwNTRhZDIxMjI5IiwidGFnIjoiIn0%3D</cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">_token=4JRnpz9zFpcqhI0xOVYKyo7MBPHllkdUhti9TRsL&amp;email=john.doe%40example.com&amp;password=12345678</queryString>
+  <redirectLocation class="java.lang.String">http://localhost:8000/dashboard</redirectLocation>
+  <java.net.URL>http://localhost:8000/login</java.net.URL>
+</httpSample>
+<httpSample t="537" it="0" lt="533" ct="0" ts="1734796625776" s="true" lb="-11" rc="200" rm="OK" tn="" dt="text" de="UTF-8" by="15498" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Host: localhost:8000
+Connection: close
+X-Powered-By: PHP/8.3.10
+Content-Type: text/html; charset=UTF-8
+Cache-Control: no-cache, private
+Date: Sat, 21 Dec 2024 15:57:06 GMT
+Set-Cookie: XSRF-TOKEN=eyJpdiI6Im1aNFlPUnRKbTlhVUxpNmZWNU8rY0E9PSIsInZhbHVlIjoieHBlKzhFakZzQWdRbU1yVElHWmZuVXljcHd4SmJjLzh6NWR0aXNxK3puT3FiSlJ2bGErelNwQWlsOTJGRnFFeWZadXVtMTNOeld2TUlVQ2xYd3g5RlJYM1RkdktHcmprcmtvc0hyRURlMHI0Vk9xTnZwbHhLTkZadFN6ckZqYVkiLCJtYWMiOiI3YzIxNzg5MWM1Y2QwMThmYzAxYzg2MjNmMTdjNGVmYWVhZGM1NjViOTkyN2JlMmExMDkwZjQ5NGMzMjIwMGQ5IiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 17:57:06 GMT; Max-Age=7200; path=/; samesite=lax
+Set-Cookie: laravel_session=eyJpdiI6IkVFOURnV2ZiZUcrcHNqdVZmQXAwbGc9PSIsInZhbHVlIjoiWnJnTTJaVHhhbzVXczJZYW1QenRIa0dUQTBOUnlSTkFnK2tlU2V4eWRiWDhCU0xEdXU0OTdKRXdmcm8yYjBmVjgyaVBFYVdpT20vazBRZlk1VlRyYktIUkc1VlBkdXhkUjRweE5PdlhLRE9QMDNIeDBiNVVNNStTeEZrTjh0ejMiLCJtYWMiOiIyYzBlMjE4ZjUyM2VlNDAzYzYyYzg1Y2M3ZGI5YTg1MDQ0N2Y3N2M1MThiMzljZDBkZWQyNGI4ZWZiMGEyYmU3IiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 17:57:06 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Referer: http://localhost:8000/
+Accept-Language: en-US,en;q=0.5
+Host: localhost:8000
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+        &lt;meta name=&quot;csrf-token&quot; content=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot;&gt;
+
+        &lt;title&gt;Laravel&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.bunny.net&quot;&gt;
+        &lt;link href=&quot;https://fonts.bunny.net/css?family=figtree:400,500,600&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+
+        &lt;!-- Scripts --&gt;
+        &lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/@vite/client&quot;&gt;&lt;/script&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;http://[::1]:5173/resources/css/app.css&quot; /&gt;&lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/resources/js/app.js&quot;&gt;&lt;/script&gt;        
+        &lt;!-- jquery --&gt;
+        &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- DataTables CSS --&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css&quot;&gt;
+
+        &lt;!-- DataTables JS --&gt;
+        &lt;script src=&quot;https://cdn.datatables.net/2.1.8/js/dataTables.min.js&quot;&gt;&lt;/script&gt;
+        
+        &lt;!-- SweetAlert2 --&gt;
+        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/sweetalert2@11&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- Font Awesome --&gt;
+        &lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;/head&gt;
+
+    
+    &lt;style&gt;
+    select.dt-input {
+                margin-right: 5px !important;
+                width: 60px;
+            }
+
+            .dt-type-numeric {
+                text-align: left !important;
+            }
+
+            input.dt-input {
+                margin-left: 5px !important;
+            }
+    &lt;/style&gt;
+    
+    &lt;body class=&quot;font-sans antialiased&quot;&gt;
+        &lt;div class=&quot;min-h-screen bg-gray-100 dark:bg-gray-900&quot;&gt;
+            &lt;nav x-data=&quot;{ open: false }&quot; class=&quot;bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700&quot;&gt;
+    &lt;!-- Primary Navigation Menu --&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+        &lt;div class=&quot;flex justify-between h-16&quot;&gt;
+            &lt;div class=&quot;flex&quot;&gt;
+                &lt;!-- Logo --&gt;
+                &lt;div class=&quot;shrink-0 flex items-center&quot;&gt;
+                    &lt;a href=&quot;http://localhost:8000/dashboard&quot;&gt;
+                        &lt;img src=&quot;http://localhost:8000/images/logo.png&quot; class=&quot;h-10 w-auto&quot; alt=&quot;Logo&quot;&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Navigation Links --&gt;
+                &lt;div class=&quot;hidden space-x-8 sm:-my-px sm:ms-10 sm:flex&quot;&gt;
+                    &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-indigo-400 dark:border-indigo-600 text-sm font-medium leading-5 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/dashboard&quot;&gt;
+    Dashboard
+&lt;/a&gt;
+                                            &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/books&quot;&gt;
+    Book List
+&lt;/a&gt;
+                                                            &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/reservation&quot;&gt;
+    Reservations
+&lt;/a&gt;
+
+                   
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Settings Dropdown --&gt;
+            &lt;div class=&quot;hidden sm:flex sm:items-center sm:ms-6&quot;&gt;
+                &lt;div class=&quot;relative&quot; x-data=&quot;{ open: false }&quot; @click.outside=&quot;open = false&quot; @close.stop=&quot;open = false&quot;&gt;
+    &lt;div @click=&quot;open = ! open&quot;&gt;
+        &lt;button class=&quot;inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150&quot;&gt;
+                            &lt;div&gt;John Doe&lt;/div&gt;
+
+                            &lt;div class=&quot;ms-1&quot;&gt;
+                                &lt;svg class=&quot;fill-current h-4 w-4&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 20 20&quot;&gt;
+                                    &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z&quot; clip-rule=&quot;evenodd&quot; /&gt;
+                                &lt;/svg&gt;
+                            &lt;/div&gt;
+                        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div x-show=&quot;open&quot;
+            x-transition:enter=&quot;transition ease-out duration-200&quot;
+            x-transition:enter-start=&quot;opacity-0 scale-95&quot;
+            x-transition:enter-end=&quot;opacity-100 scale-100&quot;
+            x-transition:leave=&quot;transition ease-in duration-75&quot;
+            x-transition:leave-start=&quot;opacity-100 scale-100&quot;
+            x-transition:leave-end=&quot;opacity-0 scale-95&quot;
+            class=&quot;absolute z-50 mt-2 w-48 rounded-md shadow-lg ltr:origin-top-right rtl:origin-top-left end-0&quot;
+            style=&quot;display: none;&quot;
+            @click=&quot;open = false&quot;&gt;
+        &lt;div class=&quot;rounded-md ring-1 ring-black ring-opacity-5 py-1 bg-white dark:bg-gray-700&quot;&gt;
+            &lt;a class=&quot;block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/profile&quot;&gt;Profile&lt;/a&gt;
+
+                        &lt;!-- Authentication --&gt;
+                        &lt;form method=&quot;POST&quot; action=&quot;http://localhost:8000/logout&quot;&gt;
+                            &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;
+                            &lt;a class=&quot;block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/logout&quot; onclick=&quot;event.preventDefault();
+                                                this.closest(&apos;form&apos;).submit();&quot;&gt;Log Out&lt;/a&gt;
+                        &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Hamburger --&gt;
+            &lt;div class=&quot;-me-2 flex items-center sm:hidden&quot;&gt;
+                &lt;button @click=&quot;open = ! open&quot; class=&quot;inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out&quot;&gt;
+                    &lt;svg class=&quot;h-6 w-6&quot; stroke=&quot;currentColor&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+                        &lt;path :class=&quot;{&apos;hidden&apos;: open, &apos;inline-flex&apos;: ! open }&quot; class=&quot;inline-flex&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 6h16M4 12h16M4 18h16&quot; /&gt;
+                        &lt;path :class=&quot;{&apos;hidden&apos;: ! open, &apos;inline-flex&apos;: open }&quot; class=&quot;hidden&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M6 18L18 6M6 6l12 12&quot; /&gt;
+                    &lt;/svg&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Responsive Navigation Menu --&gt;
+    &lt;div :class=&quot;{&apos;block&apos;: open, &apos;hidden&apos;: ! open}&quot; class=&quot;hidden sm:hidden&quot;&gt;
+        &lt;div class=&quot;pt-2 pb-3 space-y-1&quot;&gt;
+            &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-indigo-400 dark:border-indigo-600 text-start text-base font-medium text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-900/50 focus:outline-none focus:text-indigo-800 dark:focus:text-indigo-200 focus:bg-indigo-100 dark:focus:bg-indigo-900 focus:border-indigo-700 dark:focus:border-indigo-300 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/dashboard&quot;&gt;
+    Dashboard
+&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Responsive Settings Options --&gt;
+        &lt;div class=&quot;pt-4 pb-1 border-t border-gray-200 dark:border-gray-600&quot;&gt;
+            &lt;div class=&quot;px-4&quot;&gt;
+                &lt;div class=&quot;font-medium text-base text-gray-800 dark:text-gray-200&quot;&gt;John Doe&lt;/div&gt;
+                &lt;div class=&quot;font-medium text-sm text-gray-500&quot;&gt;john.doe@example.com&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;mt-3 space-y-1&quot;&gt;
+                &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/profile&quot;&gt;
+    Profile
+&lt;/a&gt;
+
+                &lt;!-- Authentication --&gt;
+                &lt;form method=&quot;POST&quot; action=&quot;http://localhost:8000/logout&quot;&gt;
+                    &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;
+                    &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/logout&quot; onclick=&quot;event.preventDefault();
+                                        this.closest(&apos;form&apos;).submit();&quot;&gt;
+    Log Out
+&lt;/a&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+
+            &lt;!-- Page Heading --&gt;
+            
+            &lt;!-- Page Content --&gt;
+            &lt;main&gt;
+                &lt;div class=&quot;section1 relative h-screen overflow-hidden&quot;&gt;
+        &lt;img src=&quot;http://localhost:8000/images/library.png&quot; alt=&quot;Foto Gereja&quot; class=&quot;absolute inset-0 w-full h-full object-cover z-10&quot;&gt;
+        &lt;div class=&quot;absolute inset-0 bg-black opacity-70 z-20&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;relative py-12 z-30&quot;&gt;
+            &lt;div class=&quot;max-w-sm md:max-w-7xl mx-auto sm:px-6 lg:px-8&quot;&gt;
+                &lt;div class=&quot;bg-white dark:bg-gray-800 overflow-hidden rounded-lg&quot;&gt;
+                    &lt;div class=&quot;p-6 text-gray-900 dark:text-gray-100&quot;&gt;
+                        You&amp;#039;re logged in!
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30  text-white&quot;&gt;
+            &lt;p class=&quot;text-4xl text-center font-bold&quot;&gt;Welcome to the library,&lt;/p&gt;
+            &lt;p class=&quot;text-4xl text-center font-bold pt-2&quot;&gt;Your Gateway to Endless Discovery!&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;section2 py-20 bg-gray-100&quot;&gt;
+        &lt;div class=&quot;text-center text-gray-900&quot;&gt;
+            &lt;p class=&quot;text-4xl font-bold&quot;&gt;Opening Hours&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- Hours --&gt;
+        &lt;div class=&quot;mt-8 space-y-8 max-w-lg mx-auto&quot;&gt;
+            &lt;!-- Weekdays --&gt;
+            &lt;div class=&quot;md:flex justify-between items-center border-b border-gray-300 pb-4&quot;&gt;
+                &lt;p class=&quot;text-center md:text-left text-2xl font-semibold&quot;&gt;Weekdays&lt;/p&gt;
+                &lt;div class=&quot;text-center md:text-right&quot;&gt;
+                    &lt;p class=&quot;text-2xl font-semibold&quot;&gt;07.30 - 21.00&lt;/p&gt;
+                    &lt;p class=&quot;text-sm text-gray-600&quot;&gt;Western Indonesia Time (UTC+7)&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Weekend --&gt;
+            &lt;div class=&quot;md:flex justify-between items-center border-b border-gray-300 pb-4&quot;&gt;
+                &lt;p class=&quot;text-center md:text-left text-2xl font-semibold&quot;&gt;Weekend&lt;/p&gt;
+                &lt;div class=&quot;text-center md:text-right&quot;&gt;
+                    &lt;p class=&quot;text-2xl font-semibold&quot;&gt;08.00 - 17.00&lt;/p&gt;
+                    &lt;p class=&quot;text-sm text-gray-600&quot;&gt;Western Indonesia Time (UTC+7)&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- National Holiday --&gt;
+            &lt;div class=&quot;md:flex justify-between items-center&quot;&gt;
+                &lt;p class=&quot;text-center md:text-left text-2xl font-semibold&quot;&gt;National Holiday&lt;/p&gt;
+                &lt;div class=&quot;text-center md:text-right&quot;&gt;
+                    &lt;p class=&quot;text-2xl font-semibold&quot;&gt;CLOSED&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;section3 py-20 bg-black&quot;&gt;
+        &lt;div class=&quot;text-center text-white mb-8&quot;&gt;
+            &lt;p class=&quot;text-4xl font-bold&quot;&gt;Contact Us&lt;/p&gt;
+        &lt;/div&gt;
+        
+        &lt;!-- Contact Details --&gt;
+        &lt;div class=&quot;flex flex-col md:flex-row justify-center items-center mt-8 max-w-4xl mx-auto md:space-x-28 space-y-8 md:space-y-0 text-white&quot;&gt;
+            
+            &lt;!-- Email --&gt;
+            &lt;div class=&quot;flex flex-col md:flex-row justify-center items-center space-y-4 w-full md:w-auto&quot;&gt;
+                &lt;!-- Email Icon from Font Awesome --&gt;
+                &lt;i class=&quot;fas fa-envelope fa-2x m-4 md:fa-3x w-8 h-8 text-white&quot;&gt;&lt;/i&gt;
+                &lt;div class=&quot;text-center md:text-left&quot;&gt;
+                    &lt;p class=&quot;text-2xl font-semibold&quot;&gt;Email Us&lt;/p&gt;
+                    &lt;p class=&quot;text-xl&quot;&gt;contact@library.com&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Phone --&gt;
+            &lt;div class=&quot;flex flex-col md:flex-row justify-center items-center space-y-4 w-full md:w-auto&quot;&gt;
+                &lt;!-- Phone Icon from Font Awesome --&gt;
+                &lt;i class=&quot;fas fa-phone-alt fa-2x m-4 md:fa-3x w-8 h-8 text-white&quot;&gt;&lt;/i&gt;
+                &lt;div class=&quot;text-center md:text-left&quot;&gt;
+                    &lt;p class=&quot;text-2xl font-semibold&quot;&gt;Call Us&lt;/p&gt;
+                    &lt;p class=&quot;text-xl&quot;&gt;+123-456-7890&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+            &lt;/main&gt;
+        &lt;/div&gt;
+        
+    &lt;/body&gt;
+&lt;/html&gt;
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">XSRF-TOKEN=eyJpdiI6InZBc0ZET3BqV0JuaFROVVZGQVI5OGc9PSIsInZhbHVlIjoicW9TN2QvM3dOODVBL3o0Z2k3MnlZY09mMFp6RXVoNTNmNkhoVnhFR21valRHbU1VcGxLT0Ywb2JXcFE4S1hFNXNDc1I0Y0RXUXdxVjN5NjFJSEFUV2M1M1hjcVpQYWlVWUdIQ0MvK0s5bG9vdmFSYi93S1MxbnU4OUZXNUE0ZWwiLCJtYWMiOiJjNmVmM2FjNGM5NWI3ZTYzMzFjODczMGEzZWQ1YmRlZjc1Zjg1MDk3NTcwNjFlNThlMWRkMThiMzVjODNiZDM2IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6ImVvSmJ0ZGhCK1JJMEdrV0NyeFFhTEE9PSIsInZhbHVlIjoiMUhFNi9tMFczenVvN0xGRGNNeE1KL1k1TisvMDA2NUIyTDN5RHZhMC80bmcra0dwTW9jU1lOSkMyQUNRSkZXSFVxalgxeWphcDFReGMyZWIrdFhZYkRkcm05VU0wQmlTMStSS2cxV2pPNGV2WUVKR0lqSmxUTUxPTzZJamJaRUYiLCJtYWMiOiIzYjVjYmI0ZGNkMTViZWEzMDQ1ZGMzNThhN2RkZWVjODljZjFkOWEzY2VjZmY1ODIyMTg1ZDhlNjg2NWI1NDU2IiwidGFnIjoiIn0%3D</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://localhost:8000/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="782" it="0" lt="773" ct="1" ts="1734796647212" s="true" lb="-21" rc="200" rm="OK" tn="" dt="text" de="UTF-8" by="37595" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Host: localhost:8000
+Connection: close
+X-Powered-By: PHP/8.3.10
+Content-Type: text/html; charset=UTF-8
+Cache-Control: no-cache, private
+Date: Sat, 21 Dec 2024 15:57:27 GMT
+Set-Cookie: XSRF-TOKEN=eyJpdiI6InpKTTErQmR0UFhMWUpMYXlwcldweGc9PSIsInZhbHVlIjoiOG9tWW1KUSs4WTBmdDM2Q3F6RjZnOG9FSmNzcW1oNVh1Slp3TjlXc0l3T1JHK2UzcGZHN002NUp4YzJWVlJXUksrNGNabmVEU2tWN21kS3FSLys0VVFHanF3VnF4UE5pcjl4ZWtXN3Nha3lwZHlBOGNrYzBNSDZOTTF3a1UwdGMiLCJtYWMiOiI3N2JjMzRmYjFhZDZiOGFhNzVkMDQxNTM4MjA3NmIxNTM1ODIyOTc0N2RmNTU5NTZmYWQzN2JiZTgwYmRiZGMzIiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 17:57:27 GMT; Max-Age=7200; path=/; samesite=lax
+Set-Cookie: laravel_session=eyJpdiI6InFyQUllcjRzeFF6Uy94QUsvTUJNZUE9PSIsInZhbHVlIjoicHdpMGZTV1N1dFVPb281ZnlHLzFYNmd5ZXdYRDhmSGpSd0pxYzlJNDg0aHlobjZiQW51eTFOMlRXWnRTMmlWanVNRmJQMVNkaWcrOHp5SDNxS0tONDZtR1dhMlo2NkNXSXZnWGVoQ0twcDdpN2lJTWg4dDVDSVhQTmxCMUNHb0EiLCJtYWMiOiI0ZjQyMmJjMDhhNTU4ZWFkZTY4NjhiNjhhMTczOWMwMmJkMTY5ZmE3MjMyNjliZWZhZjAxYzMwMDcwNjFiOThjIiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 17:57:27 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Referer: http://localhost:8000/dashboard
+Accept-Language: en-US,en;q=0.5
+Host: localhost:8000
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+        &lt;meta name=&quot;csrf-token&quot; content=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot;&gt;
+
+        &lt;title&gt;Laravel&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.bunny.net&quot;&gt;
+        &lt;link href=&quot;https://fonts.bunny.net/css?family=figtree:400,500,600&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+
+        &lt;!-- Scripts --&gt;
+        &lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/@vite/client&quot;&gt;&lt;/script&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;http://[::1]:5173/resources/css/app.css&quot; /&gt;&lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/resources/js/app.js&quot;&gt;&lt;/script&gt;        
+        &lt;!-- jquery --&gt;
+        &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- DataTables CSS --&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css&quot;&gt;
+
+        &lt;!-- DataTables JS --&gt;
+        &lt;script src=&quot;https://cdn.datatables.net/2.1.8/js/dataTables.min.js&quot;&gt;&lt;/script&gt;
+        
+        &lt;!-- SweetAlert2 --&gt;
+        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/sweetalert2@11&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- Font Awesome --&gt;
+        &lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;/head&gt;
+
+    
+    &lt;style&gt;
+    select.dt-input {
+                margin-right: 5px !important;
+                width: 60px;
+            }
+
+            .dt-type-numeric {
+                text-align: left !important;
+            }
+
+            input.dt-input {
+                margin-left: 5px !important;
+            }
+    &lt;/style&gt;
+    
+    &lt;body class=&quot;font-sans antialiased&quot;&gt;
+        &lt;div class=&quot;min-h-screen bg-gray-100 dark:bg-gray-900&quot;&gt;
+            &lt;nav x-data=&quot;{ open: false }&quot; class=&quot;bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700&quot;&gt;
+    &lt;!-- Primary Navigation Menu --&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+        &lt;div class=&quot;flex justify-between h-16&quot;&gt;
+            &lt;div class=&quot;flex&quot;&gt;
+                &lt;!-- Logo --&gt;
+                &lt;div class=&quot;shrink-0 flex items-center&quot;&gt;
+                    &lt;a href=&quot;http://localhost:8000/dashboard&quot;&gt;
+                        &lt;img src=&quot;http://localhost:8000/images/logo.png&quot; class=&quot;h-10 w-auto&quot; alt=&quot;Logo&quot;&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Navigation Links --&gt;
+                &lt;div class=&quot;hidden space-x-8 sm:-my-px sm:ms-10 sm:flex&quot;&gt;
+                    &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/dashboard&quot;&gt;
+    Dashboard
+&lt;/a&gt;
+                                            &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-indigo-400 dark:border-indigo-600 text-sm font-medium leading-5 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/books&quot;&gt;
+    Book List
+&lt;/a&gt;
+                                                            &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/reservation&quot;&gt;
+    Reservations
+&lt;/a&gt;
+
+                   
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Settings Dropdown --&gt;
+            &lt;div class=&quot;hidden sm:flex sm:items-center sm:ms-6&quot;&gt;
+                &lt;div class=&quot;relative&quot; x-data=&quot;{ open: false }&quot; @click.outside=&quot;open = false&quot; @close.stop=&quot;open = false&quot;&gt;
+    &lt;div @click=&quot;open = ! open&quot;&gt;
+        &lt;button class=&quot;inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150&quot;&gt;
+                            &lt;div&gt;John Doe&lt;/div&gt;
+
+                            &lt;div class=&quot;ms-1&quot;&gt;
+                                &lt;svg class=&quot;fill-current h-4 w-4&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 20 20&quot;&gt;
+                                    &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z&quot; clip-rule=&quot;evenodd&quot; /&gt;
+                                &lt;/svg&gt;
+                            &lt;/div&gt;
+                        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div x-show=&quot;open&quot;
+            x-transition:enter=&quot;transition ease-out duration-200&quot;
+            x-transition:enter-start=&quot;opacity-0 scale-95&quot;
+            x-transition:enter-end=&quot;opacity-100 scale-100&quot;
+            x-transition:leave=&quot;transition ease-in duration-75&quot;
+            x-transition:leave-start=&quot;opacity-100 scale-100&quot;
+            x-transition:leave-end=&quot;opacity-0 scale-95&quot;
+            class=&quot;absolute z-50 mt-2 w-48 rounded-md shadow-lg ltr:origin-top-right rtl:origin-top-left end-0&quot;
+            style=&quot;display: none;&quot;
+            @click=&quot;open = false&quot;&gt;
+        &lt;div class=&quot;rounded-md ring-1 ring-black ring-opacity-5 py-1 bg-white dark:bg-gray-700&quot;&gt;
+            &lt;a class=&quot;block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/profile&quot;&gt;Profile&lt;/a&gt;
+
+                        &lt;!-- Authentication --&gt;
+                        &lt;form method=&quot;POST&quot; action=&quot;http://localhost:8000/logout&quot;&gt;
+                            &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;
+                            &lt;a class=&quot;block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/logout&quot; onclick=&quot;event.preventDefault();
+                                                this.closest(&apos;form&apos;).submit();&quot;&gt;Log Out&lt;/a&gt;
+                        &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Hamburger --&gt;
+            &lt;div class=&quot;-me-2 flex items-center sm:hidden&quot;&gt;
+                &lt;button @click=&quot;open = ! open&quot; class=&quot;inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out&quot;&gt;
+                    &lt;svg class=&quot;h-6 w-6&quot; stroke=&quot;currentColor&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+                        &lt;path :class=&quot;{&apos;hidden&apos;: open, &apos;inline-flex&apos;: ! open }&quot; class=&quot;inline-flex&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 6h16M4 12h16M4 18h16&quot; /&gt;
+                        &lt;path :class=&quot;{&apos;hidden&apos;: ! open, &apos;inline-flex&apos;: open }&quot; class=&quot;hidden&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M6 18L18 6M6 6l12 12&quot; /&gt;
+                    &lt;/svg&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Responsive Navigation Menu --&gt;
+    &lt;div :class=&quot;{&apos;block&apos;: open, &apos;hidden&apos;: ! open}&quot; class=&quot;hidden sm:hidden&quot;&gt;
+        &lt;div class=&quot;pt-2 pb-3 space-y-1&quot;&gt;
+            &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/dashboard&quot;&gt;
+    Dashboard
+&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Responsive Settings Options --&gt;
+        &lt;div class=&quot;pt-4 pb-1 border-t border-gray-200 dark:border-gray-600&quot;&gt;
+            &lt;div class=&quot;px-4&quot;&gt;
+                &lt;div class=&quot;font-medium text-base text-gray-800 dark:text-gray-200&quot;&gt;John Doe&lt;/div&gt;
+                &lt;div class=&quot;font-medium text-sm text-gray-500&quot;&gt;john.doe@example.com&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;mt-3 space-y-1&quot;&gt;
+                &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/profile&quot;&gt;
+    Profile
+&lt;/a&gt;
+
+                &lt;!-- Authentication --&gt;
+                &lt;form method=&quot;POST&quot; action=&quot;http://localhost:8000/logout&quot;&gt;
+                    &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;
+                    &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/logout&quot; onclick=&quot;event.preventDefault();
+                                        this.closest(&apos;form&apos;).submit();&quot;&gt;
+    Log Out
+&lt;/a&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+
+            &lt;!-- Page Heading --&gt;
+                            &lt;header class=&quot;bg-white dark:bg-gray-800 shadow&quot;&gt;
+                    &lt;div class=&quot;max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8&quot;&gt;
+                        &lt;h1 class=&quot;text-2xl font-bold text-center&quot;&gt;Library Book List&lt;/h1&gt;
+                    &lt;/div&gt;
+                &lt;/header&gt;
+            
+            &lt;!-- Page Content --&gt;
+            &lt;main&gt;
+                &lt;div class=&quot;pb-3&quot;&gt;
+        &lt;div class=&quot;max-w-7xl mx-auto sm:px-6 lg:px-8&quot;&gt;
+        &lt;div class=&quot;container mx-auto p-6&quot;&gt;
+            &lt;div class=&quot;mb-4 w-5/5 max-w-full mx-auto flex justify-start&quot;&gt;
+                &lt;button type=&quot;submit&quot; class=&quot;bg-blue-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700&quot;&gt;
+                    &lt;a href=&quot;/books/add&quot;&gt;
+                        &lt;i class=&quot;fa-solid fa-plus&quot;&gt;&lt;/i&gt;
+                    ADD BOOK&lt;/a&gt;
+                &lt;/button&gt; 
+            &lt;/div&gt;
+
+            &lt;table  id=&quot;reservation_table&quot; class=&quot;table table-striped table-hover&quot;&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th scope=&quot;col&quot;&gt;ID&lt;/th&gt;
+                        &lt;th scope=&quot;col&quot;&gt;Book Title&lt;/th&gt;
+                        &lt;th scope=&quot;col&quot;&gt;Author&lt;/th&gt;
+                        &lt;th scope=&quot;col&quot;&gt;Action&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody class=&quot;bg-white divide-y divide-gray-200&quot;&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;1&lt;/td&gt;
+                            &lt;td&gt;Laut Bercerita&lt;/td&gt;
+                            &lt;td&gt;Leila S. Chudori&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/1&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-1&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6IlVxdSt5MXBPeTlVWkltWkorM0NkRnc9PSIsInZhbHVlIjoicmRkM1FKSHRmNnZYMENkU2lLR3E5Zz09IiwibWFjIjoiMGFhNmIzNmFiMWZhZDdmNDNiMDNkNjQ4ZWI0NDM0ZTRmYzkwNzQ0YzQxZTZjZDViYTgyNDExMjZhYzg4NGMxNiIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;1&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;2&lt;/td&gt;
+                            &lt;td&gt;The Psychology of Money&lt;/td&gt;
+                            &lt;td&gt;Morgan Housel&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/2&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-2&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6IjVydTVWSmhSVUJoWGZjWis2ZFRmUkE9PSIsInZhbHVlIjoiSnlncmVZSEczOEFsUi9UNXNJWGxPZz09IiwibWFjIjoiNTY0NDc5MDViNzRlMDU3OWNiNjY5YzRkNjFhNTA5M2JiZGRlMGZlYzZkOWVmMzkyZmQ0Nzc2M2ZlYThiNTRlMSIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;2&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;3&lt;/td&gt;
+                            &lt;td&gt;The Maxwell Daily Reader&lt;/td&gt;
+                            &lt;td&gt;John C. Maxwell&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/3&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-3&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6IjcxOGd6SnVnaVVBN1ZHa2U3VVJTL1E9PSIsInZhbHVlIjoiZUdUbFdQMEYvWG5mK1lTNTRwM1JXUT09IiwibWFjIjoiODA5YzNjMDA2ZWYyYzBiYjZkOGNiYTI3NTQzMzNlNTAxOTFjN2Y4NDRiNjg4ZWNkNTdjZmMzYzllMTExZmY0NCIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;3&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;4&lt;/td&gt;
+                            &lt;td&gt;Home Sweet Loan&lt;/td&gt;
+                            &lt;td&gt;Almira Bastari&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/4&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-4&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6IjRwckJybEtaRnVUbENuNUhLQnFLV3c9PSIsInZhbHVlIjoiZjJueU5ZUSswUmJOYjA5UjF4SHRvdz09IiwibWFjIjoiNjdhOGVlYzdjOTcwNWRlMWYwN2I5OTVkN2Q3ZDMzNzg5ZGZjOGM0ZjkzZDZmODMzODM4NjljZjVjYmViZmM5ZCIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;4&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;5&lt;/td&gt;
+                            &lt;td&gt;The Alchemist&amp;#039;s Secret&lt;/td&gt;
+                            &lt;td&gt;Scott Mariani&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/5&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-5&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6IlZ3bnV1cFN2UURRODlkVXJtVVFNc0E9PSIsInZhbHVlIjoiZmtYSWVpQ1ZZc1NJWHVIbjRsZk9ndz09IiwibWFjIjoiNjkyMWNjOGU0YzQ5NDUxODY0NDQwOGUyZDRmMzJlOGJkNWI1MDVkNTk4YWZiZDc0MjFlODVkZTgzMDZkZjIxMSIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;5&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;6&lt;/td&gt;
+                            &lt;td&gt;The Fault in Our Stars&lt;/td&gt;
+                            &lt;td&gt;John Green&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/6&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-6&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6IllleXBpVm5UNHhPS0hOSzVBeUZVR0E9PSIsInZhbHVlIjoiNEk5MEl0TlBoZ0NRdGs4d2wwZ0Jkdz09IiwibWFjIjoiNTQxZDFhZGFkMmEzNjNjNGJhNGY1YTRlODkyYTYwNzNkZGUwNzY1NmIwMDI3MmVlMGMwZDA3ZGYwZjE0NjlkOCIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;6&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;7&lt;/td&gt;
+                            &lt;td&gt;Koala Kumal&lt;/td&gt;
+                            &lt;td&gt;Raditya Dika&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/7&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-7&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6ImdrNlBQNExPdGorTFA4c0NWTXNLQ0E9PSIsInZhbHVlIjoiZEhaOTBzSXB6RE1Pc3hQbDdlRDBwQT09IiwibWFjIjoiNWEyNDk1M2ExZTRhYzJiYTQ4ZmQxODBkODA1NjMyYjIxNzIxNTVkYzM3MzIxMTZmYTFhNzU3NjU2ZWZhM2E0OSIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;7&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;8&lt;/td&gt;
+                            &lt;td&gt;Crazy Rich Asians&lt;/td&gt;
+                            &lt;td&gt;Kevin Kwan&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/8&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-8&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6IndoWmNIQ25nNGR2V1JVRFFZZlFxTEE9PSIsInZhbHVlIjoiMVlNYlowZEp2a01rUXc5aDhvU2tkQT09IiwibWFjIjoiZWNmYTJkOTExNzcxMjlkOTQ0NTY3YTdjNjIyZjQxYjcwZjBhYzhjODlmNmIwMDY1YmE4YTlkMjI3ZWVlNjc1MSIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;8&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;9&lt;/td&gt;
+                            &lt;td&gt;Effortless&lt;/td&gt;
+                            &lt;td&gt;Greg McKeown&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/9&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-9&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6Ik9LNUxlamFIKzhWMUE1M1ZobWNmZVE9PSIsInZhbHVlIjoid25hU1AzcGViTW8yenNTZFU4K0x6UT09IiwibWFjIjoiYmNiZjE3MTQ2ZWYyMzk4MDFiZWQzNWVlODdjOTE3ZWI4NzJmMmQ3YmRiODM0MmQ1NjgyOTE2MjQyOWNjMDNhZSIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;9&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;10&lt;/td&gt;
+                            &lt;td&gt;Supernova: Inteligensi Embun Pagi&lt;/td&gt;
+                            &lt;td&gt;Dewi Lestari&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/10&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-10&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6IlVmRjRCOGNBVVBDQUR6T0J5ak9EUXc9PSIsInZhbHVlIjoiV2hOUXV1WVRQaUlBZEM4cVl0OVM2QT09IiwibWFjIjoiOWUzMTIyMDRiNmVhNDhjZTYwYTRjMmNjMDk5MGIwMjVlNDdhZDA5YzA3YzcyMTg0MWUzMDU5Njg5NDAzOTQ0YiIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;10&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;11&lt;/td&gt;
+                            &lt;td&gt;Gojo and Geto&lt;/td&gt;
+                            &lt;td&gt;Kimberly&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/11&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-11&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6Ik80RWhVeGYrVmRncUdCcVI1MHViMlE9PSIsInZhbHVlIjoiZXgwalBnbUFyOE4wQzNhMGRib3g2UT09IiwibWFjIjoiMDY5ZGY2NDUxMDc2ZWNjODg1ZjQ0NjMwOTMxZDgwNGYxNmYwNzBiMzcwZDg2NWUzN2MxNGY2MWVmN2I3MDg4NyIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;11&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                            &lt;tr&gt;
+                            &lt;td&gt;12&lt;/td&gt;
+                            &lt;td&gt;Gojo and Geto&lt;/td&gt;
+                            &lt;td&gt;Kimberly&lt;/td&gt;
+                            &lt;td&gt;
+                                                                    &lt;button type=&quot;button&quot; onclick=&quot;window.location.href=&apos;http://localhost:8000/book/edit/12&apos;&quot; 
+                                        class=&quot;bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-regular fa-pen-to-square&quot;&gt;&lt;/i&gt;
+                                        Edit
+                                        &lt;/button&gt;
+                                                                
+                                                                    &lt;form id=&quot;delete-form-12&quot; action=&quot;http://localhost:8000/book/delete/eyJpdiI6IkYwdDJBMDVlN3JHZ1loaVUrUzhibWc9PSIsInZhbHVlIjoiWEFUSWZXalVLNHNhZzlueGxPZnpqQT09IiwibWFjIjoiZjQwZjM5Nzg1MmRkNDUzMTdkZTJiMjc0OTdiODE5YjA0ZDc3YjhiNDE5NmEzMTM2N2YzNDAwMzYwMTQyZGQ2YSIsInRhZyI6IiJ9&quot; method=&quot;POST&quot; class=&quot;inline-block ml-2&quot;&gt;
+                                        &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;                                        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;                                        &lt;button type=&quot;button&quot; onclick=&quot;confirmDialog(&apos;12&apos;)&quot; 
+                                        class=&quot;bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200&quot;&gt;
+                                        &lt;i class=&quot;fa-solid fa-trash&quot;&gt;&lt;/i&gt;
+                                        Delete
+                                        &lt;/button&gt;
+                                    &lt;/form&gt;
+                                                                
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                                    &lt;/tbody&gt;
+            &lt;/table&gt;
+    &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+    $(document).ready(function() {
+        $(&apos;#reservation_table&apos;).DataTable({
+            // Optional: You can customize DataTables options here
+            paging: true,
+            searching: true,
+            ordering: true,
+            info: true,
+            lengthChange: true,
+            scrollX: true,
+            autoWidth: false
+        });
+    });
+    &lt;/script&gt;
+
+       
+&lt;script&gt;
+    function confirmDialog($id) {
+        event.preventDefault();
+        
+        Swal.fire({
+            title: `Apakah Kamu Yakin akan Menghapus Buku Ini ?`,
+            icon: &quot;warning&quot;,
+            showCancelButton: true,
+            confirmButtonText: `Ya, Hapus`,
+            confirmButtonColor: &quot;#2463eb&quot;,
+            cancelButtonText: &quot;Batal&quot;,
+            reverseButtons: true
+        }).then((result) =&gt; {
+            if (result.isConfirmed) {
+                document.getElementById(&apos;delete-form-&apos; + $id).submit();
+            }
+        });
+    }
+&lt;/script&gt;
+            &lt;/main&gt;
+        &lt;/div&gt;
+        
+    &lt;/body&gt;
+&lt;/html&gt;
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">XSRF-TOKEN=eyJpdiI6Im1aNFlPUnRKbTlhVUxpNmZWNU8rY0E9PSIsInZhbHVlIjoieHBlKzhFakZzQWdRbU1yVElHWmZuVXljcHd4SmJjLzh6NWR0aXNxK3puT3FiSlJ2bGErelNwQWlsOTJGRnFFeWZadXVtMTNOeld2TUlVQ2xYd3g5RlJYM1RkdktHcmprcmtvc0hyRURlMHI0Vk9xTnZwbHhLTkZadFN6ckZqYVkiLCJtYWMiOiI3YzIxNzg5MWM1Y2QwMThmYzAxYzg2MjNmMTdjNGVmYWVhZGM1NjViOTkyN2JlMmExMDkwZjQ5NGMzMjIwMGQ5IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IkVFOURnV2ZiZUcrcHNqdVZmQXAwbGc9PSIsInZhbHVlIjoiWnJnTTJaVHhhbzVXczJZYW1QenRIa0dUQTBOUnlSTkFnK2tlU2V4eWRiWDhCU0xEdXU0OTdKRXdmcm8yYjBmVjgyaVBFYVdpT20vazBRZlk1VlRyYktIUkc1VlBkdXhkUjRweE5PdlhLRE9QMDNIeDBiNVVNNStTeEZrTjh0ejMiLCJtYWMiOiIyYzBlMjE4ZjUyM2VlNDAzYzYyYzg1Y2M3ZGI5YTg1MDQ0N2Y3N2M1MThiMzljZDBkZWQyNGI4ZWZiMGEyYmU3IiwidGFnIjoiIn0%3D</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://localhost:8000/books</java.net.URL>
+</httpSample>
+<httpSample t="955" it="0" lt="953" ct="2" ts="1734796652109" s="true" lb="-28" rc="200" rm="OK" tn="" dt="text" de="UTF-8" by="17046" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Host: localhost:8000
+Connection: close
+X-Powered-By: PHP/8.3.10
+Content-Type: text/html; charset=UTF-8
+Cache-Control: no-cache, private
+Date: Sat, 21 Dec 2024 15:57:33 GMT
+Set-Cookie: XSRF-TOKEN=eyJpdiI6InB0clVZQWdTSERLUloxVklTYnpDL2c9PSIsInZhbHVlIjoicnp6VGMxQUwwYktMeTAyTUE1R283WXR6dlEveis0MWFLMDcxM20zTEh3QWo2RnBYLzFrODQrNzU1TTR0MUl0akorTE53WEptR0k3cEpKNFpPWDBXVkw2TktIRWdLQllzTlp5Znl4ZGZZUUpPQzBTSW1qQzhEbU5BM2JTelhBWjYiLCJtYWMiOiI0MTk1NWIzYWQwMTJhYTMzNDc1MzA1ZDZlOGFiMzRhMDI2ZjM0ZjY3N2Y1N2QyOTg4NzFiOTlmMWI4YzZmYTQzIiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 17:57:33 GMT; Max-Age=7200; path=/; samesite=lax
+Set-Cookie: laravel_session=eyJpdiI6Iko2VDZWTkpnTHZIQVlLS2l2VTNyOFE9PSIsInZhbHVlIjoiM3h0b21sdVhaZkJOVk92Q3psY05EbkdST2szSkgvNVRMMnR3VWZUY0FuemNjaHZXSHdjSjAyUDBCazJoa09mcGhtWitUU2xUSXF3dlBCQzd4T3paS0pBV2ZBRlhCSGFaaFBWNGlpTEU3cldCV2dFSGY2NjRNNHEwcWNoSDZnT0YiLCJtYWMiOiI2ODBmMjQ2OGQwNGJlODIyNWNlNjM1NDI0ZjIzZmUzMjM0ZmJkNDMxODU0ZDNmNTM3M2NmYzg3Yjk5Mzc1ZGFhIiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 17:57:33 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Referer: http://localhost:8000/books
+Accept-Language: en-US,en;q=0.5
+Host: localhost:8000
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+        &lt;meta name=&quot;csrf-token&quot; content=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot;&gt;
+
+        &lt;title&gt;Laravel&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.bunny.net&quot;&gt;
+        &lt;link href=&quot;https://fonts.bunny.net/css?family=figtree:400,500,600&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+
+        &lt;!-- Scripts --&gt;
+        &lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/@vite/client&quot;&gt;&lt;/script&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;http://[::1]:5173/resources/css/app.css&quot; /&gt;&lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/resources/js/app.js&quot;&gt;&lt;/script&gt;        
+        &lt;!-- jquery --&gt;
+        &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- DataTables CSS --&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css&quot;&gt;
+
+        &lt;!-- DataTables JS --&gt;
+        &lt;script src=&quot;https://cdn.datatables.net/2.1.8/js/dataTables.min.js&quot;&gt;&lt;/script&gt;
+        
+        &lt;!-- SweetAlert2 --&gt;
+        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/sweetalert2@11&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- Font Awesome --&gt;
+        &lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;/head&gt;
+
+    
+    &lt;style&gt;
+    select.dt-input {
+                margin-right: 5px !important;
+                width: 60px;
+            }
+
+            .dt-type-numeric {
+                text-align: left !important;
+            }
+
+            input.dt-input {
+                margin-left: 5px !important;
+            }
+    &lt;/style&gt;
+    
+    &lt;body class=&quot;font-sans antialiased&quot;&gt;
+        &lt;div class=&quot;min-h-screen bg-gray-100 dark:bg-gray-900&quot;&gt;
+            &lt;nav x-data=&quot;{ open: false }&quot; class=&quot;bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700&quot;&gt;
+    &lt;!-- Primary Navigation Menu --&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+        &lt;div class=&quot;flex justify-between h-16&quot;&gt;
+            &lt;div class=&quot;flex&quot;&gt;
+                &lt;!-- Logo --&gt;
+                &lt;div class=&quot;shrink-0 flex items-center&quot;&gt;
+                    &lt;a href=&quot;http://localhost:8000/dashboard&quot;&gt;
+                        &lt;img src=&quot;http://localhost:8000/images/logo.png&quot; class=&quot;h-10 w-auto&quot; alt=&quot;Logo&quot;&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Navigation Links --&gt;
+                &lt;div class=&quot;hidden space-x-8 sm:-my-px sm:ms-10 sm:flex&quot;&gt;
+                    &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/dashboard&quot;&gt;
+    Dashboard
+&lt;/a&gt;
+                                            &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/books&quot;&gt;
+    Book List
+&lt;/a&gt;
+                                                            &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/reservation&quot;&gt;
+    Reservations
+&lt;/a&gt;
+
+                   
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Settings Dropdown --&gt;
+            &lt;div class=&quot;hidden sm:flex sm:items-center sm:ms-6&quot;&gt;
+                &lt;div class=&quot;relative&quot; x-data=&quot;{ open: false }&quot; @click.outside=&quot;open = false&quot; @close.stop=&quot;open = false&quot;&gt;
+    &lt;div @click=&quot;open = ! open&quot;&gt;
+        &lt;button class=&quot;inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150&quot;&gt;
+                            &lt;div&gt;John Doe&lt;/div&gt;
+
+                            &lt;div class=&quot;ms-1&quot;&gt;
+                                &lt;svg class=&quot;fill-current h-4 w-4&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 20 20&quot;&gt;
+                                    &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z&quot; clip-rule=&quot;evenodd&quot; /&gt;
+                                &lt;/svg&gt;
+                            &lt;/div&gt;
+                        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div x-show=&quot;open&quot;
+            x-transition:enter=&quot;transition ease-out duration-200&quot;
+            x-transition:enter-start=&quot;opacity-0 scale-95&quot;
+            x-transition:enter-end=&quot;opacity-100 scale-100&quot;
+            x-transition:leave=&quot;transition ease-in duration-75&quot;
+            x-transition:leave-start=&quot;opacity-100 scale-100&quot;
+            x-transition:leave-end=&quot;opacity-0 scale-95&quot;
+            class=&quot;absolute z-50 mt-2 w-48 rounded-md shadow-lg ltr:origin-top-right rtl:origin-top-left end-0&quot;
+            style=&quot;display: none;&quot;
+            @click=&quot;open = false&quot;&gt;
+        &lt;div class=&quot;rounded-md ring-1 ring-black ring-opacity-5 py-1 bg-white dark:bg-gray-700&quot;&gt;
+            &lt;a class=&quot;block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/profile&quot;&gt;Profile&lt;/a&gt;
+
+                        &lt;!-- Authentication --&gt;
+                        &lt;form method=&quot;POST&quot; action=&quot;http://localhost:8000/logout&quot;&gt;
+                            &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;
+                            &lt;a class=&quot;block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/logout&quot; onclick=&quot;event.preventDefault();
+                                                this.closest(&apos;form&apos;).submit();&quot;&gt;Log Out&lt;/a&gt;
+                        &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Hamburger --&gt;
+            &lt;div class=&quot;-me-2 flex items-center sm:hidden&quot;&gt;
+                &lt;button @click=&quot;open = ! open&quot; class=&quot;inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out&quot;&gt;
+                    &lt;svg class=&quot;h-6 w-6&quot; stroke=&quot;currentColor&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+                        &lt;path :class=&quot;{&apos;hidden&apos;: open, &apos;inline-flex&apos;: ! open }&quot; class=&quot;inline-flex&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 6h16M4 12h16M4 18h16&quot; /&gt;
+                        &lt;path :class=&quot;{&apos;hidden&apos;: ! open, &apos;inline-flex&apos;: open }&quot; class=&quot;hidden&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M6 18L18 6M6 6l12 12&quot; /&gt;
+                    &lt;/svg&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Responsive Navigation Menu --&gt;
+    &lt;div :class=&quot;{&apos;block&apos;: open, &apos;hidden&apos;: ! open}&quot; class=&quot;hidden sm:hidden&quot;&gt;
+        &lt;div class=&quot;pt-2 pb-3 space-y-1&quot;&gt;
+            &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/dashboard&quot;&gt;
+    Dashboard
+&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Responsive Settings Options --&gt;
+        &lt;div class=&quot;pt-4 pb-1 border-t border-gray-200 dark:border-gray-600&quot;&gt;
+            &lt;div class=&quot;px-4&quot;&gt;
+                &lt;div class=&quot;font-medium text-base text-gray-800 dark:text-gray-200&quot;&gt;John Doe&lt;/div&gt;
+                &lt;div class=&quot;font-medium text-sm text-gray-500&quot;&gt;john.doe@example.com&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;mt-3 space-y-1&quot;&gt;
+                &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/profile&quot;&gt;
+    Profile
+&lt;/a&gt;
+
+                &lt;!-- Authentication --&gt;
+                &lt;form method=&quot;POST&quot; action=&quot;http://localhost:8000/logout&quot;&gt;
+                    &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;
+                    &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/logout&quot; onclick=&quot;event.preventDefault();
+                                        this.closest(&apos;form&apos;).submit();&quot;&gt;
+    Log Out
+&lt;/a&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+
+            &lt;!-- Page Heading --&gt;
+            
+            &lt;!-- Page Content --&gt;
+            &lt;main&gt;
+                &lt;div class=&quot;py-12&quot;&gt;
+        &lt;div class=&quot;max-w-7xl mx-auto sm:px-6 lg:px-8&quot;&gt;
+
+            &lt;section&gt;
+                &lt;form action=&quot;http://localhost:8000/books/submit&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot; class=&quot;bg-white p-4 rounded-md shadow-md&quot;&gt;
+                    &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;                    &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;post&quot;&gt;
+                    &lt;!-- Title Input --&gt;
+                    &lt;label for=&quot;title&quot; class=&quot;block mb-1&quot;&gt;Title:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;title&quot; id=&quot;title&quot; required 
+                        class=&quot;w-full p-2 border border-gray-300 rounded mb-4&quot;&gt;
+                    
+                    &lt;!-- Image Upload --&gt;
+                    &lt;label for=&quot;image&quot; class=&quot;block mb-1&quot;&gt;Upload Image:&lt;/label&gt;
+                    &lt;input type=&quot;file&quot; name=&quot;image&quot; id=&quot;image&quot; class=&quot;w-full p-2 border border-gray-300 rounded mb-4&quot; accept=&quot;image/*&quot;&gt;
+
+                    
+                    &lt;!-- Genre Selection --&gt;
+                    &lt;label for=&quot;genre_id&quot; class=&quot;block mb-1&quot;&gt;Genre:&lt;/label&gt;
+                    &lt;select name=&quot;genre_id&quot; id=&quot;genre_id&quot; class=&quot;w-full p-2 border border-gray-300 rounded mb-4&quot;&gt;
+                        &lt;option value=&quot;&quot; disabled selected&gt;Select a genre&lt;/option&gt;
+                                                    &lt;option value=&quot;1&quot;&gt;
+                                Fantasy
+                            &lt;/option&gt;
+                                                    &lt;option value=&quot;2&quot;&gt;
+                                Self-improvement
+                            &lt;/option&gt;
+                                                    &lt;option value=&quot;3&quot;&gt;
+                                Romance
+                            &lt;/option&gt;
+                                                    &lt;option value=&quot;4&quot;&gt;
+                                Comedy
+                            &lt;/option&gt;
+                                                    &lt;option value=&quot;5&quot;&gt;
+                                Science Fiction
+                            &lt;/option&gt;
+                                            &lt;/select&gt;
+                    
+
+                    &lt;!-- Year Input --&gt;
+                    &lt;label for=&quot;year&quot; class=&quot;block mb-1&quot;&gt;Year:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;year&quot; id=&quot;year&quot; required 
+                        pattern=&quot;\d{4}&quot; title=&quot;Please enter a valid year (e.g., 2024)&quot; 
+                        class=&quot;w-full p-2 border border-gray-300 rounded mb-4&quot; placeholder=&quot;YYYY&quot;&gt;
+                    
+                    &lt;!-- Author Input --&gt;
+                    &lt;label for=&quot;author&quot; class=&quot;block mb-1&quot;&gt;Author:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;author&quot; id=&quot;author&quot;required 
+                        class=&quot;w-full p-2 border border-gray-300 rounded mb-4&quot; placeholder=&quot;Author&apos;s name&quot;&gt;
+                    
+                    &lt;!-- Publisher Input --&gt;
+                    &lt;label for=&quot;publisher&quot; class=&quot;block mb-1&quot;&gt;Publisher:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;publisher&quot; id=&quot;publisher&quot; required 
+                        class=&quot;w-full p-2 border border-gray-300 rounded mb-4&quot; placeholder=&quot;Publisher&apos;s name&quot;&gt;
+                    
+                    &lt;!-- Pages Input --&gt;
+                    &lt;label for=&quot;pages&quot; class=&quot;block mb-1&quot;&gt;Pages:&lt;/label&gt;
+                    &lt;input type=&quot;number&quot; name=&quot;pages&quot; id=&quot;pages&quot; required 
+                        class=&quot;w-full p-2 border border-gray-300 rounded mb-4&quot; placeholder=&quot;Number of pages&quot;&gt;
+                    
+                    &lt;!-- Quota Input --&gt;
+                    &lt;label for=&quot;quota&quot; class=&quot;block mb-1&quot;&gt;Quota:&lt;/label&gt;
+                    &lt;input type=&quot;number&quot; name=&quot;quota&quot; id=&quot;quota&quot; required 
+                        class=&quot;w-full p-2 border border-gray-300 rounded mb-4&quot; placeholder=&quot;Number of available quota&quot;&gt;
+                    
+                    &lt;!-- Description Input --&gt;
+                    &lt;label for=&quot;description&quot; class=&quot;block mb-1&quot;&gt;Description:&lt;/label&gt;
+                    &lt;textarea name=&quot;description&quot; id=&quot;description&quot; rows=&quot;4&quot; required 
+                        class=&quot;w-full p-2 border border-gray-300 rounded mb-4 h-32&quot; placeholder=&quot;Enter a description...&quot;&gt;&lt;/textarea&gt;
+                    
+                    &lt;!-- Summary Input --&gt;
+                    &lt;label for=&quot;summary&quot; class=&quot;block mb-1&quot;&gt;Summary:&lt;/label&gt;
+                    &lt;textarea name=&quot;summary&quot; id=&quot;summary&quot; rows=&quot;4&quot; required 
+                        class=&quot;w-full p-2 border border-gray-300 rounded mb-4 h-32&quot; placeholder=&quot;Enter a summary...&quot;&gt;&lt;/textarea&gt;
+                    
+                    &lt;!-- Submit Buttons --&gt;
+                    &lt;div class=&quot;flex justify-center space-x-4 mt-4&quot;&gt;
+                        &lt;!-- Tombol Save --&gt;
+                        &lt;button type=&quot;submit&quot; class=&quot;bg-blue-600 text-white px-4 py-3 rounded hover:bg-blue-700 text-base&quot;&gt;
+                            Save
+                        &lt;/button&gt;
+
+                        &lt;!-- Tombol Cancel --&gt;
+                        &lt;a href=&quot;http://localhost:8000/books&quot; class=&quot;bg-red-600 text-white px-4 py-3 rounded hover:bg-red-700 text-base&quot;&gt;
+                            Cancel
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+            &lt;/section&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+            &lt;/main&gt;
+        &lt;/div&gt;
+        
+    &lt;/body&gt;
+&lt;/html&gt;
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">XSRF-TOKEN=eyJpdiI6InpKTTErQmR0UFhMWUpMYXlwcldweGc9PSIsInZhbHVlIjoiOG9tWW1KUSs4WTBmdDM2Q3F6RjZnOG9FSmNzcW1oNVh1Slp3TjlXc0l3T1JHK2UzcGZHN002NUp4YzJWVlJXUksrNGNabmVEU2tWN21kS3FSLys0VVFHanF3VnF4UE5pcjl4ZWtXN3Nha3lwZHlBOGNrYzBNSDZOTTF3a1UwdGMiLCJtYWMiOiI3N2JjMzRmYjFhZDZiOGFhNzVkMDQxNTM4MjA3NmIxNTM1ODIyOTc0N2RmNTU5NTZmYWQzN2JiZTgwYmRiZGMzIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6InFyQUllcjRzeFF6Uy94QUsvTUJNZUE9PSIsInZhbHVlIjoicHdpMGZTV1N1dFVPb281ZnlHLzFYNmd5ZXdYRDhmSGpSd0pxYzlJNDg0aHlobjZiQW51eTFOMlRXWnRTMmlWanVNRmJQMVNkaWcrOHp5SDNxS0tONDZtR1dhMlo2NkNXSXZnWGVoQ0twcDdpN2lJTWg4dDVDSVhQTmxCMUNHb0EiLCJtYWMiOiI0ZjQyMmJjMDhhNTU4ZWFkZTY4NjhiNjhhMTczOWMwMmJkMTY5ZmE3MjMyNjliZWZhZjAxYzMwMDcwNjFiOThjIiwidGFnIjoiIn0%3D</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://localhost:8000/books/add</java.net.URL>
+</httpSample>
+<httpSample t="1680" it="0" lt="1677" ct="7" ts="1734796750403" s="true" lb="-35" rc="302" rm="Found" tn="" dt="text" de="utf-8" by="1487" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 302 Found
+Host: localhost:8000
+Connection: close
+X-Powered-By: PHP/8.3.10
+Cache-Control: no-cache, private
+Date: Sat, 21 Dec 2024 15:59:12 GMT
+Location: http://localhost:8000/book
+Content-Type: text/html; charset=utf-8
+Set-Cookie: XSRF-TOKEN=eyJpdiI6ImdOOVBQY2tPbCtNSjRqVlBjdkg4Y0E9PSIsInZhbHVlIjoiRU5SK3hLYUdIeXJ6V0gwaVlWeXhEUUtTVE42Mkw4a0ZpOS9TQkxWQmZ1ZVZhU094UnMvUmhLNEFZQ1dwcFI4S1p5OXNXWVBOMk1GOGdRQTRUMEx1d2FnL2JSSllyNEIzcWVEd3VBazFKNklWeGpSNVZVQ0VwYUNJOGI5TG9Tb04iLCJtYWMiOiJmNjZmMjI4MTI1M2M2MGE0MjAzYThhYjcxZjUwZjFlNzgzYTI4MDExNWVlNTRkOGY1ZjMxNzEwMmFiYjcyNGE2IiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 17:59:12 GMT; Max-Age=7200; path=/; samesite=lax
+Set-Cookie: laravel_session=eyJpdiI6IlB1SnFiVkVFWDYwVXpyTThQRlQyb0E9PSIsInZhbHVlIjoiclNsbVdNWjhCK0lSeGFSc0poQmlVK2hXdWRuWXFHYkhYUm5TRzUzTHdYK3g2UGFJTVpJYy91OFh3b1RhU1dDckNaMVVaOHpuOTFRS1pWNm5aQmc0R04zRmc0NEJOVWdnNWpBUEozYXBVeTB0T0hmQ3ArYWM2TWsyN1M0SlozYWQiLCJtYWMiOiI1ZDI4MDQwMjcwMzJkMGYxODNmNTRmMDdlNWU1MTA5NGRmM2UzYWNmNGNlNmE4ODNhNjgzNmE3YWIwZGQ0NmE3IiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 17:59:12 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Referer: http://localhost:8000/books/add
+Accept-Language: en-US,en;q=0.5
+Origin: http://localhost:8000
+Priority: u=0, i
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Host: localhost:8000
+Upgrade-Insecure-Requests: 1
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Content-Length: 412202
+Content-Type: multipart/form-data; boundary=NBciy8PoND-SbGkIAIeDLtovF-C3696UgzK; charset=UTF-8
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot; /&gt;
+        &lt;meta http-equiv=&quot;refresh&quot; content=&quot;0;url=&apos;http://localhost:8000/book&apos;&quot; /&gt;
+
+        &lt;title&gt;Redirecting to http://localhost:8000/book&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Redirecting to &lt;a href=&quot;http://localhost:8000/book&quot;&gt;http://localhost:8000/book&lt;/a&gt;.
+    &lt;/body&gt;
+&lt;/html&gt;</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">XSRF-TOKEN=eyJpdiI6InB0clVZQWdTSERLUloxVklTYnpDL2c9PSIsInZhbHVlIjoicnp6VGMxQUwwYktMeTAyTUE1R283WXR6dlEveis0MWFLMDcxM20zTEh3QWo2RnBYLzFrODQrNzU1TTR0MUl0akorTE53WEptR0k3cEpKNFpPWDBXVkw2TktIRWdLQllzTlp5Znl4ZGZZUUpPQzBTSW1qQzhEbU5BM2JTelhBWjYiLCJtYWMiOiI0MTk1NWIzYWQwMTJhYTMzNDc1MzA1ZDZlOGFiMzRhMDI2ZjM0ZjY3N2Y1N2QyOTg4NzFiOTlmMWI4YzZmYTQzIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6Iko2VDZWTkpnTHZIQVlLS2l2VTNyOFE9PSIsInZhbHVlIjoiM3h0b21sdVhaZkJOVk92Q3psY05EbkdST2szSkgvNVRMMnR3VWZUY0FuemNjaHZXSHdjSjAyUDBCazJoa09mcGhtWitUU2xUSXF3dlBCQzd4T3paS0pBV2ZBRlhCSGFaaFBWNGlpTEU3cldCV2dFSGY2NjRNNHEwcWNoSDZnT0YiLCJtYWMiOiI2ODBmMjQ2OGQwNGJlODIyNWNlNjM1NDI0ZjIzZmUzMjM0ZmJkNDMxODU0ZDNmNTM3M2NmYzg3Yjk5Mzc1ZGFhIiwidGFnIjoiIn0%3D</cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">--NBciy8PoND-SbGkIAIeDLtovF-C3696UgzK&#xd;
+Content-Disposition: form-data; name=&quot;_token&quot;&#xd;
+&#xd;
+tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&#xd;
+--NBciy8PoND-SbGkIAIeDLtovF-C3696UgzK&#xd;
+Content-Disposition: form-data; name=&quot;_method&quot;&#xd;
+&#xd;
+post&#xd;
+--NBciy8PoND-SbGkIAIeDLtovF-C3696UgzK&#xd;
+Content-Disposition: form-data; name=&quot;title&quot;&#xd;
+&#xd;
+五条悟&#xd;
+--NBciy8PoND-SbGkIAIeDLtovF-C3696UgzK&#xd;
+Content-Disposition: form-data; name=&quot;genre_id&quot;&#xd;
+&#xd;
+1&#xd;
+--NBciy8PoND-SbGkIAIeDLtovF-C3696UgzK&#xd;
+Content-Disposition: form-data; name=&quot;year&quot;&#xd;
+&#xd;
+2024&#xd;
+--NBciy8PoND-SbGkIAIeDLtovF-C3696UgzK&#xd;
+Content-Disposition: form-data; name=&quot;author&quot;&#xd;
+&#xd;
+五条悟&#xd;
+--NBciy8PoND-SbGkIAIeDLtovF-C3696UgzK&#xd;
+Content-Disposition: form-data; name=&quot;publisher&quot;&#xd;
+&#xd;
+五条悟&#xd;
+--NBciy8PoND-SbGkIAIeDLtovF-C3696UgzK&#xd;
+Content-Disposition: form-data; name=&quot;pages&quot;&#xd;
+&#xd;
+100&#xd;
+--NBciy8PoND-SbGkIAIeDLtovF-C3696UgzK&#xd;
+Content-Disposition: form-data; name=&quot;quota&quot;&#xd;
+&#xd;
+5&#xd;
+--NBciy8PoND-SbGkIAIeDLtovF-C3696UgzK&#xd;
+Content-Disposition: form-data; name=&quot;description&quot;&#xd;
+&#xd;
+五条悟&#xd;
+--NBciy8PoND-SbGkIAIeDLtovF-C3696UgzK&#xd;
+Content-Disposition: form-data; name=&quot;summary&quot;&#xd;
+&#xd;
+五条悟&#xd;
+--NBciy8PoND-SbGkIAIeDLtovF-C3696UgzK&#xd;
+Content-Disposition: form-data; name=&quot;image&quot;; filename=&quot;gojo x geto bg.jpg&quot;&#xd;
+Content-Type: image/jpeg&#xd;
+&#xd;
+&lt;actual file content, not shown here&gt;&#xd;
+--NBciy8PoND-SbGkIAIeDLtovF-C3696UgzK--&#xd;
+</queryString>
+  <redirectLocation class="java.lang.String">http://localhost:8000/book</redirectLocation>
+  <java.net.URL>http://localhost:8000/books/submit</java.net.URL>
+</httpSample>
+<httpSample t="369" it="0" lt="367" ct="1" ts="1734796752089" s="true" lb="-36" rc="200" rm="OK" tn="" dt="text" de="UTF-8" by="42460" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Host: localhost:8000
+Connection: close
+X-Powered-By: PHP/8.3.10
+Content-Type: text/html; charset=UTF-8
+Cache-Control: no-cache, private
+Date: Sat, 21 Dec 2024 15:59:12 GMT
+Set-Cookie: XSRF-TOKEN=eyJpdiI6Ii80OUIybGZ5YjYwZU9XcDFFR1YvOXc9PSIsInZhbHVlIjoiZGE1TnFvVDA5N05YK1pMQ1lwbklQWnNObzV0Mm9WQVM1ZzJOU2N6ZFNsQk43TS84MzdVZGM1ZVhDaW9vUFl5b3B5dmRaL29LTDZvWnpvK3lmbnNYYnRnTTlZMFg4RTBLcEF4ZVI1bUxPYllNMDNUK1FYM0dKaENWUS9lNjlhd3QiLCJtYWMiOiI3YTdiMWQ0MTM1ODNkM2FhMzM1MWNkMTUyOGExMTEwYjYzZmZmYzdlZTFhMTgwZWQ5YWY4Y2U4ZTBkNzUwYTE0IiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 17:59:12 GMT; Max-Age=7200; path=/; samesite=lax
+Set-Cookie: laravel_session=eyJpdiI6ImZqVFREc3lMdkYwWE9XWXlqYXRJZVE9PSIsInZhbHVlIjoiTnJUNGNyQ2xLY0grSGFicWIvY2xjeHVNUUVNNllES0FBNHozL3o4b2Z4MGk1Mk9WMnJ4M013dnZBUjZDVjd0MXhzNWMrNUJiK3AxWHl4MlZqbGJ6TGVpQ1gxbmQ4SzdacFJyeDBKdk4wMlU5QzBoSFRaME4rM0JtRkhOZGszNnEiLCJtYWMiOiI3MTIxNTY1NzZjNDE4NmJmZjMzNmU1ZWJmNGEzOGI3ZDkyNzBkNjcwNjMzY2Q2ZGJhZmJmMmMzZDUxYTI5NTllIiwidGFnIjoiIn0%3D; expires=Sat, 21 Dec 2024 17:59:12 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Referer: http://localhost:8000/books/add
+Accept-Language: en-US,en;q=0.5
+Host: localhost:8000
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+        &lt;meta name=&quot;csrf-token&quot; content=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot;&gt;
+
+        &lt;title&gt;Laravel&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.bunny.net&quot;&gt;
+        &lt;link href=&quot;https://fonts.bunny.net/css?family=figtree:400,500,600&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+
+        &lt;!-- Scripts --&gt;
+        &lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/@vite/client&quot;&gt;&lt;/script&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;http://[::1]:5173/resources/css/app.css&quot; /&gt;&lt;script type=&quot;module&quot; src=&quot;http://[::1]:5173/resources/js/app.js&quot;&gt;&lt;/script&gt;        
+        &lt;!-- jquery --&gt;
+        &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- DataTables CSS --&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css&quot;&gt;
+
+        &lt;!-- DataTables JS --&gt;
+        &lt;script src=&quot;https://cdn.datatables.net/2.1.8/js/dataTables.min.js&quot;&gt;&lt;/script&gt;
+        
+        &lt;!-- SweetAlert2 --&gt;
+        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/sweetalert2@11&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- Font Awesome --&gt;
+        &lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;/head&gt;
+
+    
+    &lt;style&gt;
+    select.dt-input {
+                margin-right: 5px !important;
+                width: 60px;
+            }
+
+            .dt-type-numeric {
+                text-align: left !important;
+            }
+
+            input.dt-input {
+                margin-left: 5px !important;
+            }
+    &lt;/style&gt;
+    
+    &lt;body class=&quot;font-sans antialiased&quot;&gt;
+        &lt;div class=&quot;min-h-screen bg-gray-100 dark:bg-gray-900&quot;&gt;
+            &lt;nav x-data=&quot;{ open: false }&quot; class=&quot;bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700&quot;&gt;
+    &lt;!-- Primary Navigation Menu --&gt;
+    &lt;div class=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+        &lt;div class=&quot;flex justify-between h-16&quot;&gt;
+            &lt;div class=&quot;flex&quot;&gt;
+                &lt;!-- Logo --&gt;
+                &lt;div class=&quot;shrink-0 flex items-center&quot;&gt;
+                    &lt;a href=&quot;http://localhost:8000/dashboard&quot;&gt;
+                        &lt;img src=&quot;http://localhost:8000/images/logo.png&quot; class=&quot;h-10 w-auto&quot; alt=&quot;Logo&quot;&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Navigation Links --&gt;
+                &lt;div class=&quot;hidden space-x-8 sm:-my-px sm:ms-10 sm:flex&quot;&gt;
+                    &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/dashboard&quot;&gt;
+    Dashboard
+&lt;/a&gt;
+                                            &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/books&quot;&gt;
+    Book List
+&lt;/a&gt;
+                                                            &lt;a class=&quot;inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/reservation&quot;&gt;
+    Reservations
+&lt;/a&gt;
+
+                   
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Settings Dropdown --&gt;
+            &lt;div class=&quot;hidden sm:flex sm:items-center sm:ms-6&quot;&gt;
+                &lt;div class=&quot;relative&quot; x-data=&quot;{ open: false }&quot; @click.outside=&quot;open = false&quot; @close.stop=&quot;open = false&quot;&gt;
+    &lt;div @click=&quot;open = ! open&quot;&gt;
+        &lt;button class=&quot;inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150&quot;&gt;
+                            &lt;div&gt;John Doe&lt;/div&gt;
+
+                            &lt;div class=&quot;ms-1&quot;&gt;
+                                &lt;svg class=&quot;fill-current h-4 w-4&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 20 20&quot;&gt;
+                                    &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z&quot; clip-rule=&quot;evenodd&quot; /&gt;
+                                &lt;/svg&gt;
+                            &lt;/div&gt;
+                        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div x-show=&quot;open&quot;
+            x-transition:enter=&quot;transition ease-out duration-200&quot;
+            x-transition:enter-start=&quot;opacity-0 scale-95&quot;
+            x-transition:enter-end=&quot;opacity-100 scale-100&quot;
+            x-transition:leave=&quot;transition ease-in duration-75&quot;
+            x-transition:leave-start=&quot;opacity-100 scale-100&quot;
+            x-transition:leave-end=&quot;opacity-0 scale-95&quot;
+            class=&quot;absolute z-50 mt-2 w-48 rounded-md shadow-lg ltr:origin-top-right rtl:origin-top-left end-0&quot;
+            style=&quot;display: none;&quot;
+            @click=&quot;open = false&quot;&gt;
+        &lt;div class=&quot;rounded-md ring-1 ring-black ring-opacity-5 py-1 bg-white dark:bg-gray-700&quot;&gt;
+            &lt;a class=&quot;block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/profile&quot;&gt;Profile&lt;/a&gt;
+
+                        &lt;!-- Authentication --&gt;
+                        &lt;form method=&quot;POST&quot; action=&quot;http://localhost:8000/logout&quot;&gt;
+                            &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;
+                            &lt;a class=&quot;block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/logout&quot; onclick=&quot;event.preventDefault();
+                                                this.closest(&apos;form&apos;).submit();&quot;&gt;Log Out&lt;/a&gt;
+                        &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Hamburger --&gt;
+            &lt;div class=&quot;-me-2 flex items-center sm:hidden&quot;&gt;
+                &lt;button @click=&quot;open = ! open&quot; class=&quot;inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out&quot;&gt;
+                    &lt;svg class=&quot;h-6 w-6&quot; stroke=&quot;currentColor&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+                        &lt;path :class=&quot;{&apos;hidden&apos;: open, &apos;inline-flex&apos;: ! open }&quot; class=&quot;inline-flex&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 6h16M4 12h16M4 18h16&quot; /&gt;
+                        &lt;path :class=&quot;{&apos;hidden&apos;: ! open, &apos;inline-flex&apos;: open }&quot; class=&quot;hidden&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M6 18L18 6M6 6l12 12&quot; /&gt;
+                    &lt;/svg&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Responsive Navigation Menu --&gt;
+    &lt;div :class=&quot;{&apos;block&apos;: open, &apos;hidden&apos;: ! open}&quot; class=&quot;hidden sm:hidden&quot;&gt;
+        &lt;div class=&quot;pt-2 pb-3 space-y-1&quot;&gt;
+            &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/dashboard&quot;&gt;
+    Dashboard
+&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Responsive Settings Options --&gt;
+        &lt;div class=&quot;pt-4 pb-1 border-t border-gray-200 dark:border-gray-600&quot;&gt;
+            &lt;div class=&quot;px-4&quot;&gt;
+                &lt;div class=&quot;font-medium text-base text-gray-800 dark:text-gray-200&quot;&gt;John Doe&lt;/div&gt;
+                &lt;div class=&quot;font-medium text-sm text-gray-500&quot;&gt;john.doe@example.com&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;mt-3 space-y-1&quot;&gt;
+                &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/profile&quot;&gt;
+    Profile
+&lt;/a&gt;
+
+                &lt;!-- Authentication --&gt;
+                &lt;form method=&quot;POST&quot; action=&quot;http://localhost:8000/logout&quot;&gt;
+                    &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;tNQVU8pwM6KIdnnJxbpf6XYiImIlQbAw3H0IJifn&quot; autocomplete=&quot;off&quot;&gt;
+                    &lt;a class=&quot;block w-full ps-3 pe-4 py-2 border-l-4 border-transparent text-start text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out&quot; href=&quot;http://localhost:8000/logout&quot; onclick=&quot;event.preventDefault();
+                                        this.closest(&apos;form&apos;).submit();&quot;&gt;
+    Log Out
+&lt;/a&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+
+            &lt;!-- Page Heading --&gt;
+                            &lt;header class=&quot;bg-white dark:bg-gray-800 shadow&quot;&gt;
+                    &lt;div class=&quot;max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8&quot;&gt;
+                        &lt;h1 class=&quot;text-2xl font-bold text-center&quot;&gt;Library Book Collections&lt;/h1&gt;
+                    &lt;/div&gt;
+                &lt;/header&gt;
+            
+            &lt;!-- Page Content --&gt;
+            &lt;main&gt;
+                &lt;script&gt;
+        document.addEventListener(&apos;DOMContentLoaded&apos;, function() {
+            Swal.fire({
+                title: &apos;Book Berhasil Diinput!&apos;,
+                text: &apos;&apos;,
+                icon: &apos;success&apos;,
+                confirmButtonText: &apos;OK&apos;,
+                confirmButtonColor: &quot;#2463eb&quot;,
+            });
+        });
+    &lt;/script&gt;
+     
+    
+    &lt;form class=&quot;max-w-md mx-auto mt-8&quot; action=&quot;&quot; method=&quot;GET&quot;&gt;   
+        &lt;label for=&quot;search&quot; class=&quot;mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white&quot;&gt;Search&lt;/label&gt;
+        &lt;div class=&quot;relative&quot;&gt;
+            &lt;div class=&quot;absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none&quot;&gt;
+                &lt;svg class=&quot;w-4 h-4 text-gray-500 dark:text-gray-400&quot; aria-hidden=&quot;true&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 20 20&quot;&gt;
+                    &lt;path stroke=&quot;currentColor&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z&quot;/&gt;
+                &lt;/svg&gt;
+            &lt;/div&gt;
+            &lt;input type=&quot;search&quot; id=&quot;search&quot; name=&quot;search&quot; class=&quot;block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500&quot; placeholder=&quot;Search&quot; required /&gt;
+            &lt;button type=&quot;submit&quot; class=&quot;text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800&quot;&gt;Search&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+
+    &lt;div class=&quot;py-12&quot;&gt;
+        &lt;div class=&quot;max-w-7xl mx-auto sm:px-6 lg:px-8&quot;&gt;
+            &lt;section class=&quot;grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-6&quot;&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6InRud2RSajhraFY4emI3THJPc25BU1E9PSIsInZhbHVlIjoiZFc4WTZUZ1hLTWdwdVpBbGxWcXo3dz09IiwibWFjIjoiYmQ2MDVjMjlmNTQ4MmU0ZWU2M2ExZTQwN2ExMTg0MDg5NDhhNGZmYmNjZTgyYTY2ZTMzYjJiYTdhOTUwM2Y4MiIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/Laut-Bercerita.jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;Laut Bercerita&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Leila S. Chudori&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;A tale of struggle, sacrifice, and loss during a dark chapter in Indonesian history.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 3
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6Imt0WU1mZE1rbEt6THArRDZTandQUVE9PSIsInZhbHVlIjoiYVg2SzRWaFRjZnJLQ2U5cklBL3VNZz09IiwibWFjIjoiMjY0NmE3YTMzMjA5MWM1ZGRmNDg2ZGY0NGM1YWE3YWM4Y2YyZTNlNGI5OWZhZGIyZTk2YTIzNGY3MzJmOGI1NyIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6IkdnVHBwZGptci9yVVRZUGZUSzRDSkE9PSIsInZhbHVlIjoiWktNZ2xFQnprQVgzckhOemhUZjY4dz09IiwibWFjIjoiMGY1OTcyMGQ4NDdhNzhhYTc2ODUyYjY0NGJlYjE4Y2U4Yzk5Mzc5N2FjZDQzZmFhYjAyYTIzZDc1Y2I0YWMzNCIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/The-Psychology-of-Money.jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;The Psychology of Money&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Morgan Housel&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;Explores how a healthy mindset about money can help achieve financial freedom.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 2
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6InpUMi9IL3lFUXN0dlR2b0M1aFB5L3c9PSIsInZhbHVlIjoiSWRPOSt3RkIxRUd1ZC9vcjdiYkZ2QT09IiwibWFjIjoiZGI3MDE3OTc3Yjk3NjI1NTFiM2FkZGUwZjZlOGQ5Yzg4MWZkNGNmYWFjMmNjZjdlYTViMTdiOWJhYjQ1ODJhOCIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6Im5WaEJvbHFxUjFCZVVubEdCekk0SHc9PSIsInZhbHVlIjoiM01jamlsVVlwWFcvTWxMeDF3V2hkUT09IiwibWFjIjoiYzVhMjAyMDU2MjYxZTkwMTIzMzcxYzI1YzRjMDFjZGNhNWM2MWUxMzM5YmY5ZWI2ZTU2ODcwYmRkMjA2M2Y5YyIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/The-Maxwell-Daily-Reader.jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;The Maxwell Daily Reader&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: John C. Maxwell&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;A daily guide offering leadership lessons for personal and professional development.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 2
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6Ik1Fd3lrdUkwN3NUb1VLTkFSTG9rNFE9PSIsInZhbHVlIjoiQ3BwYWE3dzZCeG1qenlaUmJzd2FPZz09IiwibWFjIjoiZGJjNzg3ZDVjZjM2NDM5NjhiODk5Y2I3MGVlMmI1ZGU3ZjU4ZDQwOTcxMmViZDBlNmQ5ZmY0OGI3OTFlNWJjYyIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6IjdvRTNzMlp4MmM1YTcxWmo2SkZmbUE9PSIsInZhbHVlIjoiYkFGNUtnWWFNV1FjNVJEeSt4dWkwdz09IiwibWFjIjoiNDEwZjEyYjgwZmVhNmY0YmExNjAyNmUxZWM0OGQ5OTkxZDEzZGRhYmFiZjVlOWY2MmUzNTFjYTRjMWQyMDA2NSIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/Home-Sweet-Loan.jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;Home Sweet Loan&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Almira Bastari&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;A humorous story about the struggles of millennials trying to achieve their dream of owning a house amidst various obstacles.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 5
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6IjVRUjh3V3hMbXNPZHpPUi9pM092SHc9PSIsInZhbHVlIjoiK2IvMWlHa0xNRmpwQTBra1FhYk5tZz09IiwibWFjIjoiNjdlY2ZhMjFhNTJkYzUyNTBkNWRhYTEyOTg3ZjczOTQ1MGVkMTIxMjM1NWRjNDM3MWRhMWY3YThmNTZjOTY3YiIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6IjU3Q3IwSkxKbUtjcGVlUFdFeHRUd1E9PSIsInZhbHVlIjoiM21DVW5yNWFBd0E5V0FQclppL0JWQT09IiwibWFjIjoiYmEwMWQ0ZjY3MTY3ODAyZWRmOGZlOGNkZmQ4MWE0MTEyOGYyMmZmODI2ODRhZDYzOGQyMDJhYTMzNWY4YmU2NCIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/The-Alchemists-Secret.jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;The Alchemist&amp;#039;s Secret&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Scott Mariani&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;A magical adventure in the world of alchemy filled with secrets and challenges.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 1
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6ImZsVEtKQ3k3T0d3TUVHV29jTys3UGc9PSIsInZhbHVlIjoiTTlDNlNuM3B2QzFjeEErSEdhT0dBZz09IiwibWFjIjoiMDU2YWNiY2E1NWVlN2EzMTEyNWU5ZmM1MDA3MDhmMjk3Y2VhYzI5M2IyOTVmYzlkYzNjYzZlYjZmZGU3ZDAwMyIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6IkVFY1Vsdzdtam1xdDJZRFNRa0dtVVE9PSIsInZhbHVlIjoiNVphTkpkSzlKQzFBcUs5OC9rS0xWUT09IiwibWFjIjoiMWFmMjNmMjkxMDY2ODMxZDc1MTlkOTZiYmRmYzZiOGNhYzJiMTQ1ZjU4MjNmMThlYTc2ZDQ2NjVmOWFkMjQxNiIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/The-Fault-in-Our-Stars.jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;The Fault in Our Stars&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: John Green&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;A love story that teaches courage and acceptance of life’s realities.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 1
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6IjR3U2hrTHltbUs0dHFZaHV2T3FMSlE9PSIsInZhbHVlIjoiUzlmWWlDRkZENlJhQXhJRGptRGZMdz09IiwibWFjIjoiMDA1MmY2MjE0YWJjN2RmNmM5OTYzZDQzZWEwNjc1ZTJhNDU2ZDJhYmYwYjc0NWQ5ZTY2YTEwZTI5MjQ5NmJkMyIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6Ii9BbVRPZ0NVdkV0RzdNVmg5OHFRWGc9PSIsInZhbHVlIjoiek8vQ0JLVXkzc0o1TFRub05Ublg3QT09IiwibWFjIjoiMmZmYTQwMzFkMjVlMTAzMzEwY2EwMzk2OWJhODQ1ODc3M2M0M2ExZGU2OTU5YTFmNWI5N2VkN2ZhNTAyMjc0MSIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/Koala-Kumal.jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;Koala Kumal&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Raditya Dika&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;Comedy that explores everyday life with Raditya Dika&amp;#039;s signature style.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 2
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6IlJVUXVmd0NOdlM2QVQvSmVwVE9mMGc9PSIsInZhbHVlIjoiZVYxRmRBNXRlTzJoTnZOdjBPZnNtZz09IiwibWFjIjoiMWU4ODIwNDk5YTY1NTFhMmI3ZjZjNDQ4ODIzMzEwYjFkMGNlNTQ2ODQ0ZjM0MDc0YWQzNjEzODRlZjkwNzY1OSIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6IkF5ZGZwTlhmWEt5Wm1MTUJwNm1qdGc9PSIsInZhbHVlIjoiT01GVi9pMlZkNjRHN0wvZFJnL3J2UT09IiwibWFjIjoiZDJiOGMwMTI2ZjFjMTNhNjg4NTBiZGEzNTk3ZTZjMTE0OGZiN2YwNzFlZmYzYzRmMzk5NzgyZDNiNGViYzlmZiIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/Crazy-Rich-Asians.jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;Crazy Rich Asians&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Kevin Kwan&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;A romantic comedy about cultural differences and social pressures within a wealthy Asian family.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 3
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6IlNmU3VNb0E2S0lHSTZoTjdPYWd0T0E9PSIsInZhbHVlIjoib1dCb2p2WEhIWEtSWXNJbGR4Z1JGdz09IiwibWFjIjoiZGUxOTM1ZGI4NDYyOTQ4MzRiZjQwYmNmMDE1YWJiNDgzZGRmYjlhZjhjNWM3MWI0MDlmZDNlZWQzM2VhYzI2ZiIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6IndKclBwMGt0aWZOQ0NyNjZRTGRnaEE9PSIsInZhbHVlIjoiNmFXU2d6alBiVmdtSzd5d2YrcjVGdz09IiwibWFjIjoiN2FjNTBiY2ZlYTU4NzE5ZDQyMzRlY2U5ZGVlMTAwNTFmY2Y2YTVjOGUyNGZlMzFjNGM1MTEwM2Q2ZTYzMDI2NSIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/Effortless.jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;Effortless&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Greg McKeown&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;Buku pengembangan diri yang mengajarkan cara membuat hal-hal esensial dalam hidup menjadi lebih mudah dan tercapai.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 1
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6ImUrbDlMVDJPNCtOOEZEUHR6TlVONlE9PSIsInZhbHVlIjoiU3R3ZnJBc2UwRkUzT1d0Njhtcnp1dz09IiwibWFjIjoiZjhiMjM0M2Y5YzE5N2Y5MzdjY2I1YTdhYzU2ZjhjNDg0OWU5NmM4NTg2MmJiNzE5Zjc3MzhlNzQxYjNkMDEyZCIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6Ijl0VG1VUE9DQ280L2VST0lLUHBkckE9PSIsInZhbHVlIjoiMlBrMmhmZ3RkZlZmeVdHMnFRNFYzUT09IiwibWFjIjoiMzY5MzVjOThjZjg1YzNlOTllNTlhNTJmNGYyM2IxYWYwZDRhNzcxZTQxY2VhY2IyMDU2ZDI2MTBiZTUwZjFkMiIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/Supernova-Inteligensi-Embun-Pagi.jpeg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;Supernova: Inteligensi Embun Pagi&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Dewi Lestari&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;The epic conclusion of the Supernova series, blending science, spirituality, and drama.&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 2
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6IjM2MC9lVkIxeUNyd0JkTGZWYXMyWVE9PSIsInZhbHVlIjoiOU1QdEwrYUNPbGc0RlBPWWJ4OFhsdz09IiwibWFjIjoiNzk5OTY5MTdhZWJjYjNiNTYxMzUzMzA3M2UyODQ0ZTM3ODk4NjM1M2Q0M2ZhODMwMzgzZjY0OWZmM2E2ZmJlNiIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6IjhQeEhrQzg4bzNXZU5PdHJvSnJMZnc9PSIsInZhbHVlIjoibVB5V1piVHIrWkZnRnFjRkQzUU5oZz09IiwibWFjIjoiZGFmNDhlNzE5MDBjOWJlMzQ4NGRkNmViMGEzMDhkNWUwYmQ5NjAwMWNiYzA1ODJkNWE3MGY1YjlkNWE5MTY4OSIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/gojo_x_geto_bg_jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;Gojo and Geto&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Kimberly&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;Lalala&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 5
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6IlBrT3l1T0p5d3NBdWh1eEVtZVBHRFE9PSIsInZhbHVlIjoiM0duNUVSWFN4aStvTDc0QkxLUWJWZz09IiwibWFjIjoiOGEzNzVmNzg5NDMxNTM1NTQ5NDM5NDU3ZjM3YWI0YzgxMmEyOGE2ZDI4OGNhODYxZTFhMWE0Y2ZiMjA5MjQyOCIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6Ikswc3l3OEdJQTVoc3JGNno1U3lrb0E9PSIsInZhbHVlIjoiWE5YSEFxY2YvL2h5ayt1STRaS1l1QT09IiwibWFjIjoiNjIxYTcxYTZkMTk5MjUwZmQ2N2I3NGViMWQxMDI5YjhkMzBmNWZkMmQ4ZTg0ZTE3ZWFjYjI0ZGYyNDBkMTI3YyIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/gojo_x_geto_bg_jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;Gojo and Geto&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: Kimberly&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;Summary&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 5
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6IlVCbFZFRWN3YVJuTUxEdUlyRGEzb0E9PSIsInZhbHVlIjoiajJyY29Vcml3ajk5WW9qbHdka1o0Zz09IiwibWFjIjoiMjE1ODk4MjM2NzhlMDNlZjY3OGQ4ZTg0NzYyY2Y2ZmIzNTU1MDA2YmFlZTIyZTIxYjFjNTdhNTdiNmYyZDRhZCIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                                    &lt;div class=&quot;bg-white rounded-lg shadow-md overflow-hidden relative&quot;&gt;
+                        &lt;a href=&quot;http://localhost:8000/book/eyJpdiI6IldNOFRvNkNqU0gzU0lDQzlBcGxlVWc9PSIsInZhbHVlIjoiOWY3VStkV3AvNWlKeVJhR1BuVkZlQT09IiwibWFjIjoiNGI2NjkxZWU3ZTZhNThmMTA4MDAzZTRiN2RiMWEzYmZkMzY4OWFlYWQzMTViNDg4Yjc0OThmYzQzZjJkYTQwYSIsInRhZyI6IiJ9&quot;  &gt; 
+                            &lt;div class=&quot;flex items-center justify-center py-4 bg-gray-50&quot;&gt;
+                                &lt;img src=&quot;http://localhost:8000/images/books/gojo_x_geto_bg_jpg&quot; alt=&quot;Book Cover&quot; class=&quot;w-33 h-48 rounded shadow-md object-cover&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;hr class=&quot;w-full border-gray-300&quot;&gt;
+                        &lt;div class=&quot;p-4 pb-16&quot;&gt;
+                            &lt;h2 class=&quot;text-xl font-semibold&quot;&gt;五条悟&lt;/h2&gt;
+                            &lt;p class=&quot;text-gray-700&quot;&gt;Author: 五条悟&lt;/p&gt;
+                            &lt;p class=&quot;text-gray-600 mt-2&quot;&gt;五条悟&lt;/p&gt;
+                            &lt;div class=&quot;absolute bottom-4 right-4 flex items-center space-x-4&quot;&gt;
+                                &lt;!-- Book Quota --&gt;
+                                &lt;span class=&quot;text-white bg-yellow-500 text-sm px-3 py-1 rounded-full&quot;&gt;
+                                    Quota: 5
+                                &lt;/span&gt;
+                                &lt;!-- Reserve Button --&gt;
+                                                                    &lt;button onclick=&quot;window.location=&apos;http://localhost:8000/reserve/eyJpdiI6ImxIZXNyZEU5VG0wdFc5emxvWmxaYVE9PSIsInZhbHVlIjoidFM5eGZtR1NKV3NrRmN0VWhSaXhWZz09IiwibWFjIjoiYTFhNDNmYzFmMGQ2NDVlMmQ2Njg3ZmQ4NDRkZmY3MzA5YjIxYmU2M2U2OTg3NTMyOGE0ZjI2NWM3OTNmYzg0MSIsInRhZyI6IiJ9&apos;&quot; 
+                                        class=&quot;bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200&quot;&gt;
+                                        Reserve
+                                    &lt;/button&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                            &lt;/section&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+            &lt;/main&gt;
+        &lt;/div&gt;
+        
+    &lt;/body&gt;
+&lt;/html&gt;
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">XSRF-TOKEN=eyJpdiI6ImdOOVBQY2tPbCtNSjRqVlBjdkg4Y0E9PSIsInZhbHVlIjoiRU5SK3hLYUdIeXJ6V0gwaVlWeXhEUUtTVE42Mkw4a0ZpOS9TQkxWQmZ1ZVZhU094UnMvUmhLNEFZQ1dwcFI4S1p5OXNXWVBOMk1GOGdRQTRUMEx1d2FnL2JSSllyNEIzcWVEd3VBazFKNklWeGpSNVZVQ0VwYUNJOGI5TG9Tb04iLCJtYWMiOiJmNjZmMjI4MTI1M2M2MGE0MjAzYThhYjcxZjUwZjFlNzgzYTI4MDExNWVlNTRkOGY1ZjMxNzEwMmFiYjcyNGE2IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IlB1SnFiVkVFWDYwVXpyTThQRlQyb0E9PSIsInZhbHVlIjoiclNsbVdNWjhCK0lSeGFSc0poQmlVK2hXdWRuWXFHYkhYUm5TRzUzTHdYK3g2UGFJTVpJYy91OFh3b1RhU1dDckNaMVVaOHpuOTFRS1pWNm5aQmc0R04zRmc0NEJOVWdnNWpBUEozYXBVeTB0T0hmQ3ArYWM2TWsyN1M0SlozYWQiLCJtYWMiOiI1ZDI4MDQwMjcwMzJkMGYxODNmNTRmMDdlNWU1MTA5NGRmM2UzYWNmNGNlNmE4ODNhNjgzNmE3YWIwZGQ0NmE3IiwidGFnIjoiIn0%3D</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://localhost:8000/book</java.net.URL>
+</httpSample>
+<httpSample t="24" it="0" lt="23" ct="0" ts="1734796752510" s="true" lb="-50" rc="200" rm="OK" tn="" dt="" de="" by="411041" sc="1" ec="0" ng="0" na="0" hn="MSI">
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Host: localhost:8000
+Date: Sat, 21 Dec 2024 15:59:12 GMT
+Connection: close
+Content-Length: 410920
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Referer: http://localhost:8000/book
+Accept-Language: en-US,en;q=0.5
+Host: localhost:8000
+Priority: u=5, i
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+</requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">XSRF-TOKEN=eyJpdiI6Ii80OUIybGZ5YjYwZU9XcDFFR1YvOXc9PSIsInZhbHVlIjoiZGE1TnFvVDA5N05YK1pMQ1lwbklQWnNObzV0Mm9WQVM1ZzJOU2N6ZFNsQk43TS84MzdVZGM1ZVhDaW9vUFl5b3B5dmRaL29LTDZvWnpvK3lmbnNYYnRnTTlZMFg4RTBLcEF4ZVI1bUxPYllNMDNUK1FYM0dKaENWUS9lNjlhd3QiLCJtYWMiOiI3YTdiMWQ0MTM1ODNkM2FhMzM1MWNkMTUyOGExMTEwYjYzZmZmYzdlZTFhMTgwZWQ5YWY4Y2U4ZTBkNzUwYTE0IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6ImZqVFREc3lMdkYwWE9XWXlqYXRJZVE9PSIsInZhbHVlIjoiTnJUNGNyQ2xLY0grSGFicWIvY2xjeHVNUUVNNllES0FBNHozL3o4b2Z4MGk1Mk9WMnJ4M013dnZBUjZDVjd0MXhzNWMrNUJiK3AxWHl4MlZqbGJ6TGVpQ1gxbmQ4SzdacFJyeDBKdk4wMlU5QzBoSFRaME4rM0JtRkhOZGszNnEiLCJtYWMiOiI3MTIxNTY1NzZjNDE4NmJmZjMzNmU1ZWJmNGEzOGI3ZDkyNzBkNjcwNjMzY2Q2ZGJhZmJmMmMzZDUxYTI5NTllIiwidGFnIjoiIn0%3D</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://localhost:8000/images/books/gojo_x_geto_bg_jpg</java.net.URL>
+</httpSample>
+
+</testResults>

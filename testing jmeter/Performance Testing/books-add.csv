@@ -1,0 +1,81 @@
+book_title,image,genre,year,author,publisher,pages,quota,description,summary
+The Great Gatsby,image.jpg,Fiction,1925,F. Scott Fitzgerald,Scribner,218,10,A novel set in the Jazz Age that critiques the American Dream,The story of Jay Gatsby's unrequited love for Daisy Buchanan.
+1984,image.jpg,Dystopian,1949,George Orwell,Secker & Warburg,328,8,A chilling vision of a totalitarian future where freedom is suppressed,The life of Winston Smith in a society ruled by Big Brother.
+To Kill a Mockingbird,image.jpg,Fiction,1960,Harper Lee,J.B. Lippincott & Co.,281,12,A story of racial injustice in the Deep South,Scout Finch grows up in a town divided by racism and prejudice.
+Moby-Dick,image.jpg,Adventure,1851,Herman Melville,Richard Bentley,585,5,A sailor's quest to kill the white whale, Ishmael's journey with Captain Ahab in search of vengeance against Moby Dick.
+Pride and Prejudice,image.jpg,Romance,1813,Jane Austen,T. Egerton,279,20,A classic romance exploring themes of love, class, and manners,Elizabeth Bennet navigates love and societal expectations with Mr. Darcy.
+The Catcher in the Rye,image.jpg,Fiction,1951,J.D. Salinger,Little, Brown and Company,277,15,A rebellious teenager’s journey through New York City,Holden Caulfield struggles with the complexities of adulthood.
+War and Peace,image.jpg,Historical Fiction,1869,Leo Tolstoy,The Russian Messenger,1225,4,An epic of Russian society during the Napoleonic Wars,The intertwined lives of aristocratic families during the Napoleonic Wars.
+The Hobbit,image.jpg,Fantasy,1937,J.R.R. Tolkien,George Allen & Unwin,310,18,A fantasy adventure about a hobbit's unexpected journey,Bilbo Baggins embarks on a quest to recover treasure guarded by a dragon.
+Crime and Punishment,image.jpg,Philosophical Fiction,1866,Fyodor Dostoevsky,The Russian Messenger,430,6,A young man grapples with the moral implications of murder,Raskolnikov’s existential torment after committing a crime.
+The Odyssey,image.jpg,Mythology,8th Century BCE,Homer,Various Publishers,500,10,An epic of Odysseus’ journey home after the Trojan War,Odysseus’ perilous voyage back to Ithaca after the fall of Troy.
+Brave New World,image.jpg,Dystopian,1932,Aldous Huxley,Chatto & Windus,311,7,A vision of a future where technology controls every aspect of life,The novel explores the consequences of a society obsessed with happiness and control.
+The Lord of the Rings:image.jpg,Fantasy,1954,J.R.R. Tolkien,George Allen & Unwin,1200,9,A high fantasy epic following the quest to destroy a powerful ring,Frodo Baggins and his companions travel to destroy the One Ring.
+The Chronicles of Narnia:image.jpg,Fantasy,1950,C.S. Lewis,Geoffrey Bles,767,14,Seven fantasy novels about a magical land,The adventures of children who discover a magical world called Narnia.
+The Great Expectations:image.jpg,Fiction,1861,Charles Dickens,Chapman & Hall,505,11,A story of a young orphan's journey through life,Pip’s coming-of-age tale, learning about love, wealth, and loyalty.
+Anna Karenina:image.jpg,Romance,1878,Leo Tolstoy,The Russian Messenger,864,6,A tragic love story set in Russian high society,The passionate affair between Anna Karenina and Count Vronsky leads to a tragic ending.
+Little Women:image.jpg,Historical Fiction,1868,Louisa May Alcott,Roberts Brothers,759,13,Follows the lives of four sisters in post-Civil War New England,Jo March and her sisters navigate love, loss, and personal growth.
+"Fahrenheit 451:image.jpg,Dystopian,1953,Ray Bradbury,Ballantine Books,158,16,A society where books are banned and ""firemen"" burn them,Montag begins to question his role in society as a book burner."
+Frankenstein:image.jpg,Gothic Fiction,1818,Mary Shelley,Lackington, Hughes, Harding, Mavor & Jones,280,12,A scientist creates a living creature, only to abandon it,Victor Frankenstein’s creation leads to tragedy and a quest for revenge.
+Dracula:image.jpg,Gothic Fiction,1897,Bram Stoker,Archibald Constable and Company,418,5,The story of Count Dracula’s attempt to move to England and spread the undead curse,A young lawyer battles the evil influence of the vampire Count Dracula.
+The Picture of Dorian Gray:image.jpg,Philosophical Fiction,1890,Oscar Wilde,Lea & Blanchard,252,8,A young man whose portrait ages while he remains eternally youthful,Dorian Gray’s life is marked by a corrupting pursuit of pleasure.
+The Kite Runner:image.jpg,Drama,2003,Khaled Hosseini,Riverhead Books,371,14,Two boys' friendship in Afghanistan and the impact of war,Amir’s guilt over betraying his friend Hassan shapes his journey to redemption.
+The Alchemist:image.jpg,Adventure,1988,Paulo Coelho,Rocco,208,20,A shepherd’s journey to find treasure and his personal legend,Santiago’s adventure teaches him the importance of following his dreams.
+The Hunger Games:image.jpg,Dystopian,2008,Suzanne Collins,Scholastic Press,374,18,A girl must fight for her life in a televised death match,Katniss Everdeen volunteers to take her sister's place in a brutal televised competition.
+Catch-22:image.jpg,Satire,1961,Joseph Heller,Simon & Schuster,453,7,A dark satire about the absurdities of war,Lieutenant Yossarian tries to escape the madness of war, but finds he can't escape the paradox of military regulations.
+Gone with the Wind:image.jpg,Historical Fiction,1936,Margaret Mitchell,Macmillan,1037,4,An epic tale of love and loss during the American Civil War,Scarlett O'Hara struggles to survive the hardships of war and the loss of her love, Rhett Butler.
+The Shining:image.jpg,Horror,1977,Stephen King,Doubleday,447,10,A family is trapped in a haunted hotel,The Torrance family becomes haunted by the supernatural forces in a desolate hotel.
+The Secret Garden:image.jpg,Children's Fiction,1911,Frances Hodgson Burnett,F. H. Burnett,331,16,A young girl discovers a hidden garden that changes her life,The story of Mary Lennox’s transformation and the healing powers of a secret garden.
+Wuthering Heights:image.jpg,Gothic Fiction,1847,Emily Brontë,Thomas Cautley Newby,416,9,A tragic tale of love and revenge on the Yorkshire moors,Heathcliff’s obsession with Catherine Earnshaw leads to a destructive love.
+The Bell Jar:image.jpg,Fiction,1963,Sylvia Plath,Harper & Row,244,12,The story of a young woman's descent into mental illness,Esther Greenwood struggles with depression and the expectations of society.
+Les Misérables:image.jpg,Historical Fiction,1862,Victor Hugo,A. Lacroix, 1862,1232,6,The epic story of the struggles of the poor in post-revolutionary France,Jean Valjean’s quest for redemption amid the turmoil of 19th-century France.
+The Road:image.jpg,Post-Apocalyptic,2006,Cormac McCarthy,Alfred A. Knopf,287,8,A father and son journey through a bleak, post-apocalyptic world,The two survivors struggle to stay alive in a world ravaged by an unspecified disaster.
+The Outsiders:image.jpg,Fiction,1967,S.E. Hinton,Viking Press,192,15,Teenagers struggle with identity and class in a divided town,Ponyboy Curtis and his gang of “Greasers” clash with the affluent “Socs.”
+The Godfather:image.jpg,Crime,1969,Marion Puzo,G.P. Putnam's Sons,448,5,A family saga set in the world of organized crime,Don Vito Corleone navigates power, betrayal, and family loyalty in the Mafia.
+The Secret Life of Bees:image.jpg,Historical Fiction,2002,Sue Monk Kidd,Viking Press,302,10,A young girl searches for answers about her mother and herself,Lily Owens embarks on a journey to uncover the truth about her mother.
+The Girl with the Dragon Tattoo:image.jpg,Thriller,2005,Stieg Larsson,MacLehose Press,465,12,Investigative journalist and hacker uncover a family’s dark secrets,Mikael Blomkvist and Lisbeth Salander investigate a wealthy family’s history.
+The Handmaid's Tale:image.jpg,Dystopian,1985,Margaret Atwood,McClelland and Stewart,311,9,A dystopian novel about a woman’s struggle in a theocratic society,Offred’s fight for freedom in a patriarchal, totalitarian world.
+The Princess Bride:image.jpg,Fantasy,1973,William Goldman,Harper & Row,399,13,A fairy tale adventure filled with romance and humor,Westley and Princess Buttercup must overcome obstacles to be together.
+The Hitchhiker's Guide to the Galaxy:image.jpg,Science Fiction,1979,Douglas Adams,Pan Books,224,14,A comedic adventure through space,Arthur Dent and his friends journey through space after Earth is destroyed.
+The Handmaid's Tale:image.jpg,Dystopian,1985,Margaret Atwood,McClelland and Stewart,311,8,A dystopian future where women are forced into servitude,Offred fights to reclaim her agency in a society where women are oppressed.
+The Martian:image.jpg,Science Fiction,2011,Andy Weir,Crown Publishing,369,12,A stranded astronaut’s fight for survival on Mars,Mark Watney must use his ingenuity to survive after being left behind on Mars.
+The Giver:image.jpg,Dystopian,1993,Lois Lowry,Houghton Mifflin,180,14,A society where emotions are suppressed,Jonas discovers the truth about his community.
+The Book Thief:image.jpg,Historical Fiction,2005,Markus Zusak,Alfred A. Knopf,584,11,A young girl’s life in Nazi Germany,Death narrates the life of Liesel Meminger, a girl who steals books.
+"Slaughterhouse-Five:image.jpg,Science Fiction,1969,Kurt Vonnegut,Delacorte Press,275,10,A time-traveling soldier experiences World War II's horrors,Billy Pilgrim becomes ""unstuck"" in time, witnessing his life out of order."
+The Road:image.jpg,Post-Apocalyptic,2006,Cormac McCarthy,Alfred A. Knopf,287,8,A father and son journey through a bleak, post-apocalyptic world,The two survivors struggle to stay alive in a world ravaged by an unspecified disaster.
+The Silent Patient,image.jpg,Thriller,2019,Alex Michaelides,Celadon Books,325,10,A psychological thriller about a woman who shot her husband,The story of Alicia Berenson, who is accused of murdering her husband and her silence afterward.
+The Midnight Library,image.jpg,Fiction,2020,Matt Haig,Viking,304,12,A woman explores alternative lives in a library between life and death,Nora Seed finds herself in a magical library where she can explore the lives she could have lived.
+Dune:image.jpg,Science Fiction,1965,Frank Herbert,Chilton Books,412,9,A sweeping space opera about politics, religion, and power,Paul Atreides navigates the desert planet Arrakis in a battle for control over the valuable spice melange.
+The Night Circus:image.jpg,Fantasy,2011,Erin Morgenstern,Anchor Books,387,13,A magical competition between two illusionists,Two magicians, bound by a mysterious pact, compete to create the most extraordinary circus.
+Where the Crawdads Sing:image.jpg,Mystery,2018,Delia Owens,G.P. Putnam's Sons,368,15,A mystery involving the death of a man in a small town,A young girl, Kya, raised in isolation, is suspected of murder when a local man is found dead.
+The Invisible Man,image.jpg,Science Fiction,1897,H.G. Wells,Grant Richards,224,10,A man discovers the power of invisibility but loses his humanity,Griffin, a scientist, becomes invisible and descends into madness, terrorizing those around him.
+Book Title 1,image.png,Genre 1,2010,Author 1,Publisher 1,100,10,A brief description of Book Title 1.,A summary of the story in Book Title 1.
+Book Title 2,image.png,Genre 2,2011,Author 2,Publisher 2,105,11,A brief description of Book Title 2.,A summary of the story in Book Title 2.
+Book Title 3,image.png,Genre 3,2012,Author 3,Publisher 3,110,12,A brief description of Book Title 3.,A summary of the story in Book Title 3.
+Book Title 4,image.png,Genre 4,2013,Author 4,Publisher 4,115,13,A brief description of Book Title 4.,A summary of the story in Book Title 4.
+Book Title 5,image.png,Genre 5,2014,Author 5,Publisher 5,120,14,A brief description of Book Title 5.,A summary of the story in Book Title 5.
+Book Title 6,image.png,Genre 1,2015,Author 6,Publisher 6,125,15,A brief description of Book Title 6.,A summary of the story in Book Title 6.
+Book Title 7,image.png,Genre 2,2016,Author 7,Publisher 7,130,16,A brief description of Book Title 7.,A summary of the story in Book Title 7.
+Book Title 8,image.png,Genre 3,2017,Author 8,Publisher 1,135,17,A brief description of Book Title 8.,A summary of the story in Book Title 8.
+Book Title 9,image.png,Genre 4,2018,Author 9,Publisher 2,140,18,A brief description of Book Title 9.,A summary of the story in Book Title 9.
+Book Title 10,image.png,Genre 5,2019,Author 10,Publisher 3,145,19,A brief description of Book Title 10.,A summary of the story in Book Title 10.
+Book Title 11,image.png,Genre 1,2020,Author 1,Publisher 4,150,20,A brief description of Book Title 11.,A summary of the story in Book Title 11.
+Book Title 12,image.png,Genre 2,2021,Author 2,Publisher 5,155,21,A brief description of Book Title 12.,A summary of the story in Book Title 12.
+Book Title 13,image.png,Genre 3,2022,Author 3,Publisher 6,160,22,A brief description of Book Title 13.,A summary of the story in Book Title 13.
+Book Title 14,image.png,Genre 4,2023,Author 4,Publisher 7,165,23,A brief description of Book Title 14.,A summary of the story in Book Title 14.
+Book Title 15,image.png,Genre 5,2024,Author 5,Publisher 1,170,24,A brief description of Book Title 15.,A summary of the story in Book Title 15.
+Book Title 16,image.png,Genre 1,2010,Author 6,Publisher 2,175,25,A brief description of Book Title 16.,A summary of the story in Book Title 16.
+Book Title 17,image.png,Genre 2,2011,Author 7,Publisher 3,180,26,A brief description of Book Title 17.,A summary of the story in Book Title 17.
+Book Title 18,image.png,Genre 3,2012,Author 8,Publisher 4,185,27,A brief description of Book Title 18.,A summary of the story in Book Title 18.
+Book Title 19,image.png,Genre 4,2013,Author 9,Publisher 5,190,28,A brief description of Book Title 19.,A summary of the story in Book Title 19.
+Book Title 20,image.png,Genre 5,2014,Author 10,Publisher 6,195,29,A brief description of Book Title 20.,A summary of the story in Book Title 20.
+Book Title 21,image.png,Genre 1,2015,Author 1,Publisher 7,200,30,A brief description of Book Title 21.,A summary of the story in Book Title 21.
+Book Title 22,image.png,Genre 2,2016,Author 2,Publisher 1,205,31,A brief description of Book Title 22.,A summary of the story in Book Title 22.
+Book Title 23,image.png,Genre 3,2017,Author 3,Publisher 2,210,32,A brief description of Book Title 23.,A summary of the story in Book Title 23.
+Book Title 24,image.png,Genre 4,2018,Author 4,Publisher 3,215,33,A brief description of Book Title 24.,A summary of the story in Book Title 24.
+Book Title 25,image.png,Genre 5,2019,Author 5,Publisher 4,220,34,A brief description of Book Title 25.,A summary of the story in Book Title 25.
+Book Title 26,image.png,Genre 1,2020,Author 6,Publisher 5,225,35,A brief description of Book Title 26.,A summary of the story in Book Title 26.
+Book Title 27,image.png,Genre 2,2021,Author 7,Publisher 6,230,36,A brief description of Book Title 27.,A summary of the story in Book Title 27.
+Book Title 28,image.png,Genre 3,2022,Author 8,Publisher 7,235,37,A brief description of Book Title 28.,A summary of the story in Book Title 28.
+Book Title 29,image.png,Genre 4,2023,Author 9,Publisher 1,240,38,A brief description of Book Title 29.,A summary of the story in Book Title 29.
+Book Title 30,image.png,Genre 5,2024,Author 10,Publisher 2,245,39,A brief description of Book Title 30.,A summary of the story in Book Title 30.
