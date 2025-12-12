@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use App\Models\Genre;
+use App\Models\BookPdf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 class BookController extends Controller
 {
@@ -205,7 +207,7 @@ class BookController extends Controller
         }
 
         try{
-            Book::create([
+            $book = Book::create([
                 'title' => $request->title,
                 'genre_id' => $request->genre_id,
                 'year' => $request->year,
@@ -217,6 +219,14 @@ class BookController extends Controller
                 'summary' => $request->summary,
                 'image' => $imagePath,
             ]);
+
+            if ($request->hasFile('pdf')) {
+                $path = $request->file('pdf')->store('books/pdf', 'public');
+                BookPdf::create([
+                    'book_id' => $book->id,
+                    'pdf' => $path
+                ]);
+            }
 
             Session::flash('title', 'Book Berhasil Diinput!');
             Session::flash('message', '');
@@ -230,5 +240,46 @@ class BookController extends Controller
             return back()->withErrors($request)->withInput();
         }
         
+    }
+
+    public function uploadPdf(Request $request, Book $book)
+    {
+        $request->validate([
+            'pdf' => 'required|file|mimes:pdf|max:10240'
+        ], [
+            'pdf.required' => 'File PDF wajib diupload.',
+            'pdf.mimes' => 'File harus berformat PDF.',
+            'pdf.max' => 'Ukuran file maksimal 10MB.',
+        ]);
+
+        if ($request->hasFile('pdf')) {
+            $file = $request->file('pdf');
+            $path = $file->store('books/pdf', 'public');
+            
+            BookPdf::create([
+                'book_id' => $book->id,
+                'pdf' => $path
+            ]);
+
+            Session::flash('title', 'PDF Berhasil Diupload!');
+            Session::flash('message', 'File PDF telah disimpan.');
+            Session::flash('icon', 'success');
+        }
+
+        return redirect()->back();
+    }
+
+    public function viewPdf(BookPdf $bookPdf)
+    {
+        $path = Storage::disk('public')->path($bookPdf->pdf);
+        
+        if (!Storage::disk('public')->exists($bookPdf->pdf)) {
+            abort(404);
+        }
+
+        return response()->file($path, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'inline; filename="'.basename($path).'"'
+        ]);
     }
 }

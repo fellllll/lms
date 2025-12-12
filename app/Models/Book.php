@@ -34,4 +34,9 @@ class Book extends Model
     {
         return $this->belongsToMany(Book::class, 'reserve', 'book_id', 'user_id');
     }
+
+     public function pdfs()
+    {
+        return $this->hasMany(BookPdf::class);
+    }
 }

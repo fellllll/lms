@@ -56,6 +56,14 @@
                             @endphp
                             <td><span class="{{ $class }}">{{ $reservation->status }}</span></td>
                             <td>
+                            @if(isset($reservation->book) && $reservation->book->pdfs->count() > 0)
+                                <a href="{{ route('books.viewPdf', $reservation->book->pdfs->first()) }}"
+                                    target="_blank"
+                                    class="bg-green-600 text-white py-2 px-3 rounded hover:bg-green-700 transition ease-in-out duration-200 mr-2 text-sm">
+                                    📖 Baca PDF
+                                </a>
+                            @endif    
+                            
                             @if (Auth::user()->role_id == 1)
                                 <button type="button" onclick="window.location.href='{{ url('reservation/edit', encrypt($reservation->id)) }}'" 
                                     class="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200">
