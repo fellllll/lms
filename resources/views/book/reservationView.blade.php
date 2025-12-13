@@ -68,9 +68,9 @@
                                 <form id="delete-form-{{ $reservation->id }}" action="{{ route('reserve.destroy', encrypt($reservation->id)) }}" method="POST" class="inline-block ml-2">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="button" onclick="confirmDialog('{{ $reservation->id }}')" class=" bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200">
-                                        <i class="fa-solid fa-trash"></i>
-                                          Delete
+                                    <button type="button" onclick="confirmDialog('{{ $reservation->id }}')" class="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition ease-in-out duration-200">
+                                        <i class="fa-solid fa-book"></i>
+                                        Return Book
                                     </button>
                                 </form>                        
                             @endif
@@ -102,23 +102,24 @@
 
     
 <script>
-    function confirmDialog(reserve_id) {
-        event.preventDefault();
-        
-        Swal.fire({
-            title: `Apakah Kamu Yakin akan Menghapus Data Ini ?`,
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonText: `Ya, Hapus`,
-            confirmButtonColor: "#2463eb",
-            cancelButtonText: "Batal",
-            reverseButtons: true
-        }).then((result) => {
-            if (result.isConfirmed) {
-                document.getElementById('delete-form-' + reserve_id).submit();
-            }
-        });
-    }
+function confirmDialog(reserve_id) {
+    event.preventDefault();
+    
+    Swal.fire({
+        title: "Kembalikan buku ini?",
+        text: "Buku akan dianggap sudah dikembalikan.",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonText: "Ya, kembalikan",
+        confirmButtonColor: "#16a34a",
+        cancelButtonText: "Batal",
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+            document.getElementById('delete-form-' + reserve_id).submit();
+        }
+    });
+}
 </script>
 
 </x-app-layout>

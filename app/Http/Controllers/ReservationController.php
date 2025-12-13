@@ -52,7 +52,7 @@ class ReservationController extends Controller
 
         $reserve = Reserve::findOrFail(decrypt($id));
         $reserve->delete();
-        Session::flash('title', 'Hapus Data Berhasil!');
+        Session::flash('title', 'Buku berhasil dikembalikan!');
         Session::flash('message', '');
         Session::flash('icon', 'success');
         return redirect()->route('reserve.view');
