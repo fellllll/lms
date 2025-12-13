@@ -77,7 +77,7 @@ class ReservationController extends Controller
         $waktu_pinjam = \Carbon\Carbon::parse($validatedata['waktu_pinjam']);
         $waktu_kembali = \Carbon\Carbon::parse($validatedata['waktu_kembali']);
 
-        if($waktu_pinjam->diffInDays($waktu_kembali) > 7){
+        if($waktu_pinjam->diffInDays($waktu_kembali) > 14){
             return back()->withErrors(
                 ['waktu_kembali' => 'Return Date harus dalam rentang maksimal satu minggu setelah Reservation Date.']);
         };
@@ -132,7 +132,7 @@ class ReservationController extends Controller
         $waktu_pinjam = \Carbon\Carbon::parse($validatedata['waktu_pinjam']);
         $waktu_kembali = \Carbon\Carbon::parse($validatedata['waktu_kembali']);
 
-        if($waktu_pinjam->diffInDays($waktu_kembali) > 7){
+        if($waktu_pinjam->diffInDays($waktu_kembali) > 14){
             return back()->withErrors(
                 ['waktu_kembali' => 'Return Date harus dalam rentang maksimal satu minggu setelah Reservation Date.']);
         };

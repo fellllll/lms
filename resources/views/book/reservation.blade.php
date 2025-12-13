@@ -32,7 +32,7 @@
                     
                     <div class="flex justify-center space-x-4 mt-4">
                         <button type="submit" class="bg-blue-600 text-white px-4 py-3 rounded hover:bg-blue-700 text-base">Book</button>
-                        <button type="submit" onclick="history.back();" class="bg-red-600 text-white px-4 py-3 rounded hover:bg-red-700 text-base">Cancel</button>
+                        <button type="button" onclick="history.back();" class="bg-red-600 text-white px-4 py-3 rounded hover:bg-red-700 text-base">Cancel</button>
                     </div>
                 </form>
 
