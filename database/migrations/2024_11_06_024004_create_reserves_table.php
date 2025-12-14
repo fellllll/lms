@@ -15,9 +15,11 @@ return new class extends Migration
             $table->id()->autoIncrement();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->foreignId('book_id')->constrained()->cascadeOnDelete();
-            $table->string('status');
-            $table->date('waktu_pinjam');
-            $table->date('waktu_kembali'); 
+            // nanti isi: WAITING / BORROWED / RETURNED / CANCELED
+            $table->string('status'); 
+            // ✅ Nullable untuk waiting list   
+            $table->date('waktu_pinjam')->nullable();
+            $table->date('waktu_kembali')->nullable();
             $table->timestamps();
         });
     }

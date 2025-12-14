@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use App\Models\Genre;
+use App\Models\Reserve;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+
 
 class BookController extends Controller
 {
@@ -14,29 +17,107 @@ class BookController extends Controller
     public function list()
     {
         $books = DB::table('books');
-        
         $books = $books->get();
         
         return view('book.list', compact('books'));
     }
 
+    // public function show(){
+    //     $books = DB::table('books');
+    //     if(request('search')) {
+    //         $books->where('title','like','%' . request('search') . '%')
+    //         ->orWhere('author','like','%' . request('search') . '%');
+    //     }
+
+    //     $books = $books->get();
+        
+    //     return view('book.index', compact('books'));
+    // }
+
+    
     public function show(){
-        $books = DB::table('books');
-        if(request('search')) {
-            $books->where('title','like','%' . request('search') . '%')
-            ->orWhere('author','like','%' . request('search') . '%');
+        $booksQuery = DB::table('books');
+
+        if (request('search')) {
+            $booksQuery->where('title', 'like', '%' . request('search') . '%')
+                ->orWhere('author', 'like', '%' . request('search') . '%');
         }
 
-        $books = $books->get();
-        
-        return view('book.index', compact('books'));
+        $books = $booksQuery->get();
+        // Buat hitung data reserve dr user yg login
+        $userId = Auth::id();
+        $bookIds = $books->pluck('id')->all();
+
+        // Reserve aktif user per book (WAITING / BORROWED)
+        $userActiveReserves = Reserve::where('user_id', $userId)
+            ->whereIn('book_id', $bookIds)
+            ->whereIn('status', ['WAITING', 'BORROWED'])
+            ->get()
+            ->keyBy('book_id');
+
+        // Semua waiting untuk buku-buku yang sedang ditampilkan (buat hitung nomor antrian)
+        $waitingRows = Reserve::whereIn('book_id', $bookIds)
+            ->where('status', 'WAITING')
+            ->orderBy('book_id')
+            ->orderBy('created_at')
+            ->orderBy('id')
+            ->get(['id', 'book_id', 'user_id', 'created_at']);
+
+        $queuePosByBookUser = []; // [book_id][user_id] = posisi antrian
+        $waitingCountByBook = []; // [book_id] = total waiting
+        $counter = [];
+
+        foreach ($waitingRows as $row) {
+            $bid = $row->book_id;
+            $counter[$bid] = ($counter[$bid] ?? 0) + 1;
+
+            $queuePosByBookUser[$bid][$row->user_id] = $counter[$bid];
+            $waitingCountByBook[$bid] = $counter[$bid];
+        }
+
+        return view('book.index', compact('books'))
+            ->with('userActiveReserves', $userActiveReserves)
+            ->with('queuePosByBookUser', $queuePosByBookUser)
+            ->with('waitingCountByBook', $waitingCountByBook);
     }
 
-    public function detail($id, Book $books){
-        $book = $books->where('id', decrypt($id))->firstOrFail();
 
-        return view('book.detail', compact('book'));
+    // public function detail($id, Book $books){
+    //     $book = $books->where('id', decrypt($id))->firstOrFail();
+    //     return view('book.detail', compact('book'));
+    // }
+
+    public function detail($id, Book $books)
+{
+    $bookId = decrypt($id);
+    $book = $books->where('id', $bookId)->firstOrFail();
+
+    $userId = \Auth::id();
+
+    // reserve aktif user utk buku ini (kalau ada)
+    $myReserve = Reserve::where('user_id', $userId)
+        ->where('book_id', $bookId)
+        ->whereIn('status', ['WAITING', 'BORROWED'])
+        ->first();
+
+    // hitung nomor antrian kalau dia waiting
+    $myQueue = null;
+    if ($myReserve && $myReserve->status === 'WAITING') {
+        $myQueue = Reserve::where('book_id', $bookId)
+            ->where('status', 'WAITING')
+            ->where(function ($q) use ($myReserve) {
+                $q->where('created_at', '<', $myReserve->created_at)
+                  ->orWhere(function ($q2) use ($myReserve) {
+                      $q2->where('created_at', '=', $myReserve->created_at)
+                         ->where('id', '<=', $myReserve->id);
+                  });
+            })
+            ->count();
     }
+
+    return view('book.detail', compact('book', 'myReserve', 'myQueue'));
+}
+
 
     public function destroy($id)
     {
