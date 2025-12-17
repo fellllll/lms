@@ -352,15 +352,29 @@ class BookController extends Controller
 
     public function viewPdf(BookPdf $bookPdf)
     {
-        $path = Storage::disk('public')->path($bookPdf->pdf);
-        
+         // ✅ TAMBAHAN: cek user login
+        $userId = Auth::id();
+
+        // ✅ TAMBAHAN: cek status reserve HARUS BORROWED
+        $hasAccess = Reserve::where('user_id', $userId)
+            ->where('book_id', $bookPdf->book_id)
+            ->where('status', 'BORROWED')
+            ->exists();
+
+        if (!$hasAccess) {
+            abort(403, 'Anda tidak memiliki akses ke PDF ini.');
+        }
+
+        // CODE LAMA (TIDAK DIUBAH)
         if (!Storage::disk('public')->exists($bookPdf->pdf)) {
             abort(404);
         }
 
+        $path = Storage::disk('public')->path($bookPdf->pdf);
+
         return response()->file($path, [
             'Content-Type' => 'application/pdf',
-            'Content-Disposition' => 'inline; filename="'.basename($path).'"'
+            'Content-Disposition' => 'inline; filename="' . basename($path) . '"'
         ]);
     }
 }
