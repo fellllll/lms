@@ -1,42 +1,65 @@
+
+
 <x-app-layout>
     @include('components.swallalert')
+
     <x-slot name="header">
-        <h1 class="text-2xl font-bold text-center">Library Book Reservation System</h1>
+        <h1 class="text-2xl font-bold">Reserve Book</h1>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <div class="max-w-xl mx-auto py-12">
+        <div class="bg-white rounded-lg shadow-md p-6">
 
-            <section>
-                <h2 class="text-xl font-semibold mb-2">Reserve a Book</h2>
+            <h2 class="text-lg font-semibold mb-4">
+                {{ $book }}
+            </h2>
 
-                <form id="reservation-form"  action="{{route('reserve.submit')}}" method="POST" class="bg-white p-4 rounded-md shadow-md">
+            <form action="{{ route('reserve.submit') }}" method="POST">
                 @csrf
-                    <label for="book-title" class="block mb-1">Book Title:</label>
-                    <input value="{{$book}}" type="text" name="book-title" readonly class="w-full p-2 border border-gray-300 rounded mb-4">
 
-                    <input value="{{$id}}" type="hidden" name="book_id" >
+                <input type="hidden" name="book_id" value="{{ $id }}">
 
-                    <label for="user-name" class="block mb-1">Your Name:</label>
-                    <input value="{{$name}}" type="text" name="user-name" readonly class="w-full p-2 border border-gray-300 rounded mb-4">
+                {{-- Start Date --}}
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700">
+                        Start Borrow Date
+                    </label>
+                    <input
+                        type="date"
+                        name="waktu_pinjam"
+                        value="{{ old('waktu_pinjam') }}"
+                        min="{{ date('Y-m-d') }}"
+                        required
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                    >
+                    @error('waktu_pinjam')
+                        <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
+                    @enderror
+                </div>
 
-                    <label for="waktu_pinjam" class="block mb-1">Reservation Date:</label>
-                    <input type="date" name="waktu_pinjam" required class="w-full p-2 border border-gray-300 rounded mb-4">
+                {{-- Info --}}
+                <div class="mb-4 text-sm text-gray-600 space-y-1">
+                    <p>📅 Duration: <strong>2 weeks</strong> (automatically calculated)</p>
+                    <p>⏳ If the slot is full on the selected date, you will be placed on the waiting list.</p>
+                </div>
 
-                    <x-input-error :messages="$errors->get('waktu_pinjam')" class="mb-2" />
-                    
-                    <label for="waktu_kembali" class="block mb-1">Return Date:</label>
-                    <input type="date" name="waktu_kembali" required class="w-full p-2 border border-gray-300 rounded mb-4">
+                {{-- Action Buttons --}}
+                <div class="flex justify-end gap-3 mt-6">
+                    <button
+                        type="button"
+                        onclick="history.back()"
+                        class="bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400 transition">
+                        Cancel
+                    </button>
 
-                    <x-input-error :messages="$errors->get('waktu_kembali')" class="mb-2" />
-                    
-                    <div class="flex justify-center space-x-4 mt-4">
-                        <button type="submit" class="bg-blue-600 text-white px-4 py-3 rounded hover:bg-blue-700 text-base">Book</button>
-                        <button type="submit" onclick="history.back();" class="bg-red-600 text-white px-4 py-3 rounded hover:bg-red-700 text-base">Cancel</button>
-                    </div>
-                </form>
+                    <button
+                        type="submit"
+                        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                        Confirm Reservation
+                    </button>
+                </div>
+            </form>
 
-            </section>
         </div>
     </div>
 </x-app-layout>

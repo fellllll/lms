@@ -29,6 +29,11 @@ Route::middleware('auth')->group(function () {
     Route::post('reserve', [ReservationController::class, 'submit'])->name('reserve.submit');
     Route::get('reservation', [ReservationController::class, 'view'])->name('reserve.view');
     Route::delete('/reserve/{id}', [ReservationController::class, 'destroy'])->name('reserve.destroy');
+    
+    Route::post('reservation/return/{id}', [ReservationController::class, 'returnBook'])->name('reserve.return');
+    // Route::post('reservation/cancel-waiting/{id}', [ReservationController::class, 'cancelWaiting'])->name('reserve.cancelWaiting');
+    Route::post('reservation/cancel/{id}', [ReservationController::class, 'cancel'])->name('reserve.cancel');
+
 
     Route::post('/books/{book}/upload-pdf', [BookController::class, 'uploadPdf'])->name('books.uploadPdf');
     Route::get('/books/pdf/{bookPdf}', [BookController::class, 'viewPdf'])->name('books.viewPdf');

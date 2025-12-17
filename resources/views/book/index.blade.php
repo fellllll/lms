@@ -22,6 +22,14 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-6">
                 @foreach ($books as $book)
+
+                @php
+                    $myReserve = $userActiveReserves[$book->id] ?? null;
+                    $myStatus  = $myReserve->status ?? null; // WAITING / BORROWED / null
+                    $myQueue   = $queuePosByBookUser[$book->id][auth()->id()] ?? null;
+                    $reserveUrl = url('/reserve/' . encrypt($book->id));
+                @endphp
+
                     <div class="bg-white rounded-lg shadow-md overflow-hidden relative">
                         <a href="{{route('book.detail', encrypt($book->id))}}"  > 
                             <div class="flex items-center justify-center py-4 bg-gray-50">
@@ -39,16 +47,40 @@
                                     Quota: {{$book->quota}}
                                 </span>
                                 <!-- Reserve Button -->
-                                @if ($book->quota == 0)
-                                    <button disabled
+                                <!-- @if ($book->quota == 0) -->
+                                    <!-- <button disabled
                                         class="bg-red-600 text-white py-2 px-4 rounded">
                                         Not Available
-                                    </button>
-                                @elseif($book->quota > 0)
-                                    <button onclick="window.location='{{ url( '/reserve/'.encrypt($book->id)) }}'" 
+                                    </button> -->
+                                <!-- @elseif($book->quota > 0) -->
+                                    <!-- <button onclick="window.location='{{ url( '/reserve/'.encrypt($book->id)) }}'" 
                                         class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200">
                                         Reserve
+                                    </button> -->
+                                <!-- @endif -->
+
+                                @if ($myStatus === 'BORROWED')
+                                    <button disabled class="bg-gray-400 text-white py-2 px-4 rounded cursor-not-allowed">
+                                        Borrowed
                                     </button>
+
+                                @elseif ($myStatus === 'WAITING')
+                                    <button disabled class="bg-gray-400 text-white py-2 px-4 rounded cursor-not-allowed">
+                                        Waiting #{{ $myQueue ?? '-' }}
+                                    </button>
+
+                                @else
+                                    @if ($book->quota <= 0)
+                                        <button onclick="window.location='{{ $reserveUrl }}'"
+                                            class="bg-yellow-600 text-white py-2 px-4 rounded hover:bg-yellow-700 transition ease-in-out duration-200">
+                                            Join Waiting List
+                                        </button>
+                                    @else
+                                        <button onclick="window.location='{{ $reserveUrl }}'"
+                                            class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200">
+                                            Reserve
+                                        </button>
+                                    @endif
                                 @endif
                             </div>
                         </div>
