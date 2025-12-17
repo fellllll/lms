@@ -43,28 +43,99 @@
                             <td>{{ $reservation->book->title }}</td>
 
                             @php
-                                $waktu_pinjam = \Carbon\Carbon::parse($reservation->waktu_pinjam)->format('d-m-Y');
-                                $waktu_kembali = \Carbon\Carbon::parse($reservation->waktu_kembali)->format('d-m-Y');
+                                $waktu_pinjam = $reservation->waktu_pinjam
+                                    ? \Carbon\Carbon::parse($reservation->waktu_pinjam)->format('d-m-Y')
+                                    : '-';
+
+                                $waktu_kembali = $reservation->waktu_kembali
+                                    ? \Carbon\Carbon::parse($reservation->waktu_kembali)->format('d-m-Y')
+                                    : '-';
                             @endphp
                             <td>{{ $waktu_pinjam }}</td>
                             <td>{{ $waktu_kembali }}</td>
-                            @php
-                                if ($reservation->status == "Pending") $class = 'bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded';
-                                if ($reservation->status == "In Process") $class = 'bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded';
-                                if ($reservation->status == "Completed") $class = 'bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded';
-                                if ($reservation->status == "Overdue") $class = 'bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded';
-                            @endphp
-                            <td><span class="{{ $class }}">{{ $reservation->status }}</span></td>
-                            <td>
-                            @if (Auth::user()->role_id == 1)
-                                <button type="button" onclick="window.location.href='{{ url('reservation/edit', encrypt($reservation->id)) }}'" 
-                                    class="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200">
-                                    <i class="fa-regular fa-pen-to-square"></i>
-                                    Edit
-                                </button>
-                            @endif
+          
+<!-- 
+// WAITING = antri (tanggal boleh NULL, quota tidak berubah)  -- yellow
+// BORROWED = sedang pinjam (tanggal wajib ada, quota sudah berkurang) -- blue
+// RETURNED = sudah balik (quota sudah balik) -- green
+// CANCELLED = dibatalkan (buat riwayat) -- red -->
 
-                            @if ($reservation->status == "Pending")
+                            @php
+                                $class = 'bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded';
+
+                                if ($reservation->status === 'WAITING') {
+                                    $class = 'bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded';
+                                } elseif ($reservation->status === 'BORROWED') {
+                                    $class = 'bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded';
+                                } elseif ($reservation->status === 'RETURNED') {
+                                    $class = 'bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded';
+                                } elseif ($reservation->status === 'CANCELLED') {
+                                    $class = 'bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded';
+                                } elseif ($reservation->status === 'RESERVED') {
+                                    $class = 'bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded';
+                                }
+                                // if ($reservation->status == "Pending") $class = 'bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded';
+                                // if ($reservation->status == "In Process") $class = 'bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded';
+                                // if ($reservation->status == "Completed") $class = 'bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded';
+                                // if ($reservation->status == "Overdue") $class = 'bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded';
+                            @endphp
+
+                            @php
+                                $statusText = $reservation->status;
+                                if ($reservation->status === 'WAITING') {
+                                    $statusText = 'WAITING #' . ($queueByReserveId[$reservation->id] ?? '-');
+                                }
+                            @endphp
+
+                            <td><span class="{{ $class }}">{{ $statusText }}</span></td>
+                        
+                            <td class="space-x-2">
+                                 @if (Auth::user()->role_id == 1)
+                                    <button type="button" onclick="window.location.href='{{ url('reservation/edit', encrypt($reservation->id)) }}'"
+                                        class="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200">
+                                        <i class="fa-regular fa-pen-to-square"></i> Edit
+                                    </button>
+                                @endif
+
+                                {{-- BORROWED → RETURN --}}
+                                @if ($reservation->status === 'BORROWED')
+                                    <form action="{{ route('reserve.return', encrypt($reservation->id)) }}"
+                                        method="POST" class="inline-block">
+                                        @csrf
+                                        <button type="submit"
+                                            class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">
+                                            Return
+                                        </button>
+                                    </form>
+                                @endif
+
+                                {{-- WAITING → CANCEL --}}
+                                @if ($reservation->status === 'WAITING')
+                                    <form action="{{ route('reserve.cancel', encrypt($reservation->id)) }}"
+                                        method="POST" class="inline-block">
+                                        @csrf
+                                        <button type="submit"
+                                            class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">
+                                            Cancel Waiting
+                                        </button>
+                                    </form>
+                                @endif
+
+                                {{-- RESERVED → CANCEL --}}
+                                @if ($reservation->status === 'RESERVED')
+                                    <form action="{{ route('reserve.cancel', encrypt($reservation->id)) }}"
+                                        method="POST" class="inline-block">
+                                        @csrf
+                                        <button type="submit"
+                                            class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">
+                                            Cancel
+                                        </button>
+                                    </form>
+                                @endif
+
+                            </td>
+
+                            <!-- @if ($reservation->status == "Pending")
                                 <form id="delete-form-{{ $reservation->id }}" action="{{ route('reserve.destroy', encrypt($reservation->id)) }}" method="POST" class="inline-block ml-2">
                                     @csrf
                                     @method('DELETE')
@@ -73,8 +144,7 @@
                                         Return Book
                                     </button>
                                 </form>                        
-                            @endif
-                            </td>
+                            @endif -->
                         </tr>
                     @endforeach
                 </tbody>

@@ -25,9 +25,41 @@
             </div>
             <hr class="border-1 border-gray-200">
             <div class="p-4 bg-gray-50 text-right">
-                <button type="button" onclick="window.location.href='{{ url('/reserve/' . encrypt($book->id)) }}'" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200">
+                <!-- <button type="button" onclick="window.location.href='{{ url('/reserve/' . encrypt($book->id)) }}'" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200">
                     Reserve this book
-                </button>
+                </button> -->
+
+                @php
+                    $myStatus = $myReserve->status ?? null;
+                    $reserveUrl = url('/reserve/' . encrypt($book->id));
+                @endphp
+
+                @if ($myStatus === 'BORROWED')
+                    <button disabled class="bg-gray-400 text-white py-2 px-4 rounded cursor-not-allowed">
+                        Borrowed
+                    </button>
+
+                @elseif ($myStatus === 'WAITING')
+                    <button disabled class="bg-gray-400 text-white py-2 px-4 rounded cursor-not-allowed">
+                        Waiting #{{ $myQueue ?? '-' }}
+                    </button>
+
+                @else
+                    @if ($book->quota <= 0)
+                        <button type="button"
+                            onclick="window.location.href='{{ $reserveUrl }}'"
+                            class="bg-yellow-600 text-white py-2 px-4 rounded hover:bg-yellow-700 transition ease-in-out duration-200">
+                            Join Waiting List
+                        </button>
+                    @else
+                        <button type="button"
+                            onclick="window.location.href='{{ $reserveUrl }}'"
+                            class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition ease-in-out duration-200">
+                            Reserve this book
+                        </button>
+                    @endif
+                @endif
+
             </div>
         </div>
     </div>
