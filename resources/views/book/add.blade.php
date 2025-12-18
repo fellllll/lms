@@ -20,6 +20,10 @@
                     <input type="file" name="image" id="image" class="w-full p-2 border border-gray-300 rounded mb-4" accept="image/*">
 
                     <x-input-error :messages="$errors->get('image')" class="mb-2" />
+                    
+                    <!-- PDF Upload: tambahkan di bawah ini -->
+                    <label for="pdf" class="block mb-1">Upload PDF (optional):</label>
+                    <input type="file" name="pdf" id="pdf" accept="application/pdf" class="w-full p-2 border border-gray-300 rounded mb-4">
 
                     <!-- Genre Selection -->
                     <label for="genre_id" class="block mb-1">Genre:</label>

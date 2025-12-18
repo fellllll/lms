@@ -86,6 +86,40 @@
                         class="w-full p-2 border border-gray-300 rounded mb-4 h-32" placeholder="Enter a summary...">{{ old('summary', $book->summary) }}</textarea>
                     <x-input-error :messages="$errors->get('summary')" class="mb-2" />
 
+                    <!-- PDF Upload -->
+                    <label for="pdf" class="block mb-1">Upload PDF:</label>
+                    <form action="{{ route('books.uploadPdf', $book->id) }}" method="POST" enctype="multipart/form-data" class="mb-4">
+                        @csrf
+                        <div class="flex gap-2">
+                            <input type="file" name="pdf" id="pdf" class="w-full p-2 border border-gray-300 rounded" accept="application/pdf" required>
+                            <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+                                Upload PDF
+                            </button>
+                        </div>
+                        <x-input-error :messages="$errors->get('pdf')" class="mt-2" />
+                    </form>
+
+                    <!-- Tampilkan PDF yang sudah ada -->
+                    @if($book->pdfs->count() > 0)
+                        <div class="mb-4 p-3 bg-gray-50 rounded border border-gray-300">
+                            <label class="block font-semibold mb-2">PDF Tersedia:</label>
+                            <ul class="space-y-2">
+                                @foreach($book->pdfs as $pdf)
+                                    <li class="flex justify-between items-center bg-white p-2 rounded border">
+                                        <a href="{{ route('books.viewPdf', $pdf) }}" target="_blank" class="text-blue-600 hover:underline">
+                                            📄 Lihat PDF
+                                        </a>
+                                        <form action="{{ route('books.deletePdf', $pdf) }}" method="POST" style="display:inline;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="text-red-600 hover:text-red-800 text-sm">Hapus</button>
+                                        </form>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif    
+
                     <!-- Submit Buttons -->
                     <div class="flex justify-center space-x-4 mt-4">
                         <!-- Tombol Save -->
