@@ -18,6 +18,12 @@
                 @csrf
 
                 <input type="hidden" name="book_id" value="{{ $id }}">
+                
+                @if ($errors->has('book_id'))
+                    <div class="mb-4 p-3 rounded bg-red-100 text-red-800 text-sm">
+                        {{ $errors->first('book_id') }}
+                    </div>
+                @endif
 
                 {{-- Start Date --}}
                 <div class="mb-4">

@@ -299,17 +299,37 @@ class ReservationController extends Controller
     $bookId = decrypt($validatedata['book_id']);
     $userId = Auth::id();
 
-    // CEK DOUBLE (nggak boleh dobel aktif)
+    // ✅ Anti double (aktif: WAITING / RESERVED / BORROWED)
     $existing = Reserve::where('user_id', $userId)
         ->where('book_id', $bookId)
         ->whereIn('status', ['WAITING', 'RESERVED', 'BORROWED'])
+        ->orderByDesc('id')
         ->first();
 
     if ($existing) {
-        return back()->withErrors([
-            'book_id' => 'Kamu sudah memiliki reservasi/antrean/peminjaman aktif untuk buku ini.'
-        ]);
+        $start = $existing->waktu_pinjam ? Carbon::parse($existing->waktu_pinjam)->format('d M Y') : null;
+        $end   = $existing->waktu_kembali ? Carbon::parse($existing->waktu_kembali)->format('d M Y') : null;
+
+        if ($existing->status === 'BORROWED') {
+            $msg = "Kamu masih meminjam buku ini"
+                . ($start ? " sejak $start" : "")
+                . ($end ? " (jatuh tempo $end)" : "")
+                . ". Jadi kamu tidak bisa pinjam 2x.";
+        } elseif ($existing->status === 'RESERVED') {
+            $msg = "📌 Kamu sudah RESERVE buku ini"
+                . ($start ? " untuk tanggal $start" : "")
+                . ". Tidak bisa reserve 2x.";
+        } else { // WAITING
+            $msg = "⏳ Kamu sudah ada di WAITING LIST untuk buku ini"
+                . ($start ? " (tanggal mulai $start)" : "")
+                . ". Jadi tidak bisa masuk antrian 2x.";
+        }
+
+        return back()
+            ->withErrors(['book_id' => $msg])
+            ->withInput();
     }
+
 
     $start = Carbon::parse($validatedata['waktu_pinjam'])->startOfDay();
     $end   = (clone $start)->addWeeks(2)->toDateString();
