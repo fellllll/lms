@@ -90,49 +90,51 @@
                             <td><span class="{{ $class }}">{{ $statusText }}</span></td>
                         
                             <td class="space-x-2">
-                                 @if (Auth::user()->role_id == 1)
+                                @if (Auth::user()->role_id == 1)
+                                    {{-- ADMIN --}}
                                     <button type="button" onclick="window.location.href='{{ url('reservation/edit', encrypt($reservation->id)) }}'"
                                         class="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition ease-in-out duration-200">
                                         <i class="fa-regular fa-pen-to-square"></i> Edit
                                     </button>
-                                @endif
+                                @else
+                                    {{-- USER --}}
+                                    
+                                    {{-- BORROWED → RETURN --}}
+                                    @if ($reservation->status === 'BORROWED')
+                                        <form action="{{ route('reserve.return', encrypt($reservation->id)) }}"
+                                            method="POST" class="inline-block">
+                                            @csrf
+                                            <button type="submit"
+                                                class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">
+                                                Return
+                                            </button>
+                                        </form>
+                                    @endif
 
-                                {{-- BORROWED → RETURN --}}
-                                @if ($reservation->status === 'BORROWED')
-                                    <form action="{{ route('reserve.return', encrypt($reservation->id)) }}"
-                                        method="POST" class="inline-block">
-                                        @csrf
-                                        <button type="submit"
-                                            class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">
-                                            Return
-                                        </button>
-                                    </form>
-                                @endif
+                                    {{-- WAITING → CANCEL --}}
+                                    @if ($reservation->status === 'WAITING')
+                                        <form action="{{ route('reserve.cancel', encrypt($reservation->id)) }}"
+                                            method="POST" class="inline-block">
+                                            @csrf
+                                            <button type="submit"
+                                                class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">
+                                                Cancel Waiting
+                                            </button>
+                                        </form>
+                                    @endif
 
-                                {{-- WAITING → CANCEL --}}
-                                @if ($reservation->status === 'WAITING')
-                                    <form action="{{ route('reserve.cancel', encrypt($reservation->id)) }}"
-                                        method="POST" class="inline-block">
-                                        @csrf
-                                        <button type="submit"
-                                            class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">
-                                            Cancel Waiting
-                                        </button>
-                                    </form>
+                                    {{-- RESERVED → CANCEL --}}
+                                    @if ($reservation->status === 'RESERVED')
+                                        <form action="{{ route('reserve.cancel', encrypt($reservation->id)) }}"
+                                            method="POST" class="inline-block">
+                                            @csrf
+                                            <button type="submit"
+                                                class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">
+                                                Cancel
+                                            </button>
+                                        </form>
+                                    @endif
                                 @endif
-
-                                {{-- RESERVED → CANCEL --}}
-                                @if ($reservation->status === 'RESERVED')
-                                    <form action="{{ route('reserve.cancel', encrypt($reservation->id)) }}"
-                                        method="POST" class="inline-block">
-                                        @csrf
-                                        <button type="submit"
-                                            class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">
-                                            Cancel
-                                        </button>
-                                    </form>
-                                @endif
-
                             </td>
 
                             <!-- @if ($reservation->status == "Pending")
