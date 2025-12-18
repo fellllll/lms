@@ -116,8 +116,7 @@
                                     $reservation->book->pdfs &&
                                     $reservation->book->pdfs->isNotEmpty()
                                 )
-                                    <a href="{{ route('books.viewPdf', $reservation->book->pdfs->first()->id) }}"
-                                    target="_blank"
+                                    <a href="{{ route('books.pdfViewer', $reservation->book->pdfs->first()) }}" target="_blank"
                                     class="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700">
                                         📖 Read PDF
                                     </a>
@@ -161,7 +160,6 @@
     <script>
     $(document).ready(function() {
         $('#reservation_table').DataTable({
-            // Optional: You can customize DataTables options here
             paging: true,
             searching: true,
             ordering: true,

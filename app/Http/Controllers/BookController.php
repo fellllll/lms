@@ -238,6 +238,7 @@ class BookController extends Controller
             'description' => 'required|string',
             'summary' => 'required|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'pdf' => 'nullable|file|mimes:pdf|max:10240',
         ], [
             'title.required' => 'Judul buku wajib diisi.',
             'title.string' => 'Judul buku harus berupa teks.',
@@ -274,6 +275,9 @@ class BookController extends Controller
             'image.image' => 'File yang diunggah harus berupa gambar.',
             'image.mimes' => 'Gambar harus berformat jpeg, png, jpg, atau gif.',
             'image.max' => 'Ukuran gambar maksimal 2MB.',
+            
+            'pdf.mimes' => 'File harus berformat PDF.',
+            'pdf.max' => 'Ukuran file PDF maksimal 10MB.',
         ]);
 
 
@@ -352,29 +356,41 @@ class BookController extends Controller
 
     public function viewPdf(BookPdf $bookPdf)
     {
-         // ✅ TAMBAHAN: cek user login
-        $userId = Auth::id();
-
-        // ✅ TAMBAHAN: cek status reserve HARUS BORROWED
-        $hasAccess = Reserve::where('user_id', $userId)
-            ->where('book_id', $bookPdf->book_id)
-            ->where('status', 'BORROWED')
-            ->exists();
-
-        if (!$hasAccess) {
-            abort(403, 'Anda tidak memiliki akses ke PDF ini.');
+        // Cek apakah user punya akses (misal, cek reservasi)
+        $user = auth()->user();
+        $hasAccess = $bookPdf->book->reserves()->where('user_id', $user->id)->where('status', 'BORROWED')->exists();
+        
+        if (!$hasAccess && $user->role_id != 1) { // Admin bisa akses semua
+            abort(403, 'Unauthorized');
         }
 
-        // CODE LAMA (TIDAK DIUBAH)
+        $path = Storage::disk('public')->path($bookPdf->pdf);
+        
         if (!Storage::disk('public')->exists($bookPdf->pdf)) {
             abort(404);
         }
 
-        $path = Storage::disk('public')->path($bookPdf->pdf);
-
         return response()->file($path, [
             'Content-Type' => 'application/pdf',
-            'Content-Disposition' => 'inline; filename="' . basename($path) . '"'
+            'Content-Disposition' => 'inline; filename="'.basename($path).'"',
+            'Cache-Control' => 'no-cache, no-store, must-revalidate',
+            'Pragma' => 'no-cache',
+            'Expires' => '0'
         ]);
+    }
+
+    public function pdfViewer(BookPdf $bookPdf)
+    {
+        // Cek akses sama seperti viewPdf
+        $user = auth()->user();
+        $hasAccess = $bookPdf->book->reserves()->where('user_id', $user->id)->where('status', 'BORROWED')->exists();
+        
+        if (!$hasAccess && $user->role_id != 1) {
+            abort(403, 'Unauthorized');
+        }
+
+        // Kirim URL PDF ke view
+        $pdfUrl = route('books.viewPdf', $bookPdf->id);
+        return view('book.pdfViewer', compact('pdfUrl'));
     }
 }
