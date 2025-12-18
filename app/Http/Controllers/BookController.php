@@ -11,8 +11,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
-
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class BookController extends Controller
 {
@@ -122,15 +122,36 @@ class BookController extends Controller
 }
 
 
-    public function destroy($id)
-    {
+    // public function destroy($id)
+    // {
+    //     $book = Book::findOrFail(decrypt($id));
+    //     $book->delete();
+    //     Session::flash('title', 'Hapus Buku Berhasil!');
+    //     Session::flash('message', '');
+    //     Session::flash('icon', 'success');
+    //     return redirect()->back();
+    // }
+    public function destroy($id){
         $book = Book::findOrFail(decrypt($id));
+
+        // hapus semua pdf di S3
+        $pdfs = BookPdf::where('book_id', $book->id)->get();
+        foreach ($pdfs as $pdf) {
+            if ($pdf->pdf && Storage::disk('s3')->exists($pdf->pdf)) {
+                Storage::disk('s3')->delete($pdf->pdf);
+            }
+            $pdf->delete();
+        }
+
         $book->delete();
+
         Session::flash('title', 'Hapus Buku Berhasil!');
         Session::flash('message', '');
         Session::flash('icon', 'success');
+
         return redirect()->back();
     }
+
 
     public function edit(Book $book){
         $genres = Genre::all();
@@ -307,10 +328,16 @@ class BookController extends Controller
             ]);
 
             if ($request->hasFile('pdf')) {
-                $path = $request->file('pdf')->store('books/pdf', 'public');
+                // $path = $request->file('pdf')->store('books/pdf', 'public');
+                // BookPdf::create([
+                //     'book_id' => $book->id,
+                //     'pdf' => $path
+                // ]);
+
+                $path = $request->file('pdf')->store('books/pdf', 's3'); // <-- ganti public -> s3
                 BookPdf::create([
-                    'book_id' => $book->id,
-                    'pdf' => $path
+                'book_id' => $book->id,
+                'pdf' => $path, // ini sekarang key S3
                 ]);
             }
 
@@ -340,11 +367,15 @@ class BookController extends Controller
 
         if ($request->hasFile('pdf')) {
             $file = $request->file('pdf');
-            $path = $file->store('books/pdf', 'public');
-            
+            // $path = $file->store('books/pdf', 'public');
+            // BookPdf::create([
+            //     'book_id' => $book->id,
+            //     'pdf' => $path
+            // ]);
+            $path = $file->store('books/pdf', 's3');
             BookPdf::create([
-                'book_id' => $book->id,
-                'pdf' => $path
+            'book_id' => $book->id,
+            'pdf' => $path
             ]);
 
             Session::flash('title', 'PDF Berhasil Diupload!');
@@ -355,30 +386,59 @@ class BookController extends Controller
         return redirect()->back();
     }
 
-    public function viewPdf(BookPdf $bookPdf)
-    {
-        // Cek apakah user punya akses (misal, cek reservasi)
-        $user = auth()->user();
-        $hasAccess = $bookPdf->book->reserves()->where('user_id', $user->id)->where('status', 'BORROWED')->exists();
+    // public function viewPdf(BookPdf $bookPdf)
+    // {
+    //     // Cek apakah user punya akses (misal, cek reservasi)
+    //     $user = auth()->user();
+    //     $hasAccess = $bookPdf->book->reserves()->where('user_id', $user->id)->where('status', 'BORROWED')->exists();
         
-        if (!$hasAccess && $user->role_id != 1) { // Admin bisa akses semua
+    //     if (!$hasAccess && $user->role_id != 1) { // Admin bisa akses semua
+    //         abort(403, 'Unauthorized');
+    //     }
+
+    //     $path = Storage::disk('public')->path($bookPdf->pdf);
+        
+    //     if (!Storage::disk('public')->exists($bookPdf->pdf)) {
+    //         abort(404);
+    //     }
+
+    //     return response()->file($path, [
+    //         'Content-Type' => 'application/pdf',
+    //         'Content-Disposition' => 'inline; filename="'.basename($path).'"',
+    //         'Cache-Control' => 'no-cache, no-store, must-revalidate',
+    //         'Pragma' => 'no-cache',
+    //         'Expires' => '0'
+    //     ]);
+    // }
+
+    
+    public function viewPdf(BookPdf $bookPdf){
+        $user = auth()->user();
+
+        $hasAccess = $bookPdf->book->reserves()
+            ->where('user_id', $user->id)
+            ->where('status', 'BORROWED')
+            ->exists();
+
+        if (!$hasAccess && $user->role_id != 1) {
             abort(403, 'Unauthorized');
         }
 
-        $path = Storage::disk('public')->path($bookPdf->pdf);
-        
-        if (!Storage::disk('public')->exists($bookPdf->pdf)) {
+        $key = $bookPdf->pdf; // key/path di S3
+
+        if (!Storage::disk('s3')->exists($key)) {
             abort(404);
         }
 
-        return response()->file($path, [
-            'Content-Type' => 'application/pdf',
-            'Content-Disposition' => 'inline; filename="'.basename($path).'"',
-            'Cache-Control' => 'no-cache, no-store, must-revalidate',
-            'Pragma' => 'no-cache',
-            'Expires' => '0'
-        ]);
+        // signed url biar bisa dibuka inline, private tetap aman
+        $url = Storage::disk('s3')->temporaryUrl(
+            $key,
+            now()->addMinutes(10)
+        );
+
+        return redirect($url);
     }
+
 
     public function pdfViewer(BookPdf $bookPdf)
     {
