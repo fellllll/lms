@@ -1,4 +1,5 @@
 <x-app-layout>
+    @include('components.swallalert')
     <x-slot name="header">
         <div class="relative">
             <a href="{{ route('reserve.view') }}" class="absolute left-0 bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-700">
@@ -17,7 +18,10 @@
                 <div class="flex justify-between items-center">
                     <button id="prevPage" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Previous</button>
                     <span id="pageInfo">Page: <span id="currentPage">1</span> / <span id="totalPages">1</span></span>
-                    <button id="nextPage" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Next</button>
+                    <div>
+                        <button id="bookmarkBtn" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700 mr-2">Bookmark This Page</button>
+                        <button id="nextPage" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Next</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -35,6 +39,7 @@
                 pdfDoc = await loadingTask.promise;
                 totalPages = pdfDoc.numPages;
                 document.getElementById('totalPages').textContent = totalPages;
+                await loadBookmark(); // Load bookmark first
                 renderPage(currentPage);
             } catch (error) {
                 console.error('Error loading PDF:', error);
@@ -70,6 +75,29 @@
                 // Adjust container height to fit canvas
                 container.style.height = (canvas.height + 20) + 'px';
                 console.log('Canvas rendered, height:', canvas.height);
+
+                // Add bookmark indicator if this is the bookmarked page
+                if (bookmarkPage && pageNum === bookmarkPage) {
+                    const indicator = document.createElement('div');
+                    indicator.id = 'bookmarkIndicator';
+                    indicator.textContent = '📖 Last Read';
+                    indicator.style.position = 'absolute';
+                    indicator.style.top = '10px';
+                    indicator.style.right = '10px';
+                    indicator.style.backgroundColor = 'rgba(255, 255, 0, 0.8)';
+                    indicator.style.padding = '5px 10px';
+                    indicator.style.borderRadius = '5px';
+                    indicator.style.fontSize = '14px';
+                    indicator.style.fontWeight = 'bold';
+                    indicator.style.zIndex = '10';
+                    container.style.position = 'relative';
+                    container.appendChild(indicator);
+                } else {
+                    const existingIndicator = document.getElementById('bookmarkIndicator');
+                    if (existingIndicator) {
+                        existingIndicator.remove();
+                    }
+                }
             } catch (error) {
                 console.error('Error rendering page:', error);
             }
@@ -89,6 +117,10 @@
             }
         });
 
+        document.getElementById('bookmarkBtn').addEventListener('click', () => {
+            saveBookmark(currentPage);
+        });
+
         // Proteksi copy/right-click
         document.addEventListener('contextmenu', function(e) {
             if (e.target.id === 'pdfCanvas') {
@@ -101,6 +133,68 @@
                 e.preventDefault();
             }
         });
+
+        let bookmarkPage = null;
+
+        async function loadBookmark() {
+            try {
+                const response = await fetch('{{ route("books.pdfViewer", $bookPdf) }}', {
+                    method: 'GET',
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.bookmark) {
+                        bookmarkPage = data.bookmark.page_number;
+                        currentPage = bookmarkPage; // Start from bookmarked page
+                        renderPage(currentPage);
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading bookmark:', error);
+            }
+        }
+
+        async function saveBookmark(pageNum) {
+            try {
+                const response = await fetch('{{ route("books.saveBookmark", $bookPdf) }}', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    },
+                    body: JSON.stringify({ page_number: pageNum })
+                });
+                if (response.ok) {
+                    bookmarkPage = pageNum; // Update local bookmarkPage
+                    renderPage(currentPage); // Re-render to show indicator
+                    Swal.fire({
+                        title: 'Bookmark Saved!',
+                        text: 'Your reading progress has been saved.',
+                        icon: 'success',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: "#2463eb",
+                    });
+                } else {
+                    Swal.fire({
+                        title: 'Error',
+                        text: 'Failed to save bookmark.',
+                        icon: 'error',
+                        confirmButtonText: 'OK',
+                    });
+                }
+            } catch (error) {
+                console.error('Error saving bookmark:', error);
+                Swal.fire({
+                    title: 'Error',
+                    text: 'An error occurred while saving the bookmark.',
+                    icon: 'error',
+                    confirmButtonText: 'OK',
+                });
+            }
+        }
 
         // Load PDF saat halaman load
         window.onload = function() {

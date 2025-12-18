@@ -38,6 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/books/{book}/upload-pdf', [BookController::class, 'uploadPdf'])->name('books.uploadPdf');
     Route::get('/books/pdf/{bookPdf}', [BookController::class, 'viewPdf'])->name('books.viewPdf');
     Route::get('/books/pdf-viewer/{bookPdf}', [BookController::class, 'pdfViewer'])->name('books.pdfViewer');
+    Route::post('/books/pdf/{bookPdf}/bookmark', [BookController::class, 'saveBookmark'])->name('books.saveBookmark');
 
     Route::middleware(['role:1'])->group(function () {
         Route::get('/book/edit/{book:id}', [BookController::class, 'edit'])->name('book.edit');

@@ -6,6 +6,7 @@ use App\Models\Book;
 use App\Models\Genre;
 use App\Models\Reserve;
 use App\Models\BookPdf;
+use App\Models\Bookmark;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -389,8 +390,41 @@ class BookController extends Controller
             abort(403, 'Unauthorized');
         }
 
+        // Load bookmark
+        $bookmark = Bookmark::where('user_id', $user->id)->where('book_pdf_id', $bookPdf->id)->first();
+
+        // Jika request AJAX, kembalikan JSON
+        if (request()->ajax()) {
+            return response()->json([
+                'bookmark' => $bookmark ? ['page_number' => $bookmark->page_number] : null
+            ]);
+        }
+
+        $bookmarkPage = $bookmark ? $bookmark->page_number : 1;
+
         // Kirim URL PDF ke view
         $pdfUrl = route('books.viewPdf', $bookPdf->id);
-        return view('book.pdfViewer', compact('pdfUrl'));
+        return view('book.pdfViewer', compact('pdfUrl', 'bookmarkPage', 'bookPdf'));
+    }
+
+    public function saveBookmark(Request $request, BookPdf $bookPdf)
+    {
+        $request->validate([
+            'page_number' => 'required|integer|min:1'
+        ]);
+
+        $user = auth()->user();
+        $hasAccess = $bookPdf->book->reserves()->where('user_id', $user->id)->where('status', 'BORROWED')->exists();
+        
+        if (!$hasAccess && $user->role_id != 1) {
+            return response()->json(['error' => 'Unauthorized'], 403);
+        }
+
+        Bookmark::updateOrCreate(
+            ['user_id' => $user->id, 'book_pdf_id' => $bookPdf->id],
+            ['page_number' => $request->page_number]
+        );
+
+        return response()->json(['success' => true]);
     }
 }
