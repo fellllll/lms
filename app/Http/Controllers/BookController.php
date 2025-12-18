@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use App\Models\Genre;
 use App\Models\Reserve;
+use App\Models\BookPdf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
+use Illuminate\Support\Facades\Storage;
 
 class BookController extends Controller
 {
@@ -236,6 +238,7 @@ class BookController extends Controller
             'description' => 'required|string',
             'summary' => 'required|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'pdf' => 'nullable|file|mimes:pdf|max:10240',
         ], [
             'title.required' => 'Judul buku wajib diisi.',
             'title.string' => 'Judul buku harus berupa teks.',
@@ -272,6 +275,9 @@ class BookController extends Controller
             'image.image' => 'File yang diunggah harus berupa gambar.',
             'image.mimes' => 'Gambar harus berformat jpeg, png, jpg, atau gif.',
             'image.max' => 'Ukuran gambar maksimal 2MB.',
+            
+            'pdf.mimes' => 'File harus berformat PDF.',
+            'pdf.max' => 'Ukuran file PDF maksimal 10MB.',
         ]);
 
 
@@ -286,7 +292,7 @@ class BookController extends Controller
         }
 
         try{
-            Book::create([
+            $book = Book::create([
                 'title' => $request->title,
                 'genre_id' => $request->genre_id,
                 'year' => $request->year,
@@ -298,6 +304,14 @@ class BookController extends Controller
                 'summary' => $request->summary,
                 'image' => $imagePath,
             ]);
+
+            if ($request->hasFile('pdf')) {
+                $path = $request->file('pdf')->store('books/pdf', 'public');
+                BookPdf::create([
+                    'book_id' => $book->id,
+                    'pdf' => $path
+                ]);
+            }
 
             Session::flash('title', 'Book Berhasil Diinput!');
             Session::flash('message', '');
@@ -311,5 +325,72 @@ class BookController extends Controller
             return back()->withErrors($request)->withInput();
         }
         
+    }
+
+    public function uploadPdf(Request $request, Book $book)
+    {
+        $request->validate([
+            'pdf' => 'required|file|mimes:pdf|max:10240'
+        ], [
+            'pdf.required' => 'File PDF wajib diupload.',
+            'pdf.mimes' => 'File harus berformat PDF.',
+            'pdf.max' => 'Ukuran file maksimal 10MB.',
+        ]);
+
+        if ($request->hasFile('pdf')) {
+            $file = $request->file('pdf');
+            $path = $file->store('books/pdf', 'public');
+            
+            BookPdf::create([
+                'book_id' => $book->id,
+                'pdf' => $path
+            ]);
+
+            Session::flash('title', 'PDF Berhasil Diupload!');
+            Session::flash('message', 'File PDF telah disimpan.');
+            Session::flash('icon', 'success');
+        }
+
+        return redirect()->back();
+    }
+
+    public function viewPdf(BookPdf $bookPdf)
+    {
+        // Cek apakah user punya akses (misal, cek reservasi)
+        $user = auth()->user();
+        $hasAccess = $bookPdf->book->reserves()->where('user_id', $user->id)->where('status', 'BORROWED')->exists();
+        
+        if (!$hasAccess && $user->role_id != 1) { // Admin bisa akses semua
+            abort(403, 'Unauthorized');
+        }
+
+        $path = Storage::disk('public')->path($bookPdf->pdf);
+        
+        if (!Storage::disk('public')->exists($bookPdf->pdf)) {
+            abort(404);
+        }
+
+        return response()->file($path, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'inline; filename="'.basename($path).'"',
+            'Cache-Control' => 'no-cache, no-store, must-revalidate',
+            'Pragma' => 'no-cache',
+            'Expires' => '0'
+        ]);
+    }
+
+    public function pdfViewer(BookPdf $bookPdf)
+    {
+        // Cek akses sama seperti viewPdf
+        $user = auth()->user();
+        $hasAccess = $bookPdf->book->reserves()->where('user_id', $user->id)->where('status', 'BORROWED')->exists();
+        
+        if (!$hasAccess && $user->role_id != 1) {
+            abort(403, 'Unauthorized');
+        }
+
+        // Kirim URL PDF ke view
+        $pdfUrl = route('books.viewPdf', $bookPdf->id);
+        return view('book.pdfViewer', compact('pdfUrl'));
     }
 }

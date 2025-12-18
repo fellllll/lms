@@ -35,6 +35,10 @@ Route::middleware('auth')->group(function () {
     Route::post('reservation/cancel/{id}', [ReservationController::class, 'cancel'])->name('reserve.cancel');
 
 
+    Route::post('/books/{book}/upload-pdf', [BookController::class, 'uploadPdf'])->name('books.uploadPdf');
+    Route::get('/books/pdf/{bookPdf}', [BookController::class, 'viewPdf'])->name('books.viewPdf');
+    Route::get('/books/pdf-viewer/{bookPdf}', [BookController::class, 'pdfViewer'])->name('books.pdfViewer');
+
     Route::middleware(['role:1'])->group(function () {
         Route::get('/book/edit/{book:id}', [BookController::class, 'edit'])->name('book.edit');
         Route::put('/book/update/{book:id}', [BookController::class, 'update'])->name('book.update');

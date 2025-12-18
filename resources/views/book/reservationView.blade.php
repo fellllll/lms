@@ -109,6 +109,19 @@
                                     </form>
                                 @endif
 
+                               {{-- === READ PDF BUTTON === --}}
+                                @if (
+                                    $reservation->status === 'BORROWED' &&
+                                    $reservation->book &&
+                                    $reservation->book->pdfs &&
+                                    $reservation->book->pdfs->isNotEmpty()
+                                )
+                                    <a href="{{ route('books.pdfViewer', $reservation->book->pdfs->first()) }}" target="_blank"
+                                    class="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700">
+                                        📖 Read PDF
+                                    </a>
+                                @endif
+
                                 {{-- WAITING → CANCEL --}}
                                 @if ($reservation->status === 'WAITING')
                                     <form action="{{ route('reserve.cancel', encrypt($reservation->id)) }}"
@@ -134,17 +147,6 @@
                                 @endif
 
                             </td>
-
-                            <!-- @if ($reservation->status == "Pending")
-                                <form id="delete-form-{{ $reservation->id }}" action="{{ route('reserve.destroy', encrypt($reservation->id)) }}" method="POST" class="inline-block ml-2">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="button" onclick="confirmDialog('{{ $reservation->id }}')" class=" bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700 transition ease-in-out duration-200">
-                                        <i class="fa-solid fa-trash"></i>
-                                          Delete
-                                    </button>
-                                </form>                        
-                            @endif -->
                         </tr>
                     @endforeach
                 </tbody>
@@ -158,7 +160,6 @@
     <script>
     $(document).ready(function() {
         $('#reservation_table').DataTable({
-            // Optional: You can customize DataTables options here
             paging: true,
             searching: true,
             ordering: true,

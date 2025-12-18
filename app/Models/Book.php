@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\BookPdf;
 
 class Book extends Model
 {
@@ -33,5 +34,10 @@ class Book extends Model
     public function users()
     {
         return $this->belongsToMany(Book::class, 'reserve', 'book_id', 'user_id');
+    }
+
+    public function pdfs()
+    {
+        return $this->hasMany(BookPdf::class);
     }
 }

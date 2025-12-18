@@ -8,6 +8,7 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use App\Models\Book;
 
 class ReservationController extends Controller
 {
@@ -50,11 +51,17 @@ class ReservationController extends Controller
 
 
     public function show($id){
-        $book = DB::table('books')->where('id',decrypt($id))->get()->value('title');
-        
+        $bookModel = Book::with('pdfs')->findOrFail(decrypt($id));
+
+        $book = $bookModel->title;
         $name = Auth::user()->name;
 
-        return view('book.reservation', compact('book', 'id', 'name'));
+        return view('book.reservation', compact(
+            'book',
+            'id',
+            'name',
+            'bookModel' // ✅ INI KUNCI UTAMA
+        ));
     }
 
     // public function view()
@@ -69,11 +76,12 @@ class ReservationController extends Controller
     //     return view('book.reservationView', compact('reserves'));
     // }
 
-    public function view(){
+    public function view()
+    {
         if (Auth::user()->role_id == 1) {
-            $reserves = Reserve::with(['user', 'book'])->get();
+            $reserves = Reserve::with(['user', 'book.pdfs'])->get();
         } else {
-            $reserves = Reserve::with(['user', 'book'])
+            $reserves = Reserve::with(['user', 'book.pdfs'])
                 ->where('user_id', Auth::id())
                 ->get();
         }
@@ -95,7 +103,7 @@ class ReservationController extends Controller
             foreach ($waitingRows as $row) {
                 $bid = $row->book_id;
                 $counter[$bid] = ($counter[$bid] ?? 0) + 1;
-                $queueByReserveId[$row->id] = $counter[$bid]; // reserve_id -> posisi
+                $queueByReserveId[$row->id] = $counter[$bid];
             }
         }
 
