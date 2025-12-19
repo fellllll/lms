@@ -118,7 +118,7 @@
                                         $reservation->book->pdfs && 
                                         $reservation->book->pdfs->isNotEmpty()
                                     )
-                                        <a href="{{ route('books.loadBookmark', $reservation->book->pdfs->first()) }}" target="_blank"
+                                        <a href="{{ route('books.pdfViewer', $reservation->book->pdfs->first()) }}" target="_blank"
                                         class="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700">
                                             📖 Read PDF
                                         </a>
