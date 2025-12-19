@@ -138,7 +138,7 @@
 
         async function loadBookmark() {
             try {
-                const response = await fetch('{{ route("books.loadBookmark", $bookPdf) }}', {
+                const response = await fetch('{{ route("books.pdfViewer", $bookPdf) }}', {
                     method: 'GET',
                     headers: {
                         'X-Requested-With': 'XMLHttpRequest'
