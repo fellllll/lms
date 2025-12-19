@@ -17,7 +17,36 @@ use Illuminate\Support\Facades\Storage;
 
 class BookController extends Controller
 {
-    //
+    
+    
+    public function loadBookmark(BookPdf $bookPdf)
+    {
+        // Cek akses sama seperti viewPdf
+        $user = auth()->user();
+        $hasAccess = $bookPdf->book->reserves()->where('user_id', $user->id)->where('status', 'BORROWED')->exists();
+        
+        if (!$hasAccess && $user->role_id != 1) {
+            abort(403, 'Unauthorized');
+        }
+
+        // Load bookmark
+        $bookmark = Bookmark::where('user_id', $user->id)->where('book_pdf_id', $bookPdf->id)->first();
+
+        // Jika request AJAX, kembalikan JSON
+        if (request()->ajax()) {
+            return response()->json([
+                'bookmark' => $bookmark ? ['page_number' => $bookmark->page_number] : null
+            ]);
+        }
+
+        $bookmarkPage = $bookmark ? $bookmark->page_number : 1;
+
+        // Kirim URL PDF ke view
+        $pdfUrl = route('books.viewPdf', $bookPdf->id);
+        return view('book.pdfViewer', compact('pdfUrl', 'bookmarkPage', 'bookPdf'));
+    }
+
+
     public function list()
     {
         $books = DB::table('books');

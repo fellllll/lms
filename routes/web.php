@@ -33,6 +33,8 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/books/{book}/upload-pdf', [BookController::class, 'uploadPdf'])->name('books.uploadPdf');
     Route::get('/books/pdf/{bookPdf}', [BookController::class, 'viewPdf'])->name('books.viewPdf');
+    // loadBookmark
+    Route::get('/books/loadBookmark/{bookPdf}', [BookController::class, 'loadBookmark'])->name('books.pdfViewer');
     Route::post('/books/pdf/{bookPdf}/bookmark', [BookController::class, 'saveBookmark'])->name('books.saveBookmark');
 
     Route::middleware(['role:1'])->group(function () {
