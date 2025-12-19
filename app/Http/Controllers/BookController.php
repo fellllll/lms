@@ -8,11 +8,12 @@ use App\Models\Reserve;
 use App\Models\BookPdf;
 use App\Models\Bookmark;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 
 class BookController extends Controller
 {
@@ -304,12 +305,9 @@ class BookController extends Controller
 
 
         if ($request->hasFile('image')) {
-
             $originalFileName = $request->image->getClientOriginalName();
             $safeFileName = preg_replace('/[^a-zA-Z0-9_-]/', '_', $originalFileName);
-
             $imagePath = 'images/books/' . $safeFileName;
-
             $request->image->move(public_path('images/books'), $imagePath);
         }
 
@@ -386,32 +384,6 @@ class BookController extends Controller
         return redirect()->back();
     }
 
-    // public function viewPdf(BookPdf $bookPdf)
-    // {
-    //     // Cek apakah user punya akses (misal, cek reservasi)
-    //     $user = auth()->user();
-    //     $hasAccess = $bookPdf->book->reserves()->where('user_id', $user->id)->where('status', 'BORROWED')->exists();
-        
-    //     if (!$hasAccess && $user->role_id != 1) { // Admin bisa akses semua
-    //         abort(403, 'Unauthorized');
-    //     }
-
-    //     $path = Storage::disk('public')->path($bookPdf->pdf);
-        
-    //     if (!Storage::disk('public')->exists($bookPdf->pdf)) {
-    //         abort(404);
-    //     }
-
-    //     return response()->file($path, [
-    //         'Content-Type' => 'application/pdf',
-    //         'Content-Disposition' => 'inline; filename="'.basename($path).'"',
-    //         'Cache-Control' => 'no-cache, no-store, must-revalidate',
-    //         'Pragma' => 'no-cache',
-    //         'Expires' => '0'
-    //     ]);
-    // }
-
-    
     public function viewPdf(BookPdf $bookPdf){
         $user = auth()->user();
 
@@ -420,53 +392,33 @@ class BookController extends Controller
             ->where('status', 'BORROWED')
             ->exists();
 
-        if (!$hasAccess && $user->role_id != 1) {
-            abort(403, 'Unauthorized');
-        }
+        // kalau mau aktifkan lagi:
+        // if (!$hasAccess && $user->role_id != 1) abort(403);
 
-        $key = $bookPdf->pdf; // key/path di S3
+        $key = $bookPdf->pdf; // harus key S3: books/pdf/xxx.pdf
 
-        if (!Storage::disk('s3')->exists($key)) {
-            abort(404);
-        }
+        Log::info('pdf key', ['key' => $key]);
 
-        // signed url biar bisa dibuka inline, private tetap aman
-        $url = Storage::disk('s3')->temporaryUrl(
-            $key,
-            now()->addMinutes(10)
-        );
+        try {
+            // bikin signed url (private tetap aman)
+            $url = Storage::disk('s3')->temporaryUrl(
+                $key,
+                now()->addMinutes(10)
+            );
 
-        return redirect($url);
-    }
+            // redirect yang bener untuk URL eksternal
+            return redirect()->away($url);
 
-
-    public function pdfViewer(BookPdf $bookPdf)
-    {
-        // Cek akses sama seperti viewPdf
-        $user = auth()->user();
-        $hasAccess = $bookPdf->book->reserves()->where('user_id', $user->id)->where('status', 'BORROWED')->exists();
-        
-        if (!$hasAccess && $user->role_id != 1) {
-            abort(403, 'Unauthorized');
-        }
-
-        // Load bookmark
-        $bookmark = Bookmark::where('user_id', $user->id)->where('book_pdf_id', $bookPdf->id)->first();
-
-        // Jika request AJAX, kembalikan JSON
-        if (request()->ajax()) {
-            return response()->json([
-                'bookmark' => $bookmark ? ['page_number' => $bookmark->page_number] : null
+        } catch (\Throwable $e) {
+            Log::error('temporaryUrl failed', [
+                'key' => $key,
+                'error' => $e->getMessage()
             ]);
+
+            abort(404, 'PDF not found or cannot be accessed');
         }
-
-        $bookmarkPage = $bookmark ? $bookmark->page_number : 1;
-
-        // Kirim URL PDF ke view
-        $pdfUrl = route('books.viewPdf', $bookPdf->id);
-        return view('book.pdfViewer', compact('pdfUrl', 'bookmarkPage', 'bookPdf'));
     }
-
+    
     public function saveBookmark(Request $request, BookPdf $bookPdf)
     {
         $request->validate([
